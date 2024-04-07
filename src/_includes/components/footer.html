@@ -5,10 +5,7 @@
 <footer id="footer">
     <div class="container">
         <div class="left-section">
-            <a class="logo" href="/"><img loading="lazy" decoding="async" src="/assets/svgs/logo-white.svg" alt="logo" width="264" height="78"></a>
-            <p>
-                Extra content if you need it, if not you can delete this whole p tag. I usually do.
-            </p>
+            <a class="logo" href="/"><img loading="lazy" decoding="async" src="/assets/images/subg-nb-logo.png" alt="logo" height="400px"></a>
         </div>
         <div class="right-section">
             <div class="lists">
@@ -23,10 +20,10 @@
                         <a href="/about">About Us</a>
                     </li>
                     <li>
-                        <a href="/projects">Projects</a>
+                        <a href="/projects">Classes</a>
                     </li>
                     <li>
-                        <a href="/testimonials">Reviews</a>
+                        <a href="/testimonials">Schedule</a>
                     </li>
                     <li>
                         <a href="/contact">Contact</a>
@@ -36,17 +33,17 @@
                     <li>
                         <h2>Services</h2>
                     </li>
-                    <li>Service1</li>
-                    <li>Service2</li>
-                    <li>Service4</li>
-                    <li>Service5</li>
+                    <li>Brazilian Jiu-Jitsu</li>
+                    <li>MMA Striking</li>
+                    <li>Judo</li>
+                    <li>Youth Jiu-Jitsu</li>
                 </ul>
                 <ul>
                     <li>
                         <h2>Contact</h2>
                     </li>
                     <li>
-                        <a href="/contact">
+                        <a href="{{client.address.mapLink}}" target="_blank">
                             {{client.address.lineOne}}<br>
                             {{client.address.lineTwo}}<br>
                             {{client.address.city}}
@@ -61,7 +58,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="mailto:{{client.email}}">Click to Email</a>
+                        <a href="mailto:{{client.email}}">Email</a>
                     </li>
                 </ul>
             </div>
@@ -70,7 +67,7 @@
 
     <div class="credit">
         <span>Designed and Hand Coded by</span>
-        <a href="/" target="_blank" rel="noopener">Your Company Name</a>
+        <a href="/" target="_blank" rel="noopener">Straebler Web Design</a>
         <span class="copyright">
             Copyright {% year %} - Present</span>
     </div>
