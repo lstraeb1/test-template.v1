@@ -1,0 +1,495 @@
+.section-1 {
+  height: 100vh;
+  background-image: url("/assets/images/Subg-brick-bg-mobile.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+#container-1 {
+  padding-top: 4%;
+}
+
+#header-container h1 {
+  color: var(--main-red);
+  font-family: "Bebas Neue";
+  font-size: 7rem;
+  text-shadow: 1px 1px 0px var(--alt-gray-highlight);
+}
+
+#period-selector-container {
+  background: linear-gradient(180deg, rgb(175, 175, 175), white);
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  margin-top: 10%;
+  width: 474px;
+}
+
+.period-selector {
+  font-family: "Be Vietnam";
+  border-radius: 30px;
+  font-size: 1.75rem;
+  padding: 1rem;
+  text-wrap: nowrap;
+  color: black;
+  background: none;
+  border: none;
+  z-index: 100;
+  transition: color 0.4s ease-in-out;
+}
+
+#background-red {
+  background: linear-gradient(180deg, var(--maroon), var(--main-red));
+  position: relative;
+  right: 465px;
+  border-radius: 30px;
+  transition: right 0.4s ease-in-out;
+}
+
+.section-2 {
+  height: 30vh;
+  background-color: var(--main-gray);
+}
+
+#container-2 {
+  position: absolute;
+  top: 500px;
+  right: 0;
+  left: 0;
+}
+
+.price-square {
+  background-color: rgba(228, 228, 228, 0.9);
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.plan-header-container,
+.plan-subtitle-container,
+.plan-price-container,
+.plan-sticker-container,
+.plan-included-container {
+  margin-left: 35px; /* Adjust the margin value as needed */
+  opacity: 1;
+}
+
+.plan-header-container {
+  color: var(--main-red);
+  font-family: "Bebas Neue";
+  font-size: 6rem;
+  opacity: 1;
+  margin-top: 30px;
+}
+
+.plan-subtitle-container {
+  color: black;
+  font-family: "Be Vietnam";
+  font-size: 1.75rem;
+  margin-top: -15px;
+}
+
+.plan-price-container h1 {
+  color: black;
+  font-size: 7rem;
+  font-family: "Bebas Neue";
+  margin-top: 20px;
+}
+
+#per-month {
+  font-family: "Be Vietnam";
+  font-size: 1.75rem;
+}
+
+.plan-sticker-container {
+  font-family: "Be Vietnam";
+  color: var(--alt-gray-highlight);
+  font-size: 2rem;
+  margin-top: -15px;
+}
+
+.sign-up {
+  color: var(--main-red);
+  border: none;
+  border-radius: 10px;
+  font-family: "Bebas Neue";
+  font-size: 2.25rem;
+  padding: 1rem;
+  margin-top: 30px;
+}
+
+.free-class a {
+  padding: 1rem;
+  background: linear-gradient(90deg, var(--main-red) 35%, var(--highlight-red));
+  border: none;
+  font-size: 2rem;
+  padding: 1rem 14rem;
+  border-radius: 5px;
+  color: white;
+  white-space: nowrap;
+  transition: all .3s ease-in-out;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.free-class a:hover {
+  box-shadow: 0 8px 10px 0 rgba(180, 4, 4, 0.2);
+  color: white;
+}
+
+.plan-included-container,
+.plan-included-container ul {
+  font-family: "Be Vietnam";
+  font-size: 2rem;
+  list-style: none;
+  padding: 0 0 20px 0;
+  margin-top: 30px;
+  color: black;
+}
+
+.plan-included-container img {
+  margin: -5px 20px 0 0;
+}
+
+.plan-included-container li {
+  margin-top: 10px;
+  font-size: 2rem;
+}
+
+.section-3 {
+  background-color: var(--main-gray);
+  height: 70vh;
+}
+
+#faq-header-container h1 {
+  color: var(--main-red);
+  font-size: 6rem;
+  font-family: "Bebas Neue";
+  margin-bottom: 30px;
+}
+
+.faq-block {
+  border: 1px solid rgb(232, 232, 232);
+  border-radius: 10px;
+  background-color: white;
+  padding: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.block-header-container h1 {
+  font-size: 2rem;
+  font-weight: normal;
+  color: black;
+  text-align: left;
+}
+
+.extend-button {
+  border: none;
+  background: none;
+}
+
+.answer p {
+  color: black;
+  font-size: 1.75rem;
+  text-align: left;
+  cursor: text;
+}
+
+@media (max-width: 1800px) {
+  .section-2 {
+    height: 110vh;
+    background-color: var(--main-gray);
+  }
+
+  .plan-header-container,
+  .plan-subtitle-container,
+  .plan-price-container,
+  .plan-sticker-container,
+  .plan-included-container {
+    margin-left: 15px; /* Adjust the margin value as needed */
+  }
+
+  .section-3 {
+    background-color: var(--main-gray);
+    height: 100vh;
+  }
+
+  .free-class a {
+    padding: 1rem 11rem;
+  }
+}
+
+@media (max-width: 1200px) {
+
+  .navbar-text {
+    margin-left: 1vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .navbar .container-0 .navbar-brand /* logo container */ {
+    margin-right: 1%;
+  }
+
+  .collapse .navbar-text .fa-solid {
+    display: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .become-member {
+    color: white;
+    text-decoration: none;
+    text-wrap: nowrap;
+    padding: 0.75rem;
+    border-radius: 5px;
+    font-weight: normal;
+    font-size: 1.5rem;
+    transition: all .2s ease-in-out;
+    margin-left: 1px;
+  }
+
+  .free-class a {
+    padding: 1rem 9rem;
+  }
+}
+
+@media (max-width: 992px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  body.no-scroll {
+    overflow-y: hidden;
+  }
+
+  .navbar {
+    background-color: var(--main-gray);
+    max-height: 130vh;
+    width: 100vw;
+    background-color: none;
+    z-index: 5;
+  }
+  
+  .navbar .container-0 .navbar-brand /* logo container */ {
+    background: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    padding: 10px 1.5rem;
+    margin-right: 5%;
+    background-color: none;
+  }
+  
+  button.navbar-toggler {
+    border: none; 
+    outline: none; 
+    background: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-radius: 10px;
+    box-shadow: none;
+    padding: 0 1.5rem;
+  }
+
+  .navbar-nav {
+    background: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    margin-bottom: 0;
+    margin-top: 5px;
+    height: 100vh;
+  }
+
+  .navbar-collapse .navbar-nav .nav-item .nav-link {
+    text-decoration: none;
+    color: var(--maroon);
+    font-size: 7rem; 
+    font-family: "Bebas Neue"; 
+    font-weight: bold; 
+    text-align: start;
+    text-wrap: nowrap;
+    padding: 0;
+    margin: 0 0 0 15px;
+    text-shadow: 1px 1px 1px var(--alt-gray);
+    opacity: 0;
+    transition: opacity 0.7s ease;
+    background-color: none;
+    background: none;
+  }
+
+  .nav-item-2 {
+    display: block;
+  }
+
+  #log-in-mobile a,
+  #join-us-mobile a {
+    color: var(--alt-gray-highlight);
+  }
+
+  .navbar-collapse.show .navbar-nav .nav-item .nav-link {
+    opacity: 1;
+  }
+
+  .navbar-text,
+  .become-member,
+  .log-in {
+    display: none;
+  }
+
+  .section-2 {
+    height: 70vh;
+    background-color: var(--main-gray);
+  }
+
+  #container-2 {
+    position: absolute;
+    top: 455px;
+    right: 0;
+    left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .navbar-brand img {
+    height: 20px;
+  }
+
+  .section-2 {
+    height: 80vh;
+    background-color: var(--main-gray);
+  }
+
+  .section-3 {
+    height: auto;
+  }
+
+  .free-class a {
+    padding: 1rem 9rem;
+  }
+}
+
+@media (max-width: 576px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .row {
+    max-width: 100vw;
+  }
+
+  .navbar-collapse {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 100dvh;
+  }
+
+  .navbar-collapse .navbar-nav .nav-item .nav-link {
+    margin-left: 10px;
+    font-size: 7rem;
+    margin-bottom: -10%;
+  }
+
+  .section-1 {
+    height: 100vh;
+    background-image: url("/assets/images/Subg-brick-bg-mobile.png");
+    background-size: cover;
+    background-position: center center;
+  }
+
+  #period-selector-container {
+    padding: 5px;
+    margin-top: 10%;
+    width: 350px;
+  }
+  
+  .period-selector {
+    font-size: 1.35rem;
+    transition: color 0.4s ease-in-out;
+    z-index: 1;
+    text-wrap: nowrap;
+  }
+
+  #background-red {
+    transition: right 0.4s ease-in-out;
+  }
+
+  .section-2 {
+    height: 100vh;
+  }
+
+  .section-3 {
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 100px;
+  }
+
+  #container-2 {
+    top: 500px;
+  }
+
+  .price-square {
+    background-color: rgba(228, 228, 228, 1);
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .plan-header-container,
+  .plan-subtitle-container,
+  .plan-price-container,
+  .plan-sticker-container,
+  .plan-included-container {
+    margin-left: 15px; 
+  }
+
+  .plan-header-container {
+    font-size: 5rem;
+    margin-top: 20px;
+  }
+  
+  .plan-subtitle-container {
+    font-size: 1.75rem;
+    margin-top: -15px;
+  }
+  
+  .plan-price-container h1 {
+    font-size: 6rem;
+    margin-top: 10px;
+  }
+  
+  #per-month {
+    font-family: "Be Vietnam";
+    font-size: 1.5rem;
+  }
+  
+  .plan-sticker-container {
+    font-size: 1.75rem;
+  }
+  
+  .plan-included-container,
+  .plan-included-container ul {
+    font-size: 1.75rem;
+    padding: 0 0 20px 0;
+    margin-top: 0;
+  }
+  
+  .plan-included-container i {
+    margin: 25px 20px 0 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .section-2 {
+    height: 170vh;
+  }
+}

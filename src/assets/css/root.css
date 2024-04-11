@@ -6,21 +6,39 @@
 @media only screen and (min-width: 0em) {
   :root {
     --main-red: #F51414;
-    --primary: #ffba19;
-    --primaryLight: #ffd675;
-    --secondary: #001f3f;
-    --secondaryLight: #001f3f;
-    --headerColor: #1a1a1a;
-    --bodyTextColor: #4e4b66;
-    --bodyTextColorWhite: #fafbfc;
-    /* 13px - 16px */
-    --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
-    /* 31px - 49px */
-    --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
-    --bodyFontSize: 1rem;
-    /* 60px - 100px top and bottom */
-    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+    --alt-red: #ff6347;
+    --maroon: #b40404;
+    --highlight-red: #c30707;
+    --main-gray: #F2F2F2;
+    --alt-gray: #1c1c1c;
+    --alt-gray-highlight: #313131;
+    --gray-1: #A4A4A4;
+    --gray-2: #F2F2F2;
   }
+
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+
+
+  html {
+    font-size: 62.5%;
+    font-family: 'Be Vietnam';
+  }
+
+
+  body {
+    width: 100vw;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    background-color: var(--main-gray);
+    overflow-x: hidden;
+  }
+
   .cs-topper {
     font-size: var(--topperFontSize);
     line-height: 1.2em;
@@ -52,15 +70,17 @@
     color: var(--bodyTextColor);
   }
   .cs-button-solid {
-    font-size: 1rem;
+    background: linear-gradient(90deg, var(--main-red) 35%, var(--highlight-red));
+    font-size: 1.5rem;
+    border-radius: 5px;
     font-weight: bold;
     line-height: 3.125em;
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
     width: auto;
-    padding: 0 1.875rem;
-    color: #000;
+    padding: 0 3rem;
+    color: white;
     background-color: var(--primary);
     display: inline-block;
     position: relative;
@@ -73,12 +93,14 @@
   }
   .cs-button-solid:hover:before {
     width: 100%;
+    border-radius: 4px;
   }
   .cs-button-solid:before {
     content: "";
     width: 0;
     height: 100%;
     background-color: #000;
+    border-radius: 4px;
     opacity: 1;
     display: block;
     position: absolute;
@@ -99,6 +121,7 @@
     src: local(""), url("/assets/fonts/bebas-neue-v14-latin-regular.woff2") format("woff2"), url("/assets/fonts/roboto-v29-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
 
+
   @font-face {
     font-style: normal;
     font-family: "Be Vietnam";
@@ -107,25 +130,14 @@
     src: local(""), url("/assets/fonts/be-vietnam-pro-v11-latin-regular.woff2") format("woff2"), url("/assets/fonts/roboto-v29-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
 
-  body,
-  html {
-    font-family: "Roboto", Arial, sans-serif;
-    font-size: 100%;
-    margin: 0;
-    padding: 0;
-    color: var(--bodyTextColor);
-    overflow-x: hidden;
+  @font-face {
+    font-style: normal;
+    font-family: "Knewave";
+    font-weight: normal;
+    font-display: swap;
+    src: local(""), url("/assets/fonts/knewave-v14-latin-regular.woff2") format("woff2"), url("/assets/fonts/roboto-v29-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
-  *,
-  *:before,
-  *:after {
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0;
-  }
-  body {
-    transition: background-color 0.3s;
-  }
+
   .container {
     width: 92%;
     margin: auto;
@@ -165,18 +177,11 @@
 }
 /* Reset Margins */
 @media only screen and (min-width: 1024px) {
-  body,
-  html {
-    margin: 0;
-    padding: 0;
-  }
+  
 }
 /* Scale full website with the viewport width */
 @media only screen and (min-width: 2000px) {
-  body,
-  html {
-    font-size: 0.85vw;
-  }
+  
 }
 /*-- -------------------------- -->
 <---      Dark Mode Toggle      -->
@@ -244,6 +249,7 @@
 <--- -------------------------- -*/
 /* Mobile - 1023px */
 
+
 @media (max-width: 1200px) {
 
   .navbar-text {
@@ -252,6 +258,7 @@
     flex-direction: row;
     align-items: center;
   }
+
 
   .navbar .container-0 .navbar-brand /* logo container */ {
     margin-right: 1%;
@@ -267,14 +274,17 @@
     margin-right: 0;
   }
 
+  .navbar-collapse .navbar-nav .nav-item .nav-link {
+    font-size: 10px;
+  }
+
   .become-member {
     background-color: var(--maroon);
     color: white;
     text-decoration: none;
     text-wrap: nowrap;
     padding: 0.75rem;
-    border-radius: 10px;
-    box-shadow: 0 8px 10px 0 rgba(180, 4, 4, 0.2);
+    border-radius: 5px;
     font-weight: normal;
     font-size: 1.5rem;
     transition: all .2s ease-in-out;
@@ -284,6 +294,7 @@
 
 @media (max-width: 992px) {
 
+
   .navbar {
     background-color: var(--main-gray);
     max-height: 130vh;
@@ -291,7 +302,7 @@
     background-color: none;
     z-index: 100;
   }
-  
+ 
   .navbar .container-0 .navbar-brand /* logo container */ {
     background: none;
     backdrop-filter: none;
@@ -303,10 +314,10 @@
     margin-right: 5%;
     background-color: none;
   }
-  
+ 
   button.navbar-toggler {
-    border: none; 
-    outline: none; 
+    border: none;
+    outline: none;
     background: none;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
@@ -314,6 +325,7 @@
     box-shadow: none;
     padding: 0 1.5rem;
   }
+
 
   .navbar-nav {
     background: none;
@@ -327,12 +339,13 @@
     justify-content: start;
   }
 
+
   .navbar-collapse .navbar-nav .nav-item .nav-link {
     text-decoration: none;
     color: var(--maroon);
-    font-size: 7rem; 
-    font-family: "Bebas Neue", sans-serif; 
-    font-weight: bold; 
+    font-size: 7rem;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bold;
     text-align: start;
     text-wrap: nowrap;
     padding: 0;
@@ -346,18 +359,22 @@
     bottom: 100px;
   }
 
+
   .nav-item-2 {
     display: block;
   }
+
 
   #log-in-mobile a,
   #join-us-mobile a {
     color: var(--alt-gray-highlight);
   }
 
+
   .navbar-collapse.show .navbar-nav .nav-item .nav-link {
     opacity: 1;
   }
+
 
   .navbar-text,
   .become-member,
@@ -366,20 +383,25 @@
   }
 }
 
+
 @media (max-width: 768px) {
+
 
   .navbar-brand img {
     height: 20px;
   }
 }
 
+
 @media (max-width: 576px) {
+
 
   .navbar-collapse {
     flex: 1;
     overflow-y: auto;
     height: 100dvh;
   }
+
 
   .navbar-collapse .navbar-nav .nav-item .nav-link {
     margin-left: 10px;
@@ -388,14 +410,17 @@
   }
 }
 
+
 /*-- -------------------------- -->
 <---     Desktop Navigation     -->
 <--- -------------------------- -*/
 /* Small Desktop - 1024px */
 
+
 .nav-section {
-  position: absolute;
   width: 100vw;
+  z-index: 3;
+  background-color: white;
 }
 
 .navbar /* nav container */ {
@@ -403,23 +428,14 @@
   list-style-type: none;
 }
 
-.container-0 {
-  margin-top: 20px;
-}
-
 .navbar .container-0 .navbar-brand /* logo container */ {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  background: transparent;
   padding: 10px 1.5rem;
   margin-right: 5%;
 }
 
 button.navbar-toggler {
-  border: none; 
+  border: none;
   outline: none;
 }
 
@@ -431,6 +447,7 @@ button.navbar-toggler {
   border: 0;
   height: 30px;
 }
+
 
 .toggler-icon {
   width: 40px;
@@ -472,35 +489,33 @@ button.navbar-toggler {
   transform: rotate(0)
 }
 
+
 .navbar-toggler.collapsed .toggler-icon {
   background-color: var(--maroon);
 }
+
 
 button.navbar-toggler:active {
   outline: none;
   box-shadow: none;
 }
 
+
 /* nav items */
 
 .navbar-nav {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   margin-right: 1rem;
   width: auto;
 }
 
 .navbar-collapse .navbar-nav .nav-item .nav-link {
+  font-family: "Be Vietnam";
   text-decoration: none;
   color: var(--main-red);
-  font-size: 1.75rem;
-  margin: 0 1rem; 
-  padding: 1rem 1rem;   
-  font-weight: bold; 
+  font-size: 1.5rem;
+  margin: 0 1rem;
+  padding: 1.25rem 1.25rem;  
+  font-weight: bold;
   transition: 0.2s ease-in-out;
   text-align: center;
   text-wrap: nowrap;
@@ -519,9 +534,10 @@ button.navbar-toggler:active {
 }
 
 .navbar-text {
-  margin-left: 0vw;
+  margin: 0;
   background: none;
   z-index: 1;
+  margin-left: 100px;
 }
 
 .collapse .navbar-text .log-in {
@@ -536,44 +552,21 @@ button.navbar-toggler:active {
   font-weight: bold;
 }
 
-.collapse .navbar-text .fa-solid {
-  position: absolute;
-  bottom: 18px;
-  right: 8px; 
-  transition: right 0.3s ease; 
-}
-
-.collapse .navbar-text .log-in:hover {
-  color: var(--main-red);
-}
-
-.collapse .navbar-text .log-in:hover .fa-solid {
-  color: var(--main-red);
-  right: 0;
-  cursor: pointer;
-}
-
 .become-member {
-  background-color: var(--maroon);
+  background: linear-gradient(90deg, var(--main-red) 35%, var(--highlight-red));
   color: white !important;
   text-decoration: none;
   text-wrap: nowrap;
   padding: 1rem 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 8px 10px 0 rgba(180, 4, 4, 0.2);
+  border-radius: 5px;
   font-weight: normal;
   font-size: 1.75rem;
-  transition: all .2s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .become-member:hover {
-  background-color: var(--highlight-red);
+  box-shadow: 0 8px 10px 0 rgba(180, 4, 4, 0.2);
 }
-
-/*-- -------------------------- -->
-<---   Interior Page Header     -->
-<--- -------------------------- -*/
-/* Mobile */
 
 /*-- -------------------------- -->
 <---    Final Call To Action    -->
@@ -583,18 +576,6 @@ button.navbar-toggler:active {
   #cta {
     padding: 3.125rem 0;
     position: relative;
-  }
-  #cta:before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: #000;
-    opacity: 0.7;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
   }
   #cta .container {
     text-align: center;
@@ -623,13 +604,17 @@ button.navbar-toggler:active {
     margin-bottom: 2.25rem;
     color: #fff;
     position: relative;
+    font-size: 3rem;
+    font-family: "Bebas Neue";
   }
   #cta p {
+    font-size: "Be Vietnam";
     text-align: center;
     width: 96%;
     max-width: 37.375rem;
     margin: auto;
     margin-bottom: 2.25rem;
+    font-size: 1.5rem;
     color: #fff;
     opacity: 1;
   }
@@ -643,7 +628,6 @@ button.navbar-toggler:active {
 /* Large Desktop */
 @media only screen and (min-width: 1300px) {
   #cta {
-    margin-top: 6.25rem;
     position: relative;
   }
   #cta:before {
@@ -653,10 +637,7 @@ button.navbar-toggler:active {
     content: "";
     width: 125rem;
     height: 69.25rem;
-    background: url("/assets/svgs/cta-squares.svg");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-color: var(--main-gray);
     opacity: 1;
     display: block;
     position: absolute;
@@ -666,25 +647,13 @@ button.navbar-toggler:active {
     transform: translateX(-50%);
   }
   #cta .container {
-    width: 90.0625%;
+    width: 100vw;
     margin: auto;
   }
   #cta picture {
-    width: 90.0625%;
+    width: 100%;
     left: 50%;
     transform: translateX(-50%);
-  }
-  #cta picture:before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: #000;
-    opacity: 0.7;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
   }
 }
 /* Dark Mode */
@@ -693,10 +662,13 @@ button.navbar-toggler:active {
     display: none;
   }
 }
+
+
 /*-- -------------------------- -->
-<---           Footer           -->
+<---   Interior Page Header     -->
 <--- -------------------------- -*/
 /* Mobile */
+
 @media only screen and (min-width: 0em) {
   #footer {
     font-size: min(4vw, 1.2em);
@@ -908,4 +880,3 @@ button.navbar-toggler:active {
   }
 }
 
-/*# sourceMappingURL=root.css.map */

@@ -12,6 +12,8 @@ eleventyNavigation:
 
 {% block head %}
     <link rel="stylesheet" href="/assets/css/about.css">
+    <link rel="stylesheet" href="/assets/css/critical.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 {% endblock %}
 
 {% block body %}
@@ -19,58 +21,186 @@ eleventyNavigation:
     <!--                    LANDING                   -->
     <!-- ============================================ -->
 
-    <section id="int-hero">
-        <h1 id="home-h">About Us</h1>
-        <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
-        </picture>
-
+    <section class="section-4">
+      <div class="container container-5">
+        <div class="row" id="landing-page-container">
+          <div class="col-12 intro-container justify-content-center">
+            <div class="row justify-content-center">
+              <div class="col-12 col-lg-5 intro-header-container text-center mx-md-auto">
+                <h1>Enter the World of Martial Arts</h1>
+              </div>
+            </div>
+            <div class="row col-12 justify-content-center mx-auto">
+              <div class="col-12 col-xl-5 col-md-9 text-center intro-paragraph-container">
+                <p>Step onto the mat and unlock your true potential. At Sub-G, we're more than a community, we're a family.</p>
+              </div>
+            </div>
+            <div class="row col-12 mx-auto justify-content-center">
+              <div class="call-to-action col-xl-8 col-md-8 text-center mx-md-auto mx-lg-0">
+                <div class="row text-center justify-content-center">
+                  <div class="col-8 col-sm-4 col-md-8 col-lg-4 col-xl-3">
+                    <div class="free-class d-flex justify-content-center">
+                      <a href="#contact-us-container">Free Class</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- ============================================ -->
-    <!--                 Side By Side                 -->
+    <!--                 Section 2                    -->
     <!-- ============================================ -->
 
-    <section id="sbs">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-left">
-                <picture class="cs-picture cs-picture1">
-                    <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="cabinets" loading="lazy" width="400" height="563">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source media="(max-width: 600px)" srcset="/assets/images/construction-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/construction.jpg" alt="house" loading="lazy" width="400" height="563">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About Company Title</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <div class="cs-flex-group">
-                    <p class="cs-flex-p">
-                        In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                    </p>
-                    <span class="cs-name">Justin Time</span>
-                    <span class="cs-job">CEO-Founder</span>
-                    <img class="cs-quote-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg" alt="gavel" width="136" height="77">
+    <section class="section-1">
+        <div class="container" id="container-1">
+          <div class="row">
+            <div class="col-12 col-lg-6 text-center align-items-center" id="text-container">
+              <div class="row">
+                <div class="col-12 col-lg-6 text-center text-lg-start align-items-center mx-lg-4" id="about-header-container">
+                  <h1>About us</h1>
                 </div>
-                <a href="/projects" class="cs-button-solid">Our Projects</a>
+              </div>
+              <div class="row">
+                <div class="col-12 col-lg-12 justify-content-center text-center text-lg-start mx-0 mx-lg-4" id="about-subtitle-container">
+                  <p>
+                    At Sub-G, we're more than just a Brazilian Jiu-Jitsu academy; we're a family united by a passion for martial arts and a commitment 
+                    to personal growth. Nestled in the heart of our community, we provide a welcoming environment where practitioners of all levels can thrive. 
+                  </p>
+                  <p>
+                    Whether you're a seasoned competitor or stepping onto the mat for the first time, our experienced instructors are dedicated to guiding you 
+                    on your journey to mastering the art of Jiu-Jitsu. Join us in the art of Brazilian Jiu-Jitsu at Sub-G, where every roll is an opportunity for 
+                    self-discovery, and every member is 
+                  </p>
+                  <div id="interchanging-words">family</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-lg-6 justify-content-center justify-content-lg-start d-flex mx-lg-4" id="contact-btn-1">
+                  <a href="/#contact-us">Get In Touch</a> 
+                </div>
+              </div>
             </div>
+            <div class="col-12 col-lg-6 justify-content-center text-center" id="right-side">
+              <div class="col-12 justify-content-center d-flex" id="img-container">
+                <img src="/assets/images/about-landing-imgs.png" id="about-lp-imgs" height="130px" alt="Group Photos of Sub-G members">
+              </div>
+              <div class="col-12" id="grappling">
+                <h1>Grappling in <span id="sharpie-container">Port Jervis, NY<img src="/assets/svgs/map-pin.svg" alt="pin" height="25px"></span> since 2022          <i class="fa-solid fa-location-dot" style="color: #F51414;"></i></h1>
+              </div>
+              <span id="blank"></span>
+            </div>
+          </div>
         </div>
     </section>
 
-    {% include 'components/cta.html' %}
+    <!-- ============================================ -->
+    <!--                 Section 2                    -->
+    <!-- ============================================ -->
+
+    <section class="section-2 p-0">
+        <div id="coach-img">
+          <img src="/assets/images/teacher-photo-copy.png" alt="Image of Sub-G owner and coach Tyler Roberts">
+        </div>
+        <div class="container" id="container-2">
+          <div class="row" id="header-instructor-container">
+            <div class="col-12 col-lg-6"></div>
+            <div class="col-12 col-lg-5">
+              <div class="col-12 text-center text-lg-start" id="instructor-header-container">
+                <h1><span id="instructor">Head Instructor </span>Tyler Roberts</h1>
+              </div>
+              <div class="col-12 text-center text-lg-start" id="instructor-subtitle-container">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit</p>
+              </div>
+              <div class="col-12 text-center" id="buttons-container">
+                <div class="col-12 col-lg-4 justify-content-center d-flex align-items-center" id="contact-button">
+                  <a href="/join" target="_blank">See Pricing</a>
+                </div>
+                <div class="col-12 col-lg-8" id="video-button">
+                  <a href="https://www.youtube.com/watch?v=TfJ4fIu7d88&t" target="_blank"><img src="/assets/svgs/play-button-svgrepo-com.svg" alt="play button" height="45px">Watch Video</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row col-12 mx-auto" id="traits-container">
+            <div class="col-12 col-md-3 mx-auto text-center" id="trait-1-container">
+              <img src="/assets/svgs/lightbulb-on.svg" id="trait-icon-1" height="60px" alt="experience icon">
+              <h1>Experience</h1>
+              <p class="col-12">Coach Tyler has trained under some of Jiu-Jitsu's most well respected instructors such as John Danaher.</p>
+            </div>
+            <div class="col-12 col-md-3 mx-auto text-center" id="trait-2-container">
+              <img src="/assets/svgs/bullseye.svg" id="trait-icon-2" height="60px" alt="precision icon">
+              <h1>Precision</h1>
+              <p>With over 10 years of experience in martial arts, Tyler has developed a unique and detailed teaching style</p>
+            </div>
+            <div class="col-12 col-md-3 mx-auto text-center" id="trait-3-container">
+              <img src="/assets/svgs/dumbbell.svg" id="trait-icon-3" height="60px" alt="leadership icon">
+              <h1>Leadership</h1>
+              <p>As a small business owner and respected teacher, Coach Tyler has set himself apart as an outstanding leader</p>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                 Reviews                      -->
+    <!-- ============================================ -->
+
+    <section class="section-3">
+        <div class="container" id="container-3">
+          <div class="row justify-content-center" id="review-container-header">
+            <div class="col-8 text-center" id="members-say">
+              <h1>What Our Members Say</h1>
+            </div>
+            <div class="col-12 col-md-9 col-lg-7 text-center" id="members-say-subtitle">
+              <p>At SUB-G, we deeply value the insights and opinions of our members. We are committed to listening, learning, and continuously improving.</p>
+            </div>
+          </div>
+          <div class="row" id="reviews-row-container">
+            <div class="col-12 col-lg-4  reviews mx-auto" id="review-1">
+              <div class="col-12" id="review-container">
+                <img src="/assets/svgs/quote-svgrepo-com.svg" height="70px" class="quote-img" alt="quote-image">
+                <p>This is a great school! The teacher is very informative. He takes time out for every student and shows genuine intrest. New people to the art will not feel intimidated and experienced individuals will find avenues to improve!</p>
+                <h1>Tim F.</h1>
+                <h2>Sub-G Member</h2>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 reviews mx-auto" id="review-2">
+              <div class="col-12" id="review-container">
+                <img src="/assets/svgs/quote-svgrepo-com.svg" height="70px" class="quote-img" alt="quote-image">
+                <p>Super great place to train, everyone is friendly and respectful. The instructor is a very good teacher, I've learned so much in a short period of time along with my daughter who loves training here and he's great with the kids so I highly recommend this gym.</p>
+                <h1>Mike H.</h1>
+                <h2>Sub-G Member</h2>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 reviews mx-auto" id="review-3">
+              <div class="col-12" id="review-container">
+                <img src="/assets/svgs/quote-svgrepo-com.svg" height="70px" class="quote-img" alt="quote-image">
+                <p>I'm impressed with the relaxed informal class structure at Sub-G. After training at a few schools over the course of a few years the non-traditional approach at Sub-G was very refreshing. This is a growth oriented learning space...</p>
+                <h1>Sean R.</h1>
+                <h2>Sub-G Member</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-4 justify-content-center">
+            <div class="col-10 col-md-12 justify-content-center d-flex" id="buttons-container-2">
+              <div class="col-12 col-md-3 col-lg-2 text-center mx-md-2 mb-3 mb-md-0" id="more-reviews">
+                <a href="https://www.google.com/search?q=Sub-G+Brazilian+Jiu-Jitsu+Port+Jervis+NY&rlz=1C1UEAD_enUS934US934&oq=Sub-G+Brazilian+Jiu-Jitsu+Port+Jervis+NY&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIKCAEQABiiBBiJBTIKCAIQABiiBBiJBTIKCAMQABiABBiiBDIGCAQQRRg9MgYIBRBFGD3SAQkxNDg0M2owajSoAgiwAgE&sourceid=chrome&ie=UTF-8#" target="_blank">More Reviews</a>
+              </div>
+              <div class="col-12 col-md-3 col-lg-2 text-center mx-md-2" id="leave-review">
+                <a href="https://www.google.com/search?q=Sub-G+Brazilian+Jiu-Jitsu+Port+Jervis+NY&rlz=1C1UEAD_enUS934US934&oq=Sub-G+Brazilian+Jiu-Jitsu+Port+Jervis+NY&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIKCAEQABiiBBiJBTIKCAIQABiiBBiJBTIKCAMQABiABBiiBDIGCAQQRRg9MgYIBRBFGD3SAQkxNDg0M2owajSoAgiwAgE&sourceid=chrome&ie=UTF-8#" target="_blank">Leave a Review</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {% include 'components/cta.html' %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="/assets/js/about.js"></script>
 
 {% endblock %}
