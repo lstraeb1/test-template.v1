@@ -666,16 +666,16 @@ footer {
     max-height: 450px;
   }
   #images-container {
-    height: 70vh;
+    height: 50vh;
   }
   #images-container img {
-    height: 90%;
+    height: 85%;
   }
   .free-class {
     margin-bottom: 10px;
   }
   .call-to-action a {
-    font-size: 2.25rem;
+    font-size: 1.75rem;
   }
   #email-phone a {
     color: white;
