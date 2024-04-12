@@ -177,6 +177,11 @@
   margin-bottom: 5px;
 }
 
+.fa-chevron-down {
+  transform: rotate(0deg);
+  transition: all 0.3s ease-in;
+}
+
 .block-header-container h1 {
   font-size: 2rem;
   font-weight: normal;

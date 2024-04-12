@@ -217,12 +217,12 @@ function extendFaq1() {
 	if (answer1.innerHTML.trim() !== "") {
 		answer1.innerHTML = "";
 		question1.style.fontWeight = "normal"; 
-		chevron1.src = "/assets/svgs/chevron-down.svg";
+		chevron1.style.transform = "rotate(0deg)";
 	} else {
 		answer1.innerHTML = `<p>Save up to $25/month and get 2 free private lessons/month by choosing an annual plan. Our annual plans are great 
 		for customers who live locally and can commit to the extended timeframe. Join the family at Sub-G on your path to martial arts mastery</p>`;
 		question1.style.fontWeight = "bold";
-		chevron1.src = "/assets/svgs/chevron-up.svg";
+		chevron1.style.transform = "rotate(540deg)";
 	}
 };
 
@@ -230,12 +230,12 @@ function extendFaq2() {
 	if (answer2.innerHTML.trim() !== "") {
 		answer2.innerHTML = "";
 		question2.style.fontWeight = "normal"; 
-		chevron2.src = "/assets/svgs/chevron-down.svg";
+		chevron2.style.transform = "rotate(0deg)";
 	} else {
 		answer2.innerHTML = `<p>At Sub-G we welcome individuals of all experience levels to join our community. Whether you're a complete beginner or have previous martial 
 		arts experience, our classes are designed to accommodate everyone. The relaxed environment of Sub-G coupled with its qualified instructors make it a great place to train for everyone.</p>`;
 		question2.style.fontWeight = "bold";
-		chevron2.src = "/assets/svgs/chevron-up.svg";
+		chevron2.style.transform = "rotate(540deg)";
 	}
 };
 
@@ -243,12 +243,12 @@ function extendFaq3() {
 	if (answer3.innerHTML.trim() !== "") {
 		answer3.innerHTML = "";
 		question3.style.fontWeight = "normal"; 
-		chevron3.src = "/assets/svgs/chevron-down.svg";
+		chevron3.style.transform = "rotate(0deg)";
 	} else {
 		answer3.innerHTML = `<p>At Sub-G, the safety and well-being of our young students are our top priorities. We implement rigorous safety protocols and age-appropriate 
 		training methods to ensure a positive and secure learning experience for children of all ages. Additionally, we maintain a clean and padded training area to minimize the risk of injury.</p>`;
 		question3.style.fontWeight = "bold";
-		chevron3.src = "/assets/svgs/chevron-up.svg";
+		chevron3.style.transform = "rotate(540deg)";
 	}
 };
 
@@ -256,12 +256,12 @@ function extendFaq4() {
 	if (answer4.innerHTML.trim() !== "") {
 		answer4.innerHTML = "";
 		question4.style.fontWeight = "normal"; 
-		chevron4.src = "/assets/svgs/chevron-down.svg";
+		chevron4.style.transform = "rotate(0deg)";
 	} else {
 		answer4.innerHTML = `<p>training in martial arts can provide students with practical self-defense skills, mental discipline, and improved confidence. Through disciplined practice, students develop mental resilience, 
 		concentration, and self-control. Our supportive community fosters positive attitudes, respect, and camaraderie among students.</p>`;
 		question4.style.fontWeight = "bold";
-		chevron4.src = "/assets/svgs/chevron-up.svg";
+		chevron4.style.transform = "rotate(540deg)";
 	}
 };
 
@@ -269,12 +269,12 @@ function extendFaq5() {
 	if (answer5.innerHTML.trim() !== "") {
 		answer5.innerHTML = "";
 		question5.style.fontWeight = "normal"; 
-		chevron5.src = "/assets/svgs/chevron-down.svg";
+		chevron5.style.transform = "rotate(0deg)";
 	} else {
 		answer5.innerHTML = `<p>While some of our classes involve training in a traditional BJJ gi, it is not required. We encourage students to wear atheletic clothing
 		that they can be comfortable and agile in. We recommend trying out one of our free classes before purchasing gis, rashguards, mouthguards, or any other equipment.</p>`;
 		question5.style.fontWeight = "bold";
-		chevron5.src = "/assets/svgs/chevron-up.svg";
+		chevron5.style.transform = "rotate(540deg)";
 	}
 };
 
