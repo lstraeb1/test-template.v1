@@ -1,9 +1,12 @@
+/* PAGE-SPECIFIC STYLES FOR THE ABOUT PAGE */
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
 .section-4 {
   height: 80vh;
   background-color: var(--main-gray);
   background-image: url("/assets/images/about-lp-bg.png");
   background-size: cover;
-  
 }
 
 .container-5 {
@@ -83,7 +86,7 @@
 }
 
 #contact-btn-1 a {
-  background: linear-gradient(90deg, var(--main-red) 35%, var(--highlight-red)); 
+  background: linear-gradient(90deg, var(--main-red) 35%, var(--highlight-red));
   border: none;
   padding: 1rem 3rem;
   border-radius: 5px;
@@ -91,7 +94,7 @@
   font-size: 2rem;
   font-weight: bold;
   text-decoration: none;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   text-wrap: nowrap;
 }
 
@@ -116,15 +119,14 @@
 }
 
 #sharpie-container {
-  color: var(--main-red)
+  color: var(--main-red);
 }
 
 /* Section 2 */
-
 .section-2 {
   height: 90vh;
   background-color: var(--main-gray);
-  background-image: url('/assets/images/teacher-photo.png');
+  background-image: url("/assets/images/teacher-photo.png");
   background-position: bottom 0px left 0;
   background-size: 70%;
   background-repeat: no-repeat;
@@ -157,7 +159,7 @@
 }
 
 #contact-button a {
-  background: linear-gradient(90deg, var(--main-red) 35%, var(--highlight-red)); 
+  background: linear-gradient(90deg, var(--main-red) 35%, var(--highlight-red));
   border: none;
   padding: 1rem 3rem;
   border-radius: 5px;
@@ -165,7 +167,7 @@
   font-size: 2rem;
   font-weight: bold;
   text-decoration: none;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   text-wrap: nowrap;
 }
 
@@ -217,7 +219,6 @@
 }
 
 /* Section 3 */
-
 .section-3 {
   height: 80vh;
   background-color: var(--main-gray);
@@ -281,7 +282,7 @@
   border-radius: 5px;
   font-size: 1.75rem;
   text-decoration: none;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   text-wrap: nowrap;
   cursor: pointer;
 }
@@ -303,7 +304,7 @@
   border-radius: 5px;
   font-size: 1.75rem;
   white-space: nowrap;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
 
@@ -322,29 +323,23 @@
   .section-4 {
     height: 100vh;
   }
-
   .section-1 {
     height: 130vh;
   }
-
   #container-1 {
     padding-top: 10;
   }
-
   #about-lp-imgs {
     height: 70vh;
   }
-
   .section-2 {
     height: 150vh;
     background-position: bottom 40vh left 0;
   }
-
   .section-3 {
     height: 140vh;
   }
 }
-
 @media (max-width: 1200px) {
   .become-member {
     background-color: var(--maroon);
@@ -355,35 +350,29 @@
     border-radius: 5px;
     font-weight: normal;
     font-size: 1.5rem;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     margin-left: 1px;
   }
-
   .section-2 {
     background-position: bottom 110vh left 0;
   }
-
   .reviews p {
     height: 230px;
   }
 }
-
 @media (max-width: 992px) {
   body {
     overflow-x: hidden;
   }
-
   body.no-scroll {
     overflow-y: hidden;
   }
-
   .nav-section {
     width: 100vw;
     z-index: 3;
     background-color: white;
     position: absolute;
   }
-
   .navbar {
     background-color: var(--main-gray);
     max-height: 130vh;
@@ -391,8 +380,7 @@
     background-color: none;
     z-index: 100;
   }
-  
-  .navbar .container-0 .navbar-brand /* logo container */ {
+  .navbar .container-0 .navbar-brand {
     background: none;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
@@ -403,10 +391,9 @@
     margin-right: 5%;
     background-color: none;
   }
-  
   button.navbar-toggler {
-    border: none; 
-    outline: none; 
+    border: none;
+    outline: none;
     background: none;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
@@ -414,7 +401,6 @@
     box-shadow: none;
     padding: 0 1.5rem;
   }
-
   .navbar-nav {
     background: none;
     backdrop-filter: none;
@@ -426,13 +412,12 @@
     height: 100vh;
     justify-content: start;
   }
-
   .navbar-collapse .navbar-nav .nav-item .nav-link {
     text-decoration: none;
     color: var(--maroon);
-    font-size: 7rem; 
-    font-family: "Bebas Neue"; 
-    font-weight: bold; 
+    font-size: 7rem;
+    font-family: "Bebas Neue";
+    font-weight: bold;
     text-align: start;
     text-wrap: nowrap;
     padding: 0;
@@ -445,104 +430,82 @@
     position: relative;
     bottom: 100px;
   }
-
   .nav-item-2 {
     display: block;
   }
-
   #log-in-mobile a,
   #join-us-mobile a {
     color: var(--alt-gray-highlight);
   }
-
   .navbar-collapse.show .navbar-nav .nav-item .nav-link {
     opacity: 1;
   }
-
   .navbar-text,
   .become-member,
   .log-in {
     display: none;
   }
-
   .section-1,
   .section-2,
   .section-3 {
     height: auto;
   }
-
   .container {
     height: auto;
   }
-
   #container-1 {
     padding-top: 20px;
   }
-
   .section-4 {
     height: 60vh;
   }
-
   .container-5 {
     padding-top: 150px;
   }
-
   .section-2 {
     background-image: none;
   }
-
   #coach-img img {
     height: auto;
     max-height: 400px;
     max-width: 100vw;
   }
-
   #instructor-header-container h1 {
     margin-top: 0;
   }
-
   #buttons-container {
     flex-direction: column;
     justify-content: center;
   }
-
   #contact-button {
     padding: 1rem;
   }
-
   .section-3 {
     height: auto;
     padding-bottom: 40px;
     background-position: top 200px left 0;
     padding-top: 40px;
   }
-
   #traits-container {
     padding-bottom: 10%;
   }
-
   #review-container-header {
     height: auto;
   }
 }
-
 @media (max-width: 768px) {
   .navbar-brand img {
     height: 20px;
   }
-
   .section-4 {
     height: 70vh;
   }
-
   #about-lp-imgs {
     height: 45vh;
   }
-
   #video-button {
     text-align: center;
   }
-
   .section-2 {
     background-color: var(--main-gray);
     background-image: none;
@@ -550,66 +513,56 @@
     background-size: contain;
     background-repeat: no-repeat;
   }
-
   .section-3 {
     height: auto;
     padding-bottom: 40px;
     padding-top: 0;
     background-position: top 140px left 0;
   }
-
   #review-container-header {
     padding-bottom: 50px;
   }
-
   #members-say h1 {
     font-size: 5rem;
     line-height: 0.75;
   }
-
   #members-say-subtitle p {
     font-size: 1.75rem;
   }
-
   #buttons-container-2 {
     display: flex;
     flex-direction: column;
   }
 }
-
 @media (max-width: 576px) {
   .navbar-collapse {
     flex: 1;
     overflow-y: auto;
     height: 100dvh;
   }
-
   .navbar-collapse .navbar-nav .nav-item .nav-link {
     margin-left: 10px;
     font-size: 7rem;
     margin-bottom: -10%;
   }
-
   .section-4 {
     height: 100vh;
   }
-
   #container-1 {
     padding-top: 20px;
   }
-
   .section-3 {
     background-position: top 210px left 0;
     padding-top: 65px;
   }
 }
-
 @media (max-width: 400px) {
   .section-4 {
     height: 130vh;
   }
-
   #container-1 {
     padding-top: 0;
   }
 }
+
+/*# sourceMappingURL=about.css.map */
