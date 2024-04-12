@@ -377,6 +377,13 @@
     overflow-y: hidden;
   }
 
+  .nav-section {
+    width: 100vw;
+    z-index: 3;
+    background-color: white;
+    position: absolute;
+  }
+
   .navbar {
     background-color: var(--main-gray);
     max-height: 130vh;

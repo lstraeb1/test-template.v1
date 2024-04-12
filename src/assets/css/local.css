@@ -573,6 +573,13 @@ footer {
     overflow-y: hidden;
   }
 
+  .nav-section {
+    width: 100vw;
+    z-index: 3;
+    background-color: white;
+    position: absolute;
+  }
+
   .navbar {
     background-color: var(--main-gray);
     max-height: 130vh;
@@ -715,13 +722,9 @@ footer {
     height: auto;
     padding-bottom: 20px;
   }
-
-
 }
 
-
 @media (max-width: 768px) {
-
 
   .navbar-brand img {
     height: 20px;
@@ -737,30 +740,25 @@ footer {
     align-items: center;
   }
 
-
   #email-phone {
     margin-top: 45%;
   }
- 
+
 }
 
 
 @media (max-width: 576px) {
-
-
   .navbar-collapse {
     flex: 1;
     overflow-y: auto;
     height: 100dvh;
   }
 
-
   .navbar-collapse .navbar-nav .nav-item .nav-link {
     margin-left: 10px;
     font-size: 7rem;
     margin-bottom: -10%;
   }
-
 
   .intro-img-container img {
     margin-top: 10vh;
@@ -775,11 +773,9 @@ footer {
     margin-bottom: 10px;
   }
 
-
   .call-to-action a {
-    font-size: 2.25rem;
+    font-size: 1.75rem;
   }
-
 
   #email-phone a {
     color: white;

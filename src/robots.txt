@@ -1,5 +1,8 @@
 User-agent: *
 Disallow: /admin/
 Allow: /
+Allow: /about/
+Allow: /join/
+Allow: /schedule/
 
 Sitemap: https://www.yourwebsite.com/sitemap.xml
