@@ -760,6 +760,7 @@ footer {
     margin-bottom: -10%;
   }
 
+
   .intro-img-container img {
     margin-top: 10vh;
     max-height: 450px;
@@ -774,7 +775,7 @@ footer {
   }
 
   .call-to-action a {
-    font-size: 1.75rem;
+    font-size: 2.25rem;
   }
 
   #email-phone a {
