@@ -128,11 +128,19 @@
     padding-top: 70px;
   }
   
+  #images-container {
+    height: 90vh;
+  }
+
   #images-container img {
-    height: 55%;
+    height: 100%;
     opacity: 0;
     transform: translateY(8%);
     transition: all 0.8s ease-in-out;
+  }
+
+  #about-us-container {
+    height: auto;
   }
   
   #about-us-header h1 {
@@ -515,7 +523,7 @@
     }
   
     .section-4 {
-      height: 120vh;
+      height: 130vh;
     }
   }
   
@@ -738,9 +746,11 @@
     .navbar-brand img {
       height: 20px;
     }
+
+
   
     #images-container img {
-      height: 45vh;
+      height: 100%;
     }
   
     .intro-container {
@@ -774,9 +784,13 @@
       margin-top: 10vh;
       max-height: 450px;
     }
+
+    #images-container {
+      height: 70vh;
+    }
   
     #images-container img {
-      height: 40vh;
+      height: 90%;
     }
   
     .free-class {
