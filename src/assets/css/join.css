@@ -6,7 +6,7 @@
 }
 
 #container-1 {
-  padding-top: 4%;
+  padding-top: 100px;
 }
 
 #header-container h1 {
@@ -377,11 +377,12 @@
   }
 
   .section-2 {
-    height: 80vh;
+    height: 100vh;
     background-color: var(--main-gray);
   }
 
   .section-3 {
+    min-height: 100vh;
     height: auto;
   }
 
