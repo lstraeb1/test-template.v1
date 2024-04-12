@@ -161,7 +161,7 @@
 }
 
 #more-about a {
-  padding: 1.5rem 5rem;
+  padding: 1.5rem 4rem;
   background: linear-gradient(90deg, var(--main-red) 35%, var(--highlight-red));
   border: none;
   border-radius: 5px;
@@ -455,6 +455,9 @@ footer {
 @media (max-width: 1800px) {
   .section-1 {
     height: 100vh;
+  }
+  #more-about a {
+    padding: 1.5rem 2.5rem;
   }
   #section-3 {
     height: 80vh;

@@ -203,7 +203,7 @@
 
 @media (max-width: 1800px) {
   .section-2 {
-    height: 110vh;
+    height: 120vh;
     background-color: var(--main-gray);
   }
 
@@ -357,16 +357,19 @@
     display: none;
   }
 
+  .section-1 {
+    height: 50vh;
+  }
+
   .section-2 {
-    height: 70vh;
+    height: 150vh;
     background-color: var(--main-gray);
   }
 
   #container-2 {
-    position: absolute;
-    top: 455px;
-    right: 0;
-    left: 0;
+    position: static;
+    min-height: 100%;
+    max-height: calc(100% + 30%);
   }
 }
 
@@ -377,7 +380,7 @@
   }
 
   .section-2 {
-    height: 100vh;
+    height: 130vh;
     background-color: var(--main-gray);
   }
 
@@ -414,7 +417,7 @@
   }
 
   .section-1 {
-    height: 100vh;
+    height: 60vh;
     background-image: url("/assets/images/Subg-brick-bg-mobile.png");
     background-size: cover;
     background-position: center center;
@@ -438,17 +441,13 @@
   }
 
   .section-2 {
-    height: 100vh;
+    height: 140vh;
   }
 
   .section-3 {
     height: auto;
     min-height: 100vh;
     padding-bottom: 100px;
-  }
-
-  #container-2 {
-    top: 500px;
   }
 
   .price-square {

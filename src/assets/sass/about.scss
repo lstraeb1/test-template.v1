@@ -165,7 +165,7 @@
   #contact-button a {
     background: linear-gradient(90deg, var(--main-red) 35%, var(--highlight-red)); 
     border: none;
-    padding: 1rem 3rem;
+    padding: 1rem 5rem;
     border-radius: 5px;
     color: white;
     font-size: 2rem;
@@ -507,11 +507,6 @@
       margin-top: 0;
     }
   
-    #buttons-container {
-      flex-direction: column;
-      justify-content: center;
-    }
-  
     #contact-button {
       padding: 1rem;
     }
@@ -539,6 +534,14 @@
   
     .section-4 {
       height: 70vh;
+    }
+
+    #contact-button a {
+      padding: 1rem 6rem;
+    }
+
+    #contact-btn-1 a {
+      padding: 1rem 13rem;
     }
   
     #about-lp-imgs {
@@ -576,11 +579,6 @@
     #members-say-subtitle p {
       font-size: 1.75rem;
     }
-  
-    #buttons-container-2 {
-      display: flex;
-      flex-direction: column;
-    }
   }
   
   @media (max-width: 576px) {
@@ -599,6 +597,15 @@
     .section-4 {
       height: 100vh;
     }
+
+    #contact-button a {
+      padding: 1rem 13rem;
+    }
+
+    #buttons-container {
+      flex-direction: column;
+      justify-content: center;
+    }
   
     #container-1 {
       padding-top: 20px;
@@ -607,6 +614,11 @@
     .section-3 {
       background-position: top 210px left 0;
       padding-top: 65px;
+    }
+
+    #buttons-container-2 {
+      display: flex;
+      flex-direction: column;
     }
   }
   
