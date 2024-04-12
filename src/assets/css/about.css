@@ -548,7 +548,7 @@
     height: 100vh;
   }
   #contact-button a {
-    padding: 1rem 13rem;
+    padding: 1rem 11rem;
   }
   #buttons-container {
     flex-direction: column;
