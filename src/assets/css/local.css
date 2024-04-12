@@ -1,3 +1,8 @@
+/* PAGE-SPECIFIC STYLES FOR THE HOME PAGE */
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
 .section-1 {
   background-image: url("/assets/images/home-landing-bg.png");
   background-repeat: no-repeat;
@@ -13,13 +18,11 @@
   margin-top: 5%;
 }
 
-
 .intro-container {
   padding-top: 15vh;
   justify-content: center;
   align-items: center;
 }
-
 
 .intro-header-container h1 {
   font-size: 8rem;
@@ -30,7 +33,6 @@
   font-family: "Bebas Neue", sans-serif;
 }
 
-
 .intro-paragraph-container p {
   color: white;
   line-height: 1.5;
@@ -40,7 +42,6 @@
   font-family: "Be Vietnam", sans-serif;
 }
 
-
 .free-class {
   padding: 1.25rem 1.5rem;
   background: linear-gradient(90deg, var(--main-red) 35%, var(--highlight-red));
@@ -49,9 +50,8 @@
   color: white;
   font-size: 1.75rem;
   white-space: nowrap;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
-
 
 .free-class a {
   font-family: "Be Vietnam";
@@ -61,18 +61,15 @@
   font-weight: bold;
 }
 
-
 .free-class:hover {
   box-shadow: 0 8px 10px 0 rgba(180, 4, 4, 0.2);
   color: white;
   cursor: pointer;
 }
 
-
 .free-class a:hover {
   color: white;
 }
-
 
 .learn-more-container {
   padding: 1.25rem 1.5rem;
@@ -82,9 +79,8 @@
   color: white;
   font-size: 1.75rem;
   white-space: nowrap;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
-
 
 .learn-more-container a {
   font-family: "Be Vietnam";
@@ -94,18 +90,15 @@
   font-weight: bold;
 }
 
-
 .learn-more-container:hover {
   box-shadow: 0 8px 10px 0 rgba(28, 28, 28, 0.2);
   color: white;
   cursor: pointer;
 }
 
-
 .learn-more-container a:hover {
   color: white;
 }
-
 
 .intro-img-container img {
   margin-top: 10vh;
@@ -193,7 +186,6 @@
   height: auto;
 }
 
-
 .classes-container {
   padding-bottom: 40px;
   padding-top: 20px;
@@ -204,7 +196,6 @@
   border-radius: 10px;
 }
 
-
 #classes-header-container h1 {
   color: var(--maroon);
   font-size: 5rem;
@@ -212,18 +203,15 @@
   font-family: "Bebas Neue";
 }
 
-
 #classes-subtitle-container p {
   font-size: 1.75rem;
   line-height: 1.5;
   font-family: "Be Vietnam";
 }
 
-
 .classes-info-container {
   padding-top: 3%;
 }
-
 
 .class-option {
   background: transparent;
@@ -238,23 +226,19 @@
   transition: 0.2s ease-in-out;
 }
 
-
 .class-option:hover {
   background-color: var(--maroon);
   color: white;
 }
 
-
-*,*:focus,*:hover{
-  outline:none;
+*, *:focus, *:hover {
+  outline: none;
 }
-
 
 #classes-img-container {
   max-width: 100%;
   height: auto;
 }
-
 
 #class-skills-header {
   color: var(--maroon);
@@ -265,13 +249,11 @@
   text-shadow: 1px 1px 1px var(--gray-1);
 }
 
-
 #class-skills-subtitle {
   font-family: "Be Vietnam";
   font-size: 1.5rem;
   margin-bottom: 10%;
 }
-
 
 #join-today {
   background: linear-gradient(90deg, var(--main-red) 35%, var(--highlight-red));
@@ -280,9 +262,8 @@
   border-radius: 5px;
   color: white;
   white-space: nowrap;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
-
 
 #join-today a {
   font-family: "Be Vietnam";
@@ -291,18 +272,15 @@
   font-size: 1.5rem;
 }
 
-
 #join-today:hover {
   box-shadow: 0 8px 10px 0 rgba(180, 4, 4, 0.2);
   color: white;
   cursor: pointer;
 }
 
-
 #join-today a:hover {
   color: white;
 }
-
 
 #see-pricing {
   padding: 1rem;
@@ -312,9 +290,8 @@
   color: white;
   font-size: 1.5rem;
   white-space: nowrap;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
-
 
 #see-pricing a {
   font-family: "Be Vietnam";
@@ -322,7 +299,6 @@
   color: white;
   font-size: 1.5rem;
 }
-
 
 #see-pricing:hover {
   box-shadow: 0 8px 10px 0 rgba(28, 28, 28, 0.2);
@@ -368,11 +344,9 @@
   margin-top: 25%;
 }
 
-
 #email-phone {
   margin-top: 65%;
 }
-
 
 #email-phone a {
   color: white;
@@ -381,15 +355,13 @@
   text-wrap: nowrap;
 }
 
-
 .fa-envelope, .fa-phone {
   color: var(--alt-gray-highlight);
   font-size: 1.5rem;
   padding-right: 5px;
 }
 
-
-#contact-us-header-container h1{
+#contact-us-header-container h1 {
   color: var(--maroon);
   font-weight: bold;
   font-size: 5rem;
@@ -397,12 +369,10 @@
   margin-top: 70px;
 }
 
-
 .form-group {
   display: flex;
   flex-direction: column;
 }
-
 
 .input-container {
   border-bottom: 2px solid var(--gray-1);
@@ -416,7 +386,6 @@
   box-sizing: border-box;
 }
 
-
 .label-container {
   color: var(--alt-gray-highlight);
   font-family: "Be Vietnam";
@@ -425,29 +394,24 @@
   font-size: 1.75rem;
 }
 
-
 #fname, #lname {
   margin-bottom: 10%;
 }
-
 
 .input-container::placeholder {
   color: var(--gray-1);
 }
 
-
 #preferred-method-container {
   margin-top: 10px;
 }
 
-
-label[for="preferred-phone"], label[for="preferred-email"] {
+label[for=preferred-phone], label[for=preferred-email] {
   font-size: 1.25rem;
   font-family: "Be Vietnam";
   margin-left: 5px;
   font-weight: bold;
 }
-
 
 #submit-contact-form {
   margin-top: 20px;
@@ -458,31 +422,26 @@ label[for="preferred-phone"], label[for="preferred-email"] {
   border-radius: 5px;
   color: white;
   font-size: 1.75rem;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
-
 
 #submit-contact-form:hover {
   box-shadow: 0 8px 10px 0 rgba(180, 4, 4, 0.2);
 }
 
-
 #section-3 {
   height: 60vh;
 }
-
 
 footer {
   height: 40vh;
   background-color: var(--alt-gray-highlight);
 }
 
-
 #important-info-1 {
   display: flex;
   flex-direction: column;
 }
-
 
 #important-info-1 a,
 #important-info-2 a,
@@ -493,54 +452,38 @@ footer {
   font-family: "Be Vietnam";
 }
 
-
 @media (max-width: 1800px) {
   .section-1 {
     height: 100vh;
   }
-
-
   #section-3 {
     height: 80vh;
   }
-
   .section-4 {
     height: 120vh;
   }
 }
-
-
 @media (max-width: 1200px) {
   .section-1 {
     height: auto;
   }
-
-
   .navbar-text {
     margin-left: 1vw;
     display: flex;
     flex-direction: row;
     align-items: center;
   }
-
-
-  .navbar .container-0 .navbar-brand /* logo container */ {
+  .navbar .container-0 .navbar-brand {
     margin-right: 1%;
   }
-
-
-  .navbar .container-0 .navbar-brand img /* logo container */ {
+  .navbar .container-0 .navbar-brand img {
     height: 20px;
   }
-
-
   .collapse .navbar-text .fa-solid {
     display: none;
     margin-left: 0;
     margin-right: 0;
   }
-
-
   .become-member {
     background-color: var(--maroon);
     color: white;
@@ -550,35 +493,26 @@ footer {
     border-radius: 5px;
     font-weight: normal;
     font-size: 1.5rem;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     margin-left: 1px;
   }
-
   #email-phone {
     margin-top: 55%;
   }
 }
-
-
 @media (max-width: 992px) {
-
-
   body {
     overflow-x: hidden;
   }
-
-
   body.no-scroll {
     overflow-y: hidden;
   }
-
   .nav-section {
     width: 100vw;
     z-index: 3;
     background-color: white;
     position: absolute;
   }
-
   .navbar {
     background-color: var(--main-gray);
     max-height: 130vh;
@@ -586,8 +520,7 @@ footer {
     background-color: none;
     z-index: 100;
   }
- 
-  .navbar .container-0 .navbar-brand /* logo container */ {
+  .navbar .container-0 .navbar-brand {
     background: none;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
@@ -598,7 +531,6 @@ footer {
     margin-right: 5%;
     background-color: none;
   }
- 
   button.navbar-toggler {
     border: none;
     outline: none;
@@ -609,8 +541,6 @@ footer {
     box-shadow: none;
     padding: 0 1.5rem;
   }
-
-
   .navbar-nav {
     background: none;
     backdrop-filter: none;
@@ -622,8 +552,6 @@ footer {
     height: 100vh;
     justify-content: start;
   }
-
-
   .navbar-collapse .navbar-nav .nav-item .nav-link {
     text-decoration: none;
     color: var(--maroon);
@@ -642,161 +570,115 @@ footer {
     position: relative;
     bottom: 100px;
   }
-
-
   .nav-item-2 {
     display: block;
   }
-
-
   #log-in-mobile a,
   #join-us-mobile a {
     color: var(--alt-gray-highlight);
   }
-
-
   .navbar-collapse.show .navbar-nav .nav-item .nav-link {
     opacity: 1;
   }
-
-
   .navbar-text,
   .become-member,
   .log-in {
     display: none;
   }
-
-
   .container-1 {
     height: auto;
     min-height: 100vh;
   }
-
-
   .section-2 {
     height: auto;
   }
-
   .section-4 {
     height: auto;
   }
-
-
   .classes-container {
     padding-top: 20px;
     height: auto;
   }
-
-
   #email-phone {
     margin-top: 25%;
   }
-
-
   #contact-us-container {
     height: auto;
     padding-bottom: 30px;
     border-radius: 0;
   }
-
-
   .input-container {
     border-radius: 0;
   }
-
-
   #submit-contact-form {
     margin-bottom: 30px;
     box-shadow: 0 4px 10px 0 rgba(180, 4, 4, 0.2);
   }
-
-
   #section-3 {
     height: auto;
     padding-bottom: 40px;
   }
-
-
   footer {
     height: auto;
     padding-bottom: 20px;
   }
 }
-
 @media (max-width: 768px) {
-
   .navbar-brand img {
     height: 20px;
   }
-
   #images-container img {
     height: 45vh;
   }
-
   .intro-container {
     margin-top: 10%;
     justify-content: center;
     align-items: center;
   }
-
   #email-phone {
     margin-top: 45%;
   }
-
 }
-
-
 @media (max-width: 576px) {
   .navbar-collapse {
     flex: 1;
     overflow-y: auto;
     height: 100dvh;
   }
-
   .navbar-collapse .navbar-nav .nav-item .nav-link {
     margin-left: 10px;
     font-size: 7rem;
     margin-bottom: -10%;
   }
-
-
   .intro-img-container img {
     margin-top: 10vh;
     max-height: 450px;
   }
-
   #images-container img {
     height: 40vh;
   }
-
   .free-class {
     margin-bottom: 10px;
   }
-
   .call-to-action a {
     font-size: 2.25rem;
   }
-
   #email-phone a {
     color: white;
     font-size: 1.25rem;
     text-decoration: none;
     text-wrap: nowrap;
   }
- 
   .fa-envelope, .fa-phone {
     color: var(--alt-gray-highlight);
     font-size: 1.25rem;
     padding-right: 5px;
   }
 }
-
-
 @media (max-width: 450px) {
-
-
   .container-2 {
     padding-top: 10%;
   }
 }
 
+/*# sourceMappingURL=local.css.map */
