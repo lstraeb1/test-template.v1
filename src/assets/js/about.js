@@ -17,6 +17,27 @@ const changeLastWord = () => {
 
 setInterval(changeLastWord, 1000);
 
-const aboutImages = document.getElementById('about-lp-imgs');
+const image = document.getElementById('about-lp-imgs');
+const imageContainer = document.getElementById('img-container');
 
-document.addEventListener('scroll', slideIn => aboutImages.style.opacity = "1")
+// Create a new Intersection Observer
+const observer = new IntersectionObserver((entries, observer) => {
+  // Loop through each intersection entry
+  entries.forEach(entry => {
+    // Check if the image container is intersecting with the viewport
+    if (entry.isIntersecting) {
+      // Once the image container is in view, apply the opacity style to the image
+      image.style.opacity = "1";
+      image.style.transform = "translateY(0)";
+      // Unobserve the image container to prevent further triggers
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  // Optionally, you can configure the root margin to trigger the intersection earlier or later
+  // rootMargin: '0px', // You can adjust this value as needed
+  threshold: 0.4 // Trigger when the image container intersects fully with the viewport
+});
+
+// Start observing the image container
+observer.observe(imageContainer);

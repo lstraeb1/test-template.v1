@@ -43,7 +43,7 @@
 
 
 .free-class {
-  padding: 1.5rem;
+  padding: 1.25rem 1.5rem;
   background: linear-gradient(90deg, var(--main-red) 35%, var(--highlight-red));
   border: none;
   border-radius: 5px;
@@ -59,6 +59,7 @@
   text-decoration: none;
   color: white;
   font-size: 1.75rem;
+  font-weight: bold;
 }
 
 
@@ -75,6 +76,7 @@
 
 
 .learn-more-container {
+  padding: 1.25rem 1.5rem;
   background-color: var(--alt-gray);
   border: none;
   border-radius: 5px;
@@ -89,8 +91,8 @@
   font-family: "Be Vietnam";
   text-decoration: none;
   color: white;
-  padding: 1.5rem;
   font-size: 1.75rem;
+  font-weight: bold;
 }
 
 
@@ -123,7 +125,8 @@
 #images-container img {
   height: 55%;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transform: translateY(8%);
+  transition: all 0.8s ease-in-out;
 }
 
 #about-us-header h1 {
