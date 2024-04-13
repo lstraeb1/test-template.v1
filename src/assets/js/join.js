@@ -4,6 +4,8 @@ const navbar = document.querySelector('.navbar');
 const navbarCollapse = document.querySelector('.collapse');
 const loginMobile = document.getElementById('log-in-mobile');
 const joinUsMobile = document.getElementById('join-us-mobile');  
+const contactUs = document.getElementById('contact-us-nav');
+const classesNav = document.getElementById('classes-nav');
 const container0 = document.querySelector('.container-0');
 const priceSquare2 = document.getElementById('price-square-2');
 const periodSelector1 = document.getElementById('selector-1');
@@ -20,6 +22,30 @@ const price2 = document.getElementById('plan-price-2');
 const sticker2 = document.getElementById('plan-sticker-2');
 const included2 = document.getElementById('included-container-2');
 const backgroundRed = document.getElementById('background-red');
+
+navToggleBtn.addEventListener('click', () => {
+	if (navToggleBtn.classList.contains('collapsed')) {
+			body.style.overflowY = 'auto';
+			navbar.style.maxHeight = null;
+	} else {
+			body.style.overflowY = 'hidden';
+			navbar.style.maxHeight = '100vh';
+	}
+});
+
+classesNav.addEventListener('click', () => {
+	body.style.overflowY = 'auto';
+	navToggleBtn.classList.add('collapsed');
+	navbar.style.maxHeight = null;
+	navbarCollapse.classList.remove('show');
+});
+
+contactUs.addEventListener('click', () => {
+	body.style.overflowY = 'auto';
+	navToggleBtn.classList.add('collapsed');
+	navbar.style.maxHeight = null;
+	navbarCollapse.classList.remove('show');
+});
 
 // allow scrolling on navbar when open on mobile devices but prevent scrolling on rest of body
 

@@ -224,6 +224,10 @@
   background-color: var(--main-gray);
 }
 
+#container-3 {
+  padding-bottom: 30px;
+}
+
 #members-say h1 {
   color: var(--maroon);
   font-size: 7rem;
@@ -501,7 +505,7 @@
     text-wrap: nowrap;
   }
   #contact-btn-1 a {
-    padding: 1rem 13rem;
+    padding: 1rem 11rem;
   }
   #about-lp-imgs {
     height: 45vh;
@@ -532,6 +536,10 @@
   #members-say-subtitle p {
     font-size: 1.75rem;
   }
+  #buttons-container-2 {
+    display: flex;
+    flex-direction: column;
+  }
 }
 @media (max-width: 576px) {
   .navbar-collapse {
@@ -546,6 +554,7 @@
   }
   .section-4 {
     height: 100vh;
+    background-image: url("/assets/images/about-lp-bg-m.png");
   }
   #contact-button a {
     padding: 1rem 11rem;
