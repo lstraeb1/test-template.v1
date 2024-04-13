@@ -129,11 +129,11 @@
   }
   
   #images-container {
-    height: 90vh;
+    height: 70vh;
   }
 
   #images-container img {
-    height: 100%;
+    height: 85%;
     opacity: 0;
     transform: translateY(8%);
     transition: all 0.8s ease-in-out;
