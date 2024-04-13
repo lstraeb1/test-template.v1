@@ -518,6 +518,17 @@
       padding: 1.5rem 2.5rem;
     }
 
+    #images-container {
+      height: 100vh;
+    }
+  
+    #images-container img {
+      height: 100%;
+      opacity: 0;
+      transform: translateY(8%);
+      transition: all 0.8s ease-in-out;
+    }
+
     #section-3 {
       height: 80vh;
     }
