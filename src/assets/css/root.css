@@ -622,7 +622,7 @@ button.navbar-toggler:active {
   #footer .left-section .logo {
     text-align: center;
     width: auto;
-    height: 2em;
+    height: 20em;
     margin: auto;
     margin-bottom: 1.875em;
     display: inline-block;
@@ -719,7 +719,7 @@ button.navbar-toggler:active {
     padding-top: 0.1875rem;
   }
   #footer .credit {
-    font-size: 1rem;
+    font-size: 1.5rem;
     line-height: 2.25rem;
     text-align: center;
     width: 96%;
@@ -728,7 +728,7 @@ button.navbar-toggler:active {
     color: #fff;
   }
   #footer .credit a {
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-decoration: none;
     color: var(--main-red);
   }
@@ -736,7 +736,7 @@ button.navbar-toggler:active {
     text-decoration: underline;
   }
   #footer .credit .copyright {
-    font-size: 1rem;
+    font-size: 1.5rem;
     display: block;
   }
 }

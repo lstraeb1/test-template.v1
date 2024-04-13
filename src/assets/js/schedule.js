@@ -5,6 +5,8 @@ const navbarCollapse = document.querySelector('.collapse');
 const loginMobile = document.getElementById('log-in-mobile');
 const joinUsMobile = document.getElementById('join-us-mobile');  
 const container0 = document.querySelector('.container-0');
+const contactUs = document.getElementById('contact-us-nav');
+const classesNav = document.getElementById('classes-nav');
 
 // toggle between weekday and weekend
 

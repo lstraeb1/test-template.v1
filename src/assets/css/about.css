@@ -501,7 +501,7 @@
     text-wrap: nowrap;
   }
   #contact-btn-1 a {
-    padding: 1rem 13rem;
+    padding: 1rem 6rem;
   }
   #about-lp-imgs {
     height: 45vh;
@@ -545,7 +545,22 @@
     margin-bottom: -10%;
   }
   .section-4 {
+    background-image: url("/assets/images/about-lp-bg-m.png");
+  }
+  .section-1 {
+    padding-top: 0;
+  }
+  .section-4 {
     height: 100vh;
+  }
+  #about-lp-imgs {
+    margin-top: 50px;
+  }
+  #right-side {
+    margin-bottom: 50px;
+  }
+  #contact-btn-1 a {
+    padding: 1rem 11rem;
   }
   #contact-button a {
     padding: 1rem 11rem;
@@ -556,6 +571,9 @@
   }
   #container-1 {
     padding-top: 20px;
+  }
+  #instructor-header-container h1 {
+    font-size: 5rem;
   }
   .section-3 {
     background-position: top 210px left 0;
@@ -572,6 +590,15 @@
   }
   #container-1 {
     padding-top: 0;
+  }
+  #interchanging-words {
+    font-size: 3rem;
+  }
+  #contact-button a {
+    padding: 1rem 7rem;
+  }
+  #contact-btn-1 a {
+    padding: 1rem 7rem;
   }
 }
 

@@ -119,14 +119,14 @@
 }
 
 #images-container img {
-  height: 85%;
+  height: 80%;
   opacity: 0;
   transform: translateY(8%);
   transition: all 0.8s ease-in-out;
 }
 
 #about-us-container {
-  height: auto;
+  height: 100%;
 }
 
 #about-us-header h1 {
@@ -471,10 +471,7 @@ footer {
     height: 100vh;
   }
   #images-container img {
-    height: 100%;
-    opacity: 0;
-    transform: translateY(8%);
-    transition: all 0.8s ease-in-out;
+    height: 90%;
   }
   #section-3 {
     height: 80vh;
@@ -503,6 +500,12 @@ footer {
     display: none;
     margin-left: 0;
     margin-right: 0;
+  }
+  #images-container {
+    height: 70vh;
+  }
+  #images-container img {
+    height: 85%;
   }
   .become-member {
     background-color: var(--maroon);
@@ -675,10 +678,13 @@ footer {
     max-height: 450px;
   }
   #images-container {
-    height: 70vh;
+    height: 50vh;
   }
   #images-container img {
     height: 90%;
+  }
+  #more-about a {
+    padding: 1.5rem 11rem;
   }
   .free-class {
     margin-bottom: 10px;
