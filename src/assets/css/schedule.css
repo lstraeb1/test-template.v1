@@ -111,7 +111,7 @@
 
 .calendar-block {
 	border-radius: 5px;
-	height: 175px;
+	height: 185px;
 	margin-top: 5px;
 	background-color: white;
   box-shadow: 2px 2px 7px var(--gray-1);
@@ -128,7 +128,7 @@
 	align-items: center;
 }
 
-.fa-circle {
+.date-circle {
   position: relative;
   right: 10rem;
   color: var(--main-red);
@@ -154,8 +154,8 @@
 
 .calendar-subtitle-container h3 {
 	font-family: "Bebas Neue";
-	font-size: 2rem;
-	color: var(--maroon);
+	font-size: 2.5rem;
+	color: #e70303;
 }
 
 .calendar-description-container p {
@@ -199,7 +199,7 @@
   }
 
   .section-2 {
-    height: 200vh;
+    height: 220vh;
     min-height: auto;
   }
 }
@@ -457,7 +457,7 @@
     margin: 0 20px;
   }
   
-  .fa-circle {
+  .date-circle {
     position: relative;
     right: 26rem;
     color: var(--main-red);
@@ -557,6 +557,7 @@
 
   .calendar-block {
     margin-top: 5px;
+    width: 70%;
   }
 
   .calendar-header-container h1 {
@@ -565,8 +566,8 @@
     font-size: 3rem;
   }
   
-  .fa-circle {
-    right: 22rem;
+  .date-circle {
+    right: 18rem;
   }
   
   .calendar-time-container h2 {

@@ -77,8 +77,12 @@ function redCircle() {
 	const targetColumn = document.getElementById(targetColumnId);
 
 	if (targetColumn) {
-		const redCircleElement = document.createElement('i');
-    redCircleElement.classList.add('fa-solid', 'fa-circle', 'fa-xl', 'red-circle');
+		const redCircleElement = document.createElement('img');
+    redCircleElement.classList.add('date-circle');
+		redCircleElement.height = "15"; 
+		redCircleElement.width = "15"; 
+		redCircleElement.src = "/assets/svgs/red-circle.svg";
+
 
 		const headerContainer = targetColumn.querySelector('.calendar-header-container');
     if (headerContainer) {
