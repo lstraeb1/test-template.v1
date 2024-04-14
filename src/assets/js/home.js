@@ -17,6 +17,24 @@ const classOption3 = document.getElementById('class-option-3');
 const classOption4 = document.getElementById('class-option-4');
 const classOption5 = document.getElementById('class-option-5');
 
+navToggleBtn.addEventListener('click', () => {
+	if (navToggleBtn.classList.contains('collapsed')) {
+			body.style.overflowY = 'auto';
+			navbar.style.maxHeight = null;
+	} else {
+			body.style.overflowY = 'hidden';
+			navbar.style.maxHeight = '100vh';
+	}
+});
+
+classesNav.addEventListener('click', () => {
+	body.style.overflowY = 'auto';
+	navToggleBtn.classList.add('collapsed');
+	navbar.style.maxHeight = null;
+	navbarCollapse.classList.remove('show');
+});
+
+
 const classOptionsObject = [
     {
         name: "Brazilian Jiu-Jitsu",
@@ -86,23 +104,39 @@ const imageContainer = document.getElementById('images-container');
 const image = document.getElementById('about-images');
 
 // Create a new Intersection Observer
-const observer = new IntersectionObserver((entries, observer) => {
-  // Loop through each intersection entry
+const imageObserver = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
-    // Check if the image container is intersecting with the viewport
     if (entry.isIntersecting) {
-      // Once the image container is in view, apply the opacity style to the image
       image.style.opacity = "1";
       image.style.transform = "translateY(0)";
-      // Unobserve the image container to prevent further triggers
       observer.unobserve(entry.target);
     }
   });
 }, {
-  // Optionally, you can configure the root margin to trigger the intersection earlier or later
-  // rootMargin: '0px', // You can adjust this value as needed
   threshold: 0.25 // Trigger when the image container intersects fully with the viewport
 });
 
-// Start observing the image container
-observer.observe(imageContainer);
+imageObserver.observe(imageContainer);
+
+const navSection = document.querySelector('.nav-section');
+const section1 = document.querySelector('.section-1');
+const isDesktopOrLaptop = window.matchMedia("(min-width: 1024px)").matches;
+
+if (isDesktopOrLaptop) {
+  const navObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.intersectionRatio >= 0.9) {
+        // If section-2 is 50% in view, fade out the navigation section
+        navSection.style.opacity = "1";
+        navSection.style.transition = "opacity 0.3s";
+      } else {
+        // Otherwise, fade in the navigation section
+        navSection.style.opacity = "0";
+        navSection.style.transition = "opacity 0.3s";
+      }
+    });
+  }, {
+    threshold: 0.9 // Trigger when 50% of section-2 is in view
+  });
+  navObserver.observe(section1);
+}

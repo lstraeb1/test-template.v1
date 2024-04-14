@@ -255,7 +255,7 @@
   .navbar-collapse .navbar-nav .nav-item .nav-link {
     font-size: 10px;
   }
-  .become-member {
+  .contact-us {
     background-color: var(--maroon);
     color: white;
     text-decoration: none;
@@ -277,6 +277,7 @@
   }
   .nav-section {
     background-color: white;
+    position: static;
   }
   .navbar .container-0 .navbar-brand {
     background: none;
@@ -331,8 +332,7 @@
   .nav-item-2 {
     display: block;
   }
-  #log-in-mobile a,
-  #join-us-mobile a {
+  #contact-us-mobile a {
     color: var(--alt-gray-highlight);
   }
   .navbar-collapse.show .navbar-nav .nav-item .nav-link {
@@ -369,6 +369,7 @@
   width: 100vw;
   z-index: 3;
   background-color: white;
+  position: fixed;
 }
 
 .navbar {
@@ -470,7 +471,7 @@ button.navbar-toggler:active {
 }
 
 .hidden {
-  display: none;
+  opacity: 0;
 }
 
 .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
@@ -496,19 +497,19 @@ button.navbar-toggler:active {
   font-weight: bold;
 }
 
-.become-member {
+.contact-us {
   background: linear-gradient(90deg, var(--main-red) 35%, var(--highlight-red));
   color: white !important;
   text-decoration: none;
   text-wrap: nowrap;
-  padding: 1rem 1.5rem;
+  padding: 1rem 4rem;
   border-radius: 5px;
   font-weight: normal;
   font-size: 1.75rem;
   transition: all 0.3s ease-in-out;
 }
 
-.become-member:hover {
+.contact-us:hover {
   box-shadow: 0 8px 10px 0 rgba(180, 4, 4, 0.2);
 }
 

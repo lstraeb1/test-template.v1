@@ -42,3 +42,26 @@ const observer = new IntersectionObserver((entries, observer) => {
 
 // Start observing the image container
 observer.observe(imageContainer);
+
+const navSection = document.querySelector('.nav-section');
+const section4 = document.querySelector('.section-4');
+const isDesktopOrLaptop = window.matchMedia("(min-width: 1024px)").matches;
+
+if (isDesktopOrLaptop) {
+  const navObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.intersectionRatio >= 0.9) {
+        // If section-2 is 50% in view, fade out the navigation section
+        navSection.style.opacity = "1";
+        navSection.style.transition = "opacity 0.3s";
+      } else {
+        // Otherwise, fade in the navigation section
+        navSection.style.opacity = "0";
+        navSection.style.transition = "opacity 0.3s";
+      }
+    });
+  }, {
+    threshold: 0.9 // Trigger when 50% of section-2 is in view
+  });
+  navObserver.observe(section4);
+}

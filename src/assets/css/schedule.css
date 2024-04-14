@@ -7,7 +7,7 @@
 }
 
 #container-1 {
-  padding-top: 130px;
+  padding-top: 15vh;
 }
 
 #schedule-header-container h1 {
@@ -191,11 +191,11 @@
 
 @media (max-width: 1800px) {
   .section-1 {
-    height: 80vh;
+    height: 90vh;
   }
 
   #container-1 {
-    padding-top: 30px;
+    padding-top: 20vh;
   }
 
   .section-2 {
@@ -260,6 +260,7 @@
     width: 100vw;
     z-index: 3;
     background-color: white;
+    position: absolute;
   }
 
   .navbar {
@@ -399,7 +400,7 @@
   }
 
   #container-1 {
-    padding-top: 70px;
+    padding-top: 15vh;
   }
 
   .section-2 {
@@ -542,8 +543,8 @@
     margin-bottom: -10%;
   }
 
-  #container-1 {
-    padding-top: 20px;
+  .section-1 {
+    height: 90vh;
   }
 
   #schedule-header-container h1 {
