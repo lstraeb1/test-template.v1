@@ -20,13 +20,11 @@
     margin-top: 5%;
   }
   
-  
   .intro-container {
     padding-top: 15vh;
     justify-content: center;
     align-items: center;
   }
-  
   
   .intro-header-container h1 {
     font-size: 8rem;
@@ -37,11 +35,10 @@
     font-family: "Bebas Neue", sans-serif;
   }
   
-  
   .intro-paragraph-container p {
     color: white;
     line-height: 1.5;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     margin-top: 0rem;
     margin-bottom: 50px;
     font-family: "Be Vietnam", sans-serif;
@@ -184,6 +181,7 @@
   
   #more-about a {
     padding: 1.5rem 4rem;
+    font-family: "Be Vietnam";
     background: linear-gradient(90deg, var(--main-red) 35%, var(--highlight-red));
     border: none;
     border-radius: 5px;
@@ -212,18 +210,16 @@
   .classes-container {
     padding-bottom: 40px;
     padding-top: 20px;
-    border-radius: 10px 10px 0 0;
+    border-radius: 5px;
     height: auto;
     min-height: 70vh;
-    background-color: rgb(249, 249, 249);
-    border-radius: 10px;
+    background-color: rgb(247, 247, 247);
   }
   
   
   #classes-header-container h1 {
     color: var(--maroon);
-    font-size: 5rem;
-    font-weight: bold;
+    font-size: 6rem;
     font-family: "Bebas Neue";
   }
   
@@ -243,11 +239,11 @@
   .class-option {
     background: transparent;
     text-wrap: nowrap;
-    color: var(--maroon);
+    color: #e70303;
     font-size: 1.5rem;
     font-weight: bold;
     padding: 1rem;
-    border: 2px solid var(--maroon);
+    border: 2px solid #e70303;
     border-radius: 5px;
     margin-top: 5px;
     transition: 0.2s ease-in-out;
@@ -255,7 +251,7 @@
   
   
   .class-option:hover {
-    background-color: var(--maroon);
+    background-color: #e70303;
     color: white;
   }
   
@@ -465,6 +461,7 @@
   
   
   #submit-contact-form {
+    font-family: 'Be Vietnam';
     margin-top: 20px;
     padding: 0.75rem;
     background: linear-gradient(90deg, var(--main-red) 35%, var(--highlight-red));
@@ -476,38 +473,13 @@
     transition: all .2s ease-in-out;
   }
   
-  
   #submit-contact-form:hover {
     box-shadow: 0 8px 10px 0 rgba(180, 4, 4, 0.2);
   }
   
-  
   #section-3 {
     height: 60vh;
   }
-  
-  
-  footer {
-    height: 40vh;
-    background-color: var(--alt-gray-highlight);
-  }
-  
-  
-  #important-info-1 {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  
-  #important-info-1 a,
-  #important-info-2 a,
-  #socials a {
-    color: white;
-    font-size: 2rem;
-    text-decoration: none;
-    font-family: "Be Vietnam";
-  }
-  
   
   @media (max-width: 1800px) {
     .section-1 {

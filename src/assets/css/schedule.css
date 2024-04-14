@@ -1,66 +1,85 @@
 .section-1 {
-	height: 55vh;
+	height: 65vh;
 	padding-bottom: 20px;
-  background-image: url('/assets/images/schedule-bg-2.png');
+  background-image: url('/assets/images/schedule-lp-bg.png');
 	background-size: cover;
 	background-position: center center;
 }
 
 #container-1 {
   padding-top: 130px;
-
 }
 
 #schedule-header-container h1 {
 	font-size: 8rem;
-	color: var(--maroon);
+	color: var(--main-red);
 	font-family: "Bebas Neue";
   font-weight: bold;
 }
 
 #schedule-paragraph-container p {
-  font-size: 1.75rem;
-  color: black;
+  font-size: 1.5rem;
+  color: white;
   font-family: "Be Vietnam";
 }
 
-#phone-hand-img {
-  height: 30%;
+#contact-button {
+  margin-top: 20px;
+}
+
+#contact-button a {
+  background: linear-gradient(90deg, var(--main-red) 35%, var(--highlight-red)); 
+  border: none;
+  padding: 1rem 5rem;
+  border-radius: 5px;
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+  text-wrap: nowrap;
+}
+
+#contact-button a:hover {
+  box-shadow: 0 8px 10px 0 rgba(180, 4, 4, 0.2);
+  color: white;
+  cursor: pointer;
 }
 
 .section-2 {
 	height: 135vh;
   min-height: auto;
   background-color: var(--main-gray);
+  padding-top: 40px;
 }
 
 .dropdown .btn {
-  background-color: var(--maroon);
+  background: linear-gradient(90deg, var(--main-red) 35%, var(--highlight-red)); 
   border: none;
   border-radius: 10px;
   color: white;
-  font-size: 1.75rem;
+  font-size: 2rem;
   white-space: nowrap;
-  box-shadow: 0 8px 10px 0 rgba(180, 4, 4, 0.2);
   transition: all .2s ease-in-out;
   padding: 1rem;
-  font-weight: bold;
   margin-top: 20px;
 }
 
 .dropdown .btn:hover {
   color: white;
-  background-color: var(--highlight-red);
+  box-shadow: 0 8px 10px 0 rgba(180, 4, 4, 0.2);
 }
 
 .dropdown .dropdown-menu {
   background-color: white;
   box-shadow: 2px 2px 4px var(--gray-1);
-  font-size: 1.5rem;
-  font-family: "Be Vietnam";
   border: none;
   border-radius: 10px;
   padding: 1rem;
+}
+
+.dropdown .dropdown-menu a {
+  font-family: "Be Vietnam";
+  font-size: 1.75rem;
 }
 
 #calendar-container {
@@ -175,13 +194,13 @@
     height: 80vh;
   }
 
+  #container-1 {
+    padding-top: 30px;
+  }
+
   .section-2 {
     height: 200vh;
     min-height: auto;
-  }
-
-  footer {
-    height: 40vh;
   }
 }
 
@@ -241,7 +260,6 @@
     width: 100vw;
     z-index: 3;
     background-color: white;
-    position: absolute;
   }
 
   .navbar {
@@ -324,15 +342,12 @@
   }
 
   .section-1 {
+    min-height: 70vh;
     height: auto;
-    padding-bottom: 20px;
-    background-image: url('/assets/images/schedule-bg-2.png');
+    padding-bottom: 0;
+    background-image: url('/assets/images/schedule-lp-bg-m.png');
     background-size: cover;
     background-position: center center;
-  }
-
-  .container-1 {
-    height: auto;
   }
 
   #phone-hand-img {
@@ -383,12 +398,15 @@
     max-height: 350px;
   }
 
+  #container-1 {
+    padding-top: 70px;
+  }
+
   .section-2 {
     height: auto;
   }
 
   #calendar-container {
-    /* border: 2px solid pink; */
     width: 700vw;
     padding-top: 0;
   }
@@ -397,7 +415,6 @@
   .weekend-container {
     display: flex;
     font-display: row;
-    /* border: 2px solid red; */
     width: 300vw;
     justify-content: center;
   }
@@ -410,7 +427,6 @@
   .calendar-column {
     width: 100vw;
     margin: 5px 30px;
-    /* border: 2px solid blue; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -420,7 +436,7 @@
   
   .calendar-block {
     height: 200px;
-    width: 80%;
+    width: 60%;
     margin-top: 10px;
   }
   
@@ -452,15 +468,15 @@
   }
   
   .calendar-time-container h2 {
-    font-size: 7rem;
+    font-size: 6rem;
   }
   
   .calendar-subtitle-container h3 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   
   .calendar-description-container p {
-    font-size: 2rem;
+    font-size: 1.75rem;
     width: 60%;
   }
 
@@ -526,13 +542,12 @@
     margin-bottom: -10%;
   }
 
-  #img-container {
-    padding: 0;
+  #container-1 {
+    padding-top: 20px;
   }
 
-  #phone-hand-img {
-    max-height: 80vh;
-    transform: translateX(2vw);
+  #schedule-header-container h1 {
+    font-size: 7rem;
   }
 
   .calendar-column {
@@ -547,6 +562,7 @@
   .calendar-header-container h1 {
     padding: 1rem 7rem;
     margin: 0 10px;
+    font-size: 3rem;
   }
   
   .fa-circle {
@@ -554,15 +570,15 @@
   }
   
   .calendar-time-container h2 {
-    font-size: 5rem;
+    font-size: 4rem;
   }
   
   .calendar-subtitle-container h3 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   
   .calendar-description-container p {
-    font-size: 2rem;
+    font-size: 1.5rem;
     width: 80%;
   }
 }

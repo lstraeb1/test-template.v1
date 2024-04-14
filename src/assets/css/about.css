@@ -23,7 +23,7 @@
 
 .intro-paragraph-container p {
   font-family: "Be Vietnam";
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   color: white;
 }
 
@@ -44,7 +44,6 @@
   text-decoration: none;
   color: white;
   font-size: 1.75rem;
-  font-weight: bold;
 }
 
 .free-class:hover {
@@ -66,7 +65,6 @@
   color: var(--maroon);
   font-family: "Bebas Neue";
   font-size: 7rem;
-  font-weight: bold;
 }
 
 #about-subtitle-container p {
@@ -92,7 +90,6 @@
   border-radius: 5px;
   color: white;
   font-size: 2rem;
-  font-weight: bold;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
   text-wrap: nowrap;
@@ -165,7 +162,6 @@
   border-radius: 5px;
   color: white;
   font-size: 2rem;
-  font-weight: bold;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
   text-wrap: nowrap;

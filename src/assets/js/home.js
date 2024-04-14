@@ -70,7 +70,7 @@ const classOptionSelect = (index) => {
     });
 
     const selectedButton = allButtons[index];
-    selectedButton.style.backgroundColor = 'var(--maroon)';
+    selectedButton.style.backgroundColor = '#e70303';
     selectedButton.style.color = 'white';
 }
 
