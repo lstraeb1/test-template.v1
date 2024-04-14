@@ -105,27 +105,29 @@
 }
 /* Fonts and general styles */
 @media only screen and (min-width: 0em) {
-  /* roboto-regular - latin */
+  /* bebas-neue-regular - latin */
   @font-face {
-    font-style: normal;
+    font-display: swap;
     font-family: "Bebas Neue";
+    font-style: normal;
     font-weight: 400;
-    font-display: swap;
-    src: local(""), url("/assets/fonts/bebas-neue-v14-latin-regular.woff2") format("woff2"), url("/assets/fonts/roboto-v29-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    src: url("/assets/fonts/bebas-neue-v14-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
+  /* be-vietnam-pro-regular - latin */
   @font-face {
-    font-style: normal;
+    font-display: swap;
     font-family: "Be Vietnam";
-    font-weight: normal;
-    font-display: swap;
-    src: local(""), url("/assets/fonts/be-vietnam-pro-v11-latin-regular.woff2") format("woff2"), url("/assets/fonts/roboto-v29-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  @font-face {
     font-style: normal;
-    font-family: "Knewave";
-    font-weight: normal;
+    font-weight: 400;
+    src: url("/assets/fonts/be-vietnam-pro-v11-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* knewave-regular - latin */
+  @font-face {
     font-display: swap;
-    src: local(""), url("/assets/fonts/knewave-v14-latin-regular.woff2") format("woff2"), url("/assets/fonts/roboto-v29-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-family: "Knewave";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/assets/fonts/knewave-v14-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   .container {
     width: 92%;
@@ -456,10 +458,10 @@ button.navbar-toggler:active {
   font-size: 1.5rem;
   margin: 0 1rem;
   padding: 1.25rem 1.25rem;
-  font-weight: bold;
   transition: 0.2s ease-in-out;
   text-align: center;
   text-wrap: nowrap;
+  font-weight: bold;
 }
 
 .nav-item-2 {
@@ -730,7 +732,7 @@ button.navbar-toggler:active {
   #footer .credit a {
     font-size: 1.5rem;
     text-decoration: none;
-    color: var(--main-red);
+    color: #ff3636;
   }
   #footer .credit a:hover {
     text-decoration: underline;

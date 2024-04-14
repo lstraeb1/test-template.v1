@@ -58,7 +58,7 @@
   text-decoration: none;
   color: white;
   font-size: 1.75rem;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .free-class:hover {
@@ -87,7 +87,7 @@
   text-decoration: none;
   color: white;
   font-size: 1.75rem;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .learn-more-container:hover {
@@ -179,7 +179,7 @@
   transition: box-shadow 0.3s ease-in-out;
   margin-top: 30px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 #more-about a:hover {
@@ -426,7 +426,7 @@ label[for=preferred-phone], label[for=preferred-email] {
   padding: 0.75rem;
   background: linear-gradient(90deg, var(--main-red) 35%, var(--highlight-red));
   border: none;
-  font-weight: bold;
+  font-weight: normal;
   border-radius: 5px;
   color: white;
   font-size: 1.75rem;
@@ -481,9 +481,6 @@ footer {
   }
 }
 @media (max-width: 1200px) {
-  .section-1 {
-    height: auto;
-  }
   .navbar-text {
     margin-left: 1vw;
     display: flex;
@@ -678,19 +675,19 @@ footer {
     max-height: 450px;
   }
   #images-container {
-    height: 50vh;
+    height: 45vh;
   }
   #images-container img {
     height: 90%;
   }
   #more-about a {
-    padding: 1.5rem 11rem;
+    padding: 1.5rem 9rem;
   }
   .free-class {
     margin-bottom: 10px;
   }
   .call-to-action a {
-    font-size: 2.25rem;
+    font-size: 1.75rem;
   }
   #email-phone a {
     color: white;
