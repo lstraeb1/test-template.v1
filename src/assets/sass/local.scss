@@ -37,7 +37,7 @@
   }
   
   .intro-container {
-    padding-top: 20vh;
+    padding-top: 30vh;
     justify-content: center;
     align-items: center;
   }
@@ -577,7 +577,6 @@
   
   @media (max-width: 992px) {
   
-  
     body {
       overflow-x: hidden;
     }
@@ -591,7 +590,7 @@
       width: 100vw;
       z-index: 3;
       background-color: white;
-      position: absolute;
+      position: fixed;
     }
   
     .navbar {
@@ -744,8 +743,6 @@
       height: 20px;
     }
 
-
-  
     #images-container img {
       height: 100%;
     }
@@ -815,8 +812,11 @@
     }
   }
   
-  
   @media (max-width: 450px) {
+    .intro-container {
+      padding-top: 20vh;
+    }
+
     .container-2 {
       padding-top: 10%;
     }
