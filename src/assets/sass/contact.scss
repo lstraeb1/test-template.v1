@@ -1,0 +1,342 @@
+.section-1 {
+  background-color: var(--main-gray);
+  min-height: 90vh;
+}
+
+#container-1 {
+  background-color: var(--main-gray);
+  padding-top: 15vh;
+  padding-bottom: 40px;
+  border-radius: 0 0 10px 10px;
+  height: auto;
+}
+
+#contact-us-container {
+  position: relative;
+  z-index: 1;
+  min-height: 100%;
+  height: 62vh;
+  padding-bottom: 40px;
+  border-radius: 10px;
+  transition: background-size 0.4s ease;
+}
+
+#contact-us-container picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+#contact-us-container picture img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+#email-away-container h1 {
+  color: white;
+  font-family: "Be Vietnam";
+  font-weight: bold;
+  font-size: 4rem;
+  margin-top: 25%;
+}
+
+#email-phone {
+  margin-top: 75%;
+  flex-direction: column;
+}
+
+#email-phone a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-wrap: nowrap;
+  padding-bottom: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+#email-phone a:hover {
+  font-size: 1.75rem;
+}
+
+#email-symbol, #phone-symbol {
+  color: var(--alt-gray-highlight);
+  font-size: 1.5rem;
+  padding-right: 15px;
+}
+
+#contact-us-header-container h1{
+  color: var(--maroon);
+  font-weight: bold;
+  font-size: 5rem;
+  font-family: "Bebas Neue";
+  margin-top: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container {
+  border-bottom: 2px solid var(--gray-1);
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  margin-bottom: 55px;
+  padding: 5px;
+  font-size: 1.5rem;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+
+.label-container {
+  color: var(--alt-gray-highlight);
+  font-family: "Be Vietnam";
+  font-weight: bold;
+  margin-left: 5px;
+  font-size: 1.75rem;
+}
+
+#fname, #lname {
+  margin-bottom: 55px;
+}
+
+.input-container::placeholder {
+  color: var(--gray-1);
+}
+
+label[for="preferred-phone"], label[for="preferred-email"] {
+  font-size: 1.25rem;
+  font-family: "Be Vietnam";
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+#submit-contact-form {
+  font-family: 'Be Vietnam';
+  margin-top: 20px;
+  padding: 0.75rem;
+  background: linear-gradient(90deg, var(--main-red) 35%, var(--highlight-red));
+  border: none;
+  font-weight: normal;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.75rem;
+  transition: all .2s ease-in-out;
+}
+
+#submit-contact-form:hover {
+  box-shadow: 0 8px 10px 0 rgba(180, 4, 4, 0.2);
+}
+
+.section-2 {
+  background-color: var(--main-gray);
+}
+
+@media (max-width: 1800px) {
+  .section-1 {
+    height: 140vh;
+  }
+
+  #contact-us-container {
+    min-height: 100%;
+    height: 100vh;
+  }
+
+  #container-1 {
+    padding-top: 25vh;
+  }
+}
+
+@media (max-width: 1200px) { 
+  .navbar-text {
+    margin-left: 1vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .navbar .container-0 .navbar-brand /* logo container */ {
+    margin-right: 1%;
+  }
+
+
+  .navbar .container-0 .navbar-brand img /* logo container */ {
+    height: 20px;
+  }
+
+
+  .collapse .navbar-text .fa-solid {
+    display: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .nav-section {
+    width: 100vw;
+    z-index: 3;
+    background-color: white;
+    position: fixed;
+  }
+
+  .navbar {
+    background-color: var(--main-gray);
+    max-height: 130vh;
+    width: 100vw;
+    background-color: none;
+    z-index: 100;
+  }
+ 
+  .navbar .container-0 .navbar-brand /* logo container */ {
+    background: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    padding: 10px 1.5rem;
+    margin-right: 5%;
+    background-color: none;
+  }
+ 
+  button.navbar-toggler {
+    border: none;
+    outline: none;
+    background: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-radius: 10px;
+    box-shadow: none;
+    padding: 0 1.5rem;
+  }
+
+
+  .navbar-nav {
+    background: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    margin-bottom: 0;
+    height: 100vh;
+    justify-content: start;
+  }
+
+
+  .navbar-collapse .navbar-nav .nav-item .nav-link {
+    text-decoration: none;
+    color: var(--maroon);
+    font-size: 7rem;
+    font-family: "Bebas Neue";
+    font-weight: bold;
+    text-align: start;
+    text-wrap: nowrap;
+    padding: 0;
+    margin: 0 0 0 15px;
+    text-shadow: 1px 1px 1px var(--alt-gray);
+    opacity: 0;
+    transition: opacity 0.7s ease;
+    background-color: none;
+    background: none;
+    position: relative;
+    bottom: 100px;
+  }
+
+
+  .nav-item-2 {
+    display: block;
+  }
+
+
+  #log-in-mobile a,
+  #join-us-mobile a {
+    color: var(--alt-gray-highlight);
+  }
+
+
+  .navbar-collapse.show .navbar-nav .nav-item .nav-link {
+    opacity: 1;
+  }
+
+
+  .navbar-text,
+  .become-member,
+  .log-in {
+    display: none;
+  }
+
+  #email-phone {
+    margin-top: 25%;
+  }
+
+  #container-1 {
+    padding-top: 10vh;
+    border-radius: 0;
+  }
+
+  #contact-us-container {
+    padding-bottom: 30px;
+    border-radius: 0;
+  }
+
+  .input-container {
+    border-radius: 0;
+  }
+
+  #submit-contact-form {
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px 0 rgba(180, 4, 4, 0.2);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .section-1 {
+    height: auto;
+  }
+  
+  .navbar-brand img {
+    height: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-collapse {
+    flex: 1;
+    overflow-y: auto;
+    height: 100dvh;
+  }
+
+  .navbar-collapse .navbar-nav .nav-item .nav-link {
+    margin-left: 10px;
+    font-size: 7rem;
+    margin-bottom: -10%;
+  }
+
+  #container-1 {
+    padding-top: 7vh;
+    border-radius: 0;
+  }
+
+  #contact-us-container {
+    padding-bottom: 30px;
+    border-radius: 0;
+    height: auto;
+  }
+
+  #contact-us-container picture img {
+    border-radius: 0;
+  }
+}
