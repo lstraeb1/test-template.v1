@@ -1,6 +1,6 @@
 .section-1 {
   background-color: var(--main-gray);
-  min-height: 90vh;
+  height: 90vh;
 }
 
 #container-1 {
@@ -138,6 +138,7 @@ label[for="preferred-phone"], label[for="preferred-email"] {
 }
 
 .section-2 {
+  height: 80vh;
   background-color: var(--main-gray);
 }
 
