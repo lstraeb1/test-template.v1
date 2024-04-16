@@ -138,7 +138,7 @@ label[for=preferred-phone], label[for=preferred-email] {
 }
 
 .section-2 {
-  height: 80vh;
+  height: 60vh;
   background-color: var(--main-gray);
 }
 
@@ -152,6 +152,10 @@ label[for=preferred-phone], label[for=preferred-email] {
   }
   #container-1 {
     padding-top: 25vh;
+  }
+  .section-2 {
+    height: 80vh;
+    padding-bottom: 80px;
   }
 }
 @media (max-width: 1200px) {
@@ -269,6 +273,10 @@ label[for=preferred-phone], label[for=preferred-email] {
   #submit-contact-form {
     margin-bottom: 30px;
     box-shadow: 0 4px 10px 0 rgba(180, 4, 4, 0.2);
+  }
+  .section-2 {
+    height: auto;
+    padding-bottom: 40px;
   }
 }
 @media (max-width: 768px) {

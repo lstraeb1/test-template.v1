@@ -626,7 +626,7 @@ button.navbar-toggler:active {
   #footer .left-section .logo {
     text-align: center;
     width: auto;
-    height: 20em;
+    height: 14em;
     margin: auto;
     margin-bottom: 1.875em;
     display: inline-block;
@@ -636,15 +636,9 @@ button.navbar-toggler:active {
     height: 100%;
     display: block;
   }
-  #footer .left-section p {
-    font-size: 0.875rem;
-    line-height: 1.9285714286rem;
+  #footer .left-section .socials a {
     text-align: center;
-    width: 100%;
-    width: 21.9285714286rem;
-    margin: auto;
-    color: #fff;
-    opacity: 0.9;
+    margin-left: 20px;
   }
   #footer .right-section {
     width: 96%;
@@ -766,12 +760,12 @@ button.navbar-toggler:active {
   }
   #footer .left-section .logo {
     text-align: left;
-    height: 18rem;
+    height: 12rem;
     margin-left: 0;
   }
-  #footer .left-section p {
-    text-align: left;
-    margin-left: 0;
+  #footer .left-section .socials a {
+    text-align: center;
+    margin-left: 20px;
   }
   #footer .right-section {
     width: 42.0625rem;

@@ -1,9 +1,9 @@
 .section-1 {
-  height: 65vh;
-  padding-bottom: 20px;
-  background-image: url("/assets/images/schedule-lp-bg.png");
-  background-size: cover;
-  background-position: center center;
+	height: 65vh;
+	padding-bottom: 20px;
+  background-image: url('/assets/images/schedule-lp-bg.png');
+	background-size: cover;
+	background-position: center center;
 }
 
 #container-1 {
@@ -11,9 +11,9 @@
 }
 
 #schedule-header-container h1 {
-  font-size: 8rem;
-  color: var(--main-red);
-  font-family: "Bebas Neue";
+	font-size: 8rem;
+	color: var(--main-red);
+	font-family: "Bebas Neue";
   font-weight: bold;
 }
 
@@ -28,14 +28,14 @@
 }
 
 #contact-button a {
-  background: linear-gradient(90deg, var(--main-red) 35%, var(--highlight-red));
+  background: linear-gradient(90deg, var(--main-red) 35%, var(--highlight-red)); 
   border: none;
   padding: 1rem 5rem;
   border-radius: 5px;
   color: white;
   font-size: 2rem;
   text-decoration: none;
-  transition: all 0.3s ease-in-out;
+  transition: all .3s ease-in-out;
   text-wrap: nowrap;
 }
 
@@ -46,20 +46,20 @@
 }
 
 .section-2 {
-  height: 135vh;
+	height: 135vh;
   min-height: auto;
   background-color: var(--main-gray);
   padding-top: 40px;
 }
 
 .dropdown .btn {
-  background: linear-gradient(90deg, var(--main-red) 35%, var(--highlight-red));
+  background: linear-gradient(90deg, var(--main-red) 35%, var(--highlight-red)); 
   border: none;
   border-radius: 10px;
   color: white;
   font-size: 2rem;
   white-space: nowrap;
-  transition: all 0.2s ease-in-out;
+  transition: all .2s ease-in-out;
   padding: 1rem;
   margin-top: 20px;
 }
@@ -83,49 +83,49 @@
 }
 
 #calendar-container {
-  display: flex;
-  font-display: row;
-  width: 200vw;
-  transition: 0.5s ease-in-out;
-  padding-bottom: 20px;
-  padding-top: 20px;
+	display: flex;
+	font-display: row;
+	width: 200vw;
+	transition: 0.5s ease-in-out;
+	padding-bottom: 20px;
+	padding-top: 20px;
 }
 
 .weekday-container,
 .weekend-container {
-  display: flex;
-  font-display: row;
-  width: 100vw;
-  justify-content: center;
+	display: flex;
+	font-display: row;
+	width: 100vw;
+	justify-content: center;
 }
 
 .weekday-container {
-  justify-content: center;
+	justify-content: center;
 }
 
 .calendar-column {
-  width: 20%;
-  margin: 3px;
-  border-radius: 10px;
+	width: 20%;
+	margin: 3px;
+	border-radius: 10px;
 }
 
 .calendar-block {
-  border-radius: 5px;
-  height: 185px;
-  margin-top: 5px;
-  background-color: white;
+	border-radius: 5px;
+	height: 185px;
+	margin-top: 5px;
+	background-color: white;
   box-shadow: 2px 2px 7px var(--gray-1);
 }
 
 .calendar-header-container {
-  background-color: #d9d9d9;
-  padding: 0.75rem;
-  border-radius: 5px;
+	background-color: #d9d9d9;
+	padding: 0.75rem;
+	border-radius: 5px;
   margin-bottom: 5px;
   box-shadow: 2px 2px 4px var(--gray-1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .date-circle {
@@ -135,54 +135,54 @@
 }
 
 .calendar-header-container h1 {
-  font-family: "Bebas Neue";
-  font-size: 2.25rem;
-  margin: 0;
+	font-family: "Bebas Neue";
+	font-size: 2.25rem;
+	margin: 0;
 }
 
 .calendar-time-container,
 .calendar-subtitle-container,
 .calendar-description-container {
-  padding-left: 10px;
+	padding-left: 10px;
 }
 
 .calendar-time-container h2 {
-  font-family: "Bebas Neue";
-  font-size: 5rem;
-  color: var(--alt-gray-highlight);
+	font-family: "Bebas Neue";
+	font-size: 5rem;
+	color: var(--alt-gray-highlight);
 }
 
 .calendar-subtitle-container h3 {
-  font-family: "Bebas Neue";
-  font-size: 2.5rem;
-  color: #e70303;
+	font-family: "Bebas Neue";
+	font-size: 2.5rem;
+	color: #e70303;
 }
 
 .calendar-description-container p {
-  font-family: "Be Vietnam";
-  font-size: 1.5rem;
-  color: black;
-  width: 90%;
+	font-family: "Be Vietnam";
+	font-size: 1.5rem;
+	color: black;
+	width: 90%;
 }
 
 .custom-button {
-  height: 45px;
-  width: 45px;
-  background-color: #d9d9d9;
+	height: 45px;
+	width: 45px;
+	background-color: #d9d9d9;
   box-shadow: 2px 2px 4px var(--gray-1);
   border: none;
-  border-radius: 10px;
+	border-radius: 10px;
   z-index: 3;
 }
 
 .custom-button:active {
-  background-color: var(--gray-2);
+	background-color: var(--gray-2);
 }
 
 .fa-chevron-right,
 .fa-chevron-left {
-  pointer-events: none;
-  font-size: 2rem;
+	pointer-events: none;
+	font-size: 2rem;
 }
 
 .mobile-btn {
@@ -193,29 +193,36 @@
   .section-1 {
     height: 90vh;
   }
+
   #container-1 {
     padding-top: 20vh;
   }
+
   .section-2 {
     height: 220vh;
     min-height: auto;
   }
 }
+
 @media (max-width: 1200px) {
+
   .navbar-text {
     margin-left: 1vw;
     display: flex;
     flex-direction: row;
     align-items: center;
   }
-  .navbar .container-0 .navbar-brand {
+
+  .navbar .container-0 .navbar-brand /* logo container */ {
     margin-right: 1%;
   }
+
   .collapse .navbar-text .fa-solid {
     display: none;
     margin-left: 0;
     margin-right: 0;
   }
+
   .become-member {
     background-color: var(--maroon);
     color: white;
@@ -225,29 +232,36 @@
     border-radius: 5px;
     font-weight: normal;
     font-size: 1.5rem;
-    transition: all 0.2s ease-in-out;
+    transition: all .2s ease-in-out;
     margin-left: 1px;
   }
+
   .section-1 {
     height: 50vh;
   }
+
   .section-2 {
     height: 130vh;
     min-height: auto;
   }
 }
+
 @media (max-width: 992px) {
+
   body {
     overflow-x: hidden;
   }
+
   body.no-scroll {
     overflow-y: hidden;
   }
+
   .nav-section {
     width: 100vw;
     z-index: 3;
     background-color: white;
   }
+
   .navbar {
     background-color: var(--main-gray);
     max-height: 130vh;
@@ -255,7 +269,8 @@
     background-color: none;
     z-index: 100;
   }
-  .navbar .container-0 .navbar-brand {
+  
+  .navbar .container-0 .navbar-brand /* logo container */ {
     background: none;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
@@ -266,9 +281,10 @@
     margin-right: 5%;
     background-color: none;
   }
+  
   button.navbar-toggler {
-    border: none;
-    outline: none;
+    border: none; 
+    outline: none; 
     background: none;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
@@ -276,6 +292,7 @@
     box-shadow: none;
     padding: 0 1.5rem;
   }
+
   .navbar-nav {
     background: none;
     backdrop-filter: none;
@@ -287,12 +304,13 @@
     margin-top: 5px;
     height: 100vh;
   }
+
   .navbar-collapse .navbar-nav .nav-item .nav-link {
     text-decoration: none;
     color: var(--maroon);
-    font-size: 7rem;
-    font-family: "Bebas Neue";
-    font-weight: bold;
+    font-size: 7rem; 
+    font-family: "Bebas Neue"; 
+    font-weight: bold; 
     text-align: start;
     text-wrap: nowrap;
     padding: 0;
@@ -303,42 +321,51 @@
     background-color: none;
     background: none;
   }
+
   .nav-item-2 {
     display: block;
   }
+
   #log-in-mobile a,
   #join-us-mobile a {
     color: var(--alt-gray-highlight);
   }
+
   .navbar-collapse.show .navbar-nav .nav-item .nav-link {
     opacity: 1;
   }
+
   .navbar-text,
   .become-member,
   .log-in {
     display: none;
   }
+
   .section-1 {
     min-height: 70vh;
     height: auto;
     padding-bottom: 0;
-    background-image: url("/assets/images/schedule-lp-bg-m.png");
+    background-image: url('/assets/images/schedule-lp-bg-m.png');
     background-size: cover;
     background-position: center center;
   }
+
   #phone-hand-img {
     max-height: 100vh;
     transform: translateX(25vw);
   }
+
   .section-2 {
     height: auto;
     overflow-x: hidden;
   }
+  
   #calendar-container {
     width: 200vw;
     padding-bottom: 20px;
     padding-top: 20px;
   }
+  
   .weekday-container,
   .weekend-container {
     display: flex;
@@ -346,34 +373,44 @@
     width: 100vw;
     justify-content: center;
   }
+
   #phone-hand-img {
     display: none;
   }
+
   .calendar-block {
     height: 190px;
   }
+
   .calendar-description-container p {
     line-height: 1.25;
     width: 90%;
   }
 }
+
 @media (max-width: 768px) {
+
   .navbar-brand img {
     height: 20px;
   }
+
   #phone-hand-img {
     max-height: 350px;
   }
+
   #container-1 {
     padding-top: 15vh;
   }
+
   .section-2 {
     height: auto;
   }
+
   #calendar-container {
     width: 700vw;
     padding-top: 0;
   }
+  
   .weekday-container,
   .weekend-container {
     display: flex;
@@ -381,10 +418,12 @@
     width: 300vw;
     justify-content: center;
   }
+  
   .weekday-container {
     justify-content: center;
     width: 400vw;
   }
+  
   .calendar-column {
     width: 100vw;
     margin: 5px 30px;
@@ -392,13 +431,15 @@
     flex-direction: column;
     align-items: center;
     transform: translate(0);
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out; 
   }
+  
   .calendar-block {
     height: 200px;
     width: 60%;
     margin-top: 10px;
   }
+  
   .calendar-header-container {
     width: 70%;
     display: flex;
@@ -407,6 +448,7 @@
     background-color: var(--main-gray);
     box-shadow: none;
   }
+
   .calendar-header-container h1 {
     background-color: #d9d9d9;
     padding: 1rem 10rem;
@@ -414,38 +456,48 @@
     box-shadow: 2px 2px 4px var(--gray-1);
     margin: 0 20px;
   }
+  
   .date-circle {
     position: relative;
     right: 26rem;
     color: var(--main-red);
   }
+  
   .calendar-header-container h1 {
     font-size: 3rem;
   }
+  
   .calendar-time-container h2 {
     font-size: 6rem;
   }
+  
   .calendar-subtitle-container h3 {
     font-size: 3rem;
   }
+  
   .calendar-description-container p {
     font-size: 1.75rem;
     width: 60%;
   }
+
   #buttons-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+
   }
+  
   .fa-chevron-right,
   .fa-chevron-left {
     pointer-events: none;
     font-size: 2rem;
   }
+
   .custom-button {
     display: none;
   }
+
   .mobile-btn {
     display: block;
     margin: 20px 10px 0 10px;
@@ -456,63 +508,78 @@
     border: none;
     border-radius: 5px;
   }
+
   .mobile-btn-left.inactive {
     pointer-events: none;
     color: white;
   }
+
   .mobile-btn:active {
     box-shadow: none;
   }
+
 }
+
 @media (max-width: 576px) {
+
   body {
     overflow-x: hidden;
   }
+
   .row {
     max-width: 100vw;
   }
+
   .navbar-collapse {
     flex: 1;
     overflow-y: auto;
     max-height: 100dvh;
   }
+
   .navbar-collapse .navbar-nav .nav-item .nav-link {
     margin-left: 10px;
     font-size: 7rem;
     margin-bottom: -10%;
   }
+
   .section-1 {
     height: 90vh;
   }
+
   #schedule-header-container h1 {
     font-size: 7rem;
   }
+
   .calendar-column {
     width: 100vw;
     margin: 5px 0;
   }
+
   .calendar-block {
     margin-top: 5px;
     width: 70%;
   }
+
   .calendar-header-container h1 {
     padding: 1rem 7rem;
     margin: 0 10px;
     font-size: 3rem;
   }
+  
   .date-circle {
     right: 18rem;
   }
+  
   .calendar-time-container h2 {
     font-size: 4rem;
   }
+  
   .calendar-subtitle-container h3 {
     font-size: 2.5rem;
   }
+  
   .calendar-description-container p {
     font-size: 1.5rem;
     width: 80%;
   }
 }
-
-/*# sourceMappingURL=schedule.css.map */
