@@ -139,4 +139,23 @@ if (isDesktopOrLaptop) {
     threshold: 0.9 // Trigger when 50% of section-2 is in view
   });
   navObserver.observe(section1);
-}
+};
+
+document.forms['home-contact'].addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent form submission
+
+  var inputs = this.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"], textarea');
+  var isValid = true;
+  
+  inputs.forEach(function(input) {
+    if (!input.value.trim()) { 
+      isValid = false;
+    }
+  });
+  
+  if (!isValid) {
+    alert('Please fill out all fields before submitting.');
+  } else {
+    this.submit();
+  }
+});

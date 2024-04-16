@@ -15,7 +15,7 @@
   position: relative;
   z-index: 1;
   min-height: 100%;
-  height: 62vh;
+  height: 100%;
   padding-bottom: 40px;
   border-radius: 10px;
   transition: background-size 0.4s ease;
@@ -74,7 +74,7 @@
 
 #contact-us-header-container h1 {
   color: var(--maroon);
-  font-weight: bold;
+  font-weight: normal;
   font-size: 5rem;
   font-family: "Bebas Neue";
   margin-top: 15px;
@@ -142,13 +142,17 @@ label[for=preferred-phone], label[for=preferred-email] {
   background-color: var(--main-gray);
 }
 
+*, *:focus, *:hover {
+  outline: none;
+}
+
 @media (max-width: 1800px) {
   .section-1 {
     height: 140vh;
   }
   #contact-us-container {
     min-height: 100%;
-    height: 100vh;
+    height: 100%;
   }
   #container-1 {
     padding-top: 25vh;
@@ -175,6 +179,14 @@ label[for=preferred-phone], label[for=preferred-email] {
     display: none;
     margin-left: 0;
     margin-right: 0;
+  }
+  .section-1 {
+    height: auto;
+    padding-bottom: 30px;
+  }
+  .section-2 {
+    height: auto;
+    padding-bottom: 30px;
   }
 }
 @media (max-width: 992px) {
