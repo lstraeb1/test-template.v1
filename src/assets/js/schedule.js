@@ -105,6 +105,7 @@ function redCircle() {
 		redCircleElement.height = "15"; 
 		redCircleElement.width = "15"; 
 		redCircleElement.src = "/assets/svgs/red-circle.svg";
+		redCircleElement.alt = "today";
 
 
 		const headerContainer = targetColumn.querySelector('.calendar-header-container');
