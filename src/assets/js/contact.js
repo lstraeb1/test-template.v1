@@ -47,14 +47,14 @@ if (isDesktopOrLaptop) {
   navObserver.observe(section1);
 }
 
-document.getElementById('contact').addEventListener('submit', function(event) {
+document.forms['contact'].addEventListener('submit', function(event) {
   event.preventDefault(); // Prevent form submission
 
   var inputs = this.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"], textarea');
   var isValid = true;
   
   inputs.forEach(function(input) {
-    if (!input.value.trim()) { // Check if input value is empty or whitespace
+    if (!input.value.trim()) { 
       isValid = false;
     }
   });
@@ -62,7 +62,6 @@ document.getElementById('contact').addEventListener('submit', function(event) {
   if (!isValid) {
     alert('Please fill out all fields before submitting.');
   } else {
-    // Form is valid, submit it
     this.submit();
   }
 });
