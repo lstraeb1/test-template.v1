@@ -256,6 +256,9 @@ label[for=preferred-phone], label[for=preferred-email] {
   .log-in {
     display: none;
   }
+  .section-1 {
+    height: auto;
+  }
   #email-phone {
     margin-top: 25%;
   }
@@ -264,8 +267,12 @@ label[for=preferred-phone], label[for=preferred-email] {
     border-radius: 0;
   }
   #contact-us-container {
+    height: auto;
     padding-bottom: 30px;
     border-radius: 0;
+  }
+  #contact-us-form h1 {
+    margin-top: 40px;
   }
   .input-container {
     border-radius: 0;

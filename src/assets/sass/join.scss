@@ -362,6 +362,10 @@
     height: 50vh;
   }
 
+  #period-selector-container {
+    z-index: 0;
+  }
+
   .section-2 {
     height: 150vh;
     background-color: var(--main-gray);

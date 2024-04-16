@@ -227,7 +227,6 @@ label[for="preferred-phone"], label[for="preferred-email"] {
     padding: 0 1.5rem;
   }
 
-
   .navbar-nav {
     background: none;
     backdrop-filter: none;
@@ -239,7 +238,6 @@ label[for="preferred-phone"], label[for="preferred-email"] {
     height: 100vh;
     justify-content: start;
   }
-
 
   .navbar-collapse .navbar-nav .nav-item .nav-link {
     text-decoration: none;
@@ -260,27 +258,27 @@ label[for="preferred-phone"], label[for="preferred-email"] {
     bottom: 100px;
   }
 
-
   .nav-item-2 {
     display: block;
   }
-
 
   #log-in-mobile a,
   #join-us-mobile a {
     color: var(--alt-gray-highlight);
   }
 
-
   .navbar-collapse.show .navbar-nav .nav-item .nav-link {
     opacity: 1;
   }
-
 
   .navbar-text,
   .become-member,
   .log-in {
     display: none;
+  }
+
+  .section-1 {
+    height: auto;
   }
 
   #email-phone {
@@ -293,8 +291,13 @@ label[for="preferred-phone"], label[for="preferred-email"] {
   }
 
   #contact-us-container {
+    height: auto;
     padding-bottom: 30px;
     border-radius: 0;
+  }
+
+  #contact-us-form h1 {
+    margin-top: 40px;
   }
 
   .input-container {
