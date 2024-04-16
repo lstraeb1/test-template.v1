@@ -1,0 +1,103 @@
+.nav-section {
+  display: none;
+}
+
+#footer {
+  display: none;
+}
+
+.section-1 {
+  background-color: var(--main-gray);
+  height: 100vh;
+  background-image: url("/assets/images/success-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#container-2 {
+  padding-top: 15vh;
+  height: auto;
+}
+
+#success-header-container h1 {
+  font-family: "Bebas Neue";
+  font-size: 8rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px var(--alt-gray-highlight);
+  color: var(--main-red);
+  line-height: 0.9;
+}
+
+#success-subtitle-container {
+  margin-top: 20px;
+}
+
+#success-subtitle-container h2 {
+  font-family: "Be Vietnam";
+  color: black;
+  font-size: 2.25rem;
+}
+
+#return-home-container {
+  margin-top: 15vh;
+}
+
+#return-home-container a {
+  background: linear-gradient(90deg, var(--main-red) 35%, var(--highlight-red));
+  text-decoration: none;
+  color: white;
+  font-size: 1.75rem;
+  font-family: "Be Vietnam";
+  padding: 1.5rem 3rem;
+  border-radius: 5px;
+  text-wrap: nowrap;
+}
+
+#success-logo {
+  height: 45vh;
+}
+
+#success-logo img {
+  height: 100%;
+  width: 100%;
+}
+
+@media(max-width: 1800px) {
+  #container-2 {
+    padding-top: 7vh;
+  }
+
+  #success-logo {
+    height: 65vh;
+  }
+}
+
+@media(max-width: 1200px) {
+  #return-home-container {
+    margin-top: 5vh;
+  }
+
+  #success-logo {
+    height: 40vh;
+    padding-top: 8%;
+  }
+}
+
+@media (max-width: 576px) {
+  #success-header-container h1 {
+    font-size: 6rem;
+  }
+
+  #success-subtitle-container h2 {
+    font-size: 1.75rem;
+  }
+
+  #return-home-container a {
+    padding: 1.5rem 7rem;
+  }
+
+  #success-logo {
+    height: 30vh;
+    padding-top: 8%;
+  }
+}
