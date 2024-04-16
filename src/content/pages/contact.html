@@ -46,18 +46,18 @@ eleventyNavigation:
             <div class="col-12 text-center text-lg-start mx-lg-5" id="contact-us-header-container">
               <h1>Contact Us</h1>
             </div>
-            <form>
+            <form name="contact" netlify>
               <div class="row mx-4">
                 <div class="col-md-6 justify-content-center d-flex">
                   <div class="form-group col-12">
                       <label for="fname" class="label-container">First Name</label>
-                      <input id="fname" class="input-container" type="text" placeholder="Enter your first Name">
+                      <input name="fname" id="fname" class="input-container" type="text" placeholder="Enter your first Name">
                   </div>
                 </div>
                 <div class="col-md-6 justify-content-center d-flex">
                   <div class="form-group col-12">
                       <label for="lname" class="label-container">Last Name</label>
-                      <input id="lname" class="input-container" type="text" placeholder="Enter your last Name">
+                      <input name="lname" id="lname" class="input-container" type="text" placeholder="Enter your last Name">
                   </div>
                 </div>
               </div>
@@ -65,13 +65,13 @@ eleventyNavigation:
                 <div class="col-md-6 justify-content-center d-flex">
                   <div class="form-group col-12">
                     <label for="email" class="label-container">Email</label>
-                    <input id="email" class="input-container" classtype="email" placeholder="Enter your email" autocomplete="email">
+                    <input name="email" id="email" class="input-container" classtype="email" placeholder="Enter your email" autocomplete="email">
                   </div>
                 </div>
                 <div class="col-md-6 justify-content-center d-flex">
                   <div class="form-group col-12">
                     <label for="phone" class="label-container">Phone Number</label>
-                    <input id="phone" class="input-container" type="tel" placeholder="Enter your phone number" autocomplete="tel">
+                    <input name="phone" id="phone" class="input-container" type="tel" placeholder="Enter your phone number" autocomplete="tel">
                   </div>
                 </div>
               </div>
@@ -84,25 +84,25 @@ eleventyNavigation:
                 </div>
               </div>
               <div class="row mx-4" id="preferred-method-container">
-                <legend class="label-container">Preferred Method of Reply</legend>
+                <legend class="label-container" name="reply-method">Preferred Method of Reply</legend>
               </div>
               <div class="row mx-2">
                 <div class="col-md-2 d-flex">
                   <div class="form-check d-flex">
-                    <input id="preferred-phone" type="radio" name="radio-button" checked="checked">
+                    <input name="preferred-phone" id="preferred-phone" type="radio" name="phone" checked="checked">
                     <label for="preferred-phone">Phone</label>
                   </div>
                 </div>
                 <div class="col-md-2 d-flex">
                   <div class="form-check d-flex">
-                    <input id="preferred-email" type="radio" name="radio-button">
+                    <input name="preffered-email" id="preferred-email" type="radio" name="email">
                     <label for="preferred-email">Email</label>
                   </div>
                 </div>
               </div>
               <div class="row mx-4">
                 <div class="col-lg-4">
-                  <button class="col-12 col-md-12 col-xl-9" id="submit-contact-form">Submit</button>
+                  <button type="submit" class="col-12 col-md-12 col-xl-9" id="submit-contact-form">Submit</button>
                 </div>
               </div>
             </form>
