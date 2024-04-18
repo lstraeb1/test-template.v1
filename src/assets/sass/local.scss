@@ -141,6 +141,7 @@
 
   #images-container img {
     height: 80%;
+    width: auto;
     opacity: 0;
     transform: translateY(8%);
     transition: all 0.8s ease-in-out;
@@ -815,6 +816,11 @@
   }
   
   @media (max-width: 450px) {
+    .section-1 {
+      height: auto;
+      padding-bottom: 20px;
+    }
+
     .intro-container {
       padding-top: 20vh;
     }
