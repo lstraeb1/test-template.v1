@@ -53,13 +53,12 @@ const priceOptionObject = [
 		name: "Monthly Adult",
 		header: "Adult Jiu-Jitsu",
 		subtitle: "Mastering self-defense and discipline through adult Jiu-Jitsu training.",
-		price: "$159",
+		price: "$40",
 		sticker: "",
 		includes: `
 			<ul>
 				<li><img src="/assets/svgs/check-circle.svg" alt="included check mark" height="22px" class="check">Unlimited Jiu-Jitsu</li>
 				<li><img src="/assets/svgs/check-circle.svg" alt="included check mark" height="22px" class="check">Unlimited Striking</li>
-				<li><img src="/assets/svgs/check-circle.svg" alt="included check mark" height="22px" class="check">Unlimited Judo</li>
 				<li><img src="/assets/svgs/check-circle.svg" alt="included check mark" height="22px" class="check">Unlimited Open Mat</li>
 			</ul>
 		`
@@ -69,7 +68,7 @@ const priceOptionObject = [
 		name: "Monthly Youth",
 		header: "Youth Jiu-Jitsu",
 		subtitle: "Nurturing confidence and resilience in youth through the art of Jiu-Jitsu.",
-		price: "$149",
+		price: "$30",
 		sticker: "",
 		includes: `
 			<ul>
@@ -83,29 +82,13 @@ const priceOptionObject = [
 		name: "6 Month Adult",
 		header: "Adult Jiu-Jitsu",
 		subtitle: "Mastering self-defense and discipline through adult Jiu-Jitsu training.",
-		price: "$149",
-		sticker: "$849 billed semi-annually",
+		price: "$35",
 		includes: `
 			<ul>
 				<li><img src="/assets/svgs/check-circle.svg" alt="included check mark" height="22px" class="check">Unlimited Jiu-Jitsu</li>
 				<li><img src="/assets/svgs/check-circle.svg" alt="included check mark" height="22px" class="check">Unlimited Striking</li>
-				<li><img src="/assets/svgs/check-circle.svg" alt="included check mark" height="22px" class="check">Unlimited Judo</li>
 				<li><img src="/assets/svgs/check-circle.svg" alt="included check mark" height="22px" class="check">Unlimited Open Mat</li>
 				<li><img src="/assets/svgs/check-circle.svg" alt="included check mark" height="22px" class="check">1 Free Private Lesson/Month</li>
-			</ul>
-		`
-	},
-
-	{
-		name: "6 Month Youth",
-		header: "Youth Jiu-Jitsu",
-		subtitle: "Nurturing confidence and resilience in youth through the art of Jiu-Jitsu.",
-		price: "$135",
-		sticker: "$810 billed semi-annually",
-		includes: `
-			<ul>
-				<li><img src="/assets/svgs/check-circle.svg" alt="included check mark" height="22px" class="check">Unlimited Youth Jiu-Jitsu</li>
-				<li><img src="/assets/svgs/check-circle.svg" alt="included check mark" height="22px" class="check">Unlimited Youth Judo</li>
 			</ul>
 		`
 	},
@@ -114,8 +97,7 @@ const priceOptionObject = [
 		name: "1 Year Adult",
 		header: "Adult Jiu-Jitsu",
 		subtitle: "Mastering self-defense and discipline through adult Jiu-Jitsu training.",
-		price: "$135",
-		sticker: "$1,620 billed annually",
+		price: "$30",
 		includes: `
 			<ul>
 				<li><img src="/assets/svgs/check-circle.svg" alt="included check mark" height="22px" class="check">Unlimited Jiu-Jitsu</li>
@@ -136,13 +118,13 @@ function priceOptionSelect(identifier) {
 	if (identifier == 'periodSelector1') {
 		priceHeader1.textContent = priceOptionObject[0].header;
 		priceSubtitle1.textContent = priceOptionObject[0].subtitle;
-		price1.innerHTML= `<h1>${priceOptionObject[0].price}<span id="per-month">/Month</span></h1>`;
+		price1.innerHTML= `<h1>${priceOptionObject[0].price}<span id="per-week">/Week</span></h1>`;
 		sticker1.textContent = priceOptionObject[0].sticker;
 		included1.innerHTML = priceOptionObject[0].includes;
 
 		priceHeader2.textContent = priceOptionObject[1].header;
 		priceSubtitle2.textContent = priceOptionObject[1].subtitle;
-		price2.innerHTML= `<h1>${priceOptionObject[1].price}<span id="per-month">/Month</span></h1>`;
+		price2.innerHTML= `<h1>${priceOptionObject[1].price}<span id="per-week">/Week</span></h1>`;
 		sticker2.innerHTML = priceOptionObject[1].sticker;
 		included2.innerHTML = priceOptionObject[1].includes;
 
@@ -158,18 +140,11 @@ function priceOptionSelect(identifier) {
 	} else if (identifier == 'periodSelector2') {
 		priceHeader1.textContent = priceOptionObject[2].header;
 		priceSubtitle1.textContent = priceOptionObject[2].subtitle;
-		price1.innerHTML= `<h1>${priceOptionObject[2].price}<span id="per-month">/Month</span></h1>`;
+		price1.innerHTML= `<h1>${priceOptionObject[2].price}<span id="per-week">/Week</span></h1>`;
 		sticker1.textContent = priceOptionObject[2].sticker;
 		included1.innerHTML = priceOptionObject[2].includes;
 
-
-		priceHeader2.textContent = priceOptionObject[3].header;
-		priceSubtitle2.textContent = priceOptionObject[3].subtitle;
-		price2.innerHTML= `<h1>${priceOptionObject[3].price}<span id="per-month">/Month</span></h1>`;
-		sticker2.textContent = priceOptionObject[3].sticker;
-		included2.innerHTML = priceOptionObject[3].includes;
-
-		priceSquare2.style.display = "block";
+		priceSquare2.style.display = "none";
 		periodSelector2.style.color = "white";
 
 		if (window.innerWidth < 576) {
@@ -181,12 +156,12 @@ function priceOptionSelect(identifier) {
 
 	else if (identifier == 'periodSelector3') {
 		setTimeout(function() {
-			priceHeader1.textContent = priceOptionObject[4].header;
-			priceSubtitle1.textContent = priceOptionObject[4].subtitle;
-			price1.innerHTML= `<h1>${priceOptionObject[4].price}<span id="per-month">/Month</span></h1>`;
-			sticker1.textContent = priceOptionObject[4].sticker;
+			priceHeader1.textContent = priceOptionObject[3].header;
+			priceSubtitle1.textContent = priceOptionObject[3].subtitle;
+			price1.innerHTML= `<h1>${priceOptionObject[3].price}<span id="per-week">/Month</span></h1>`;
+			sticker1.textContent = priceOptionObject[3].sticker;
 			priceSquare2.style.display = "none";
-			included1.innerHTML = priceOptionObject[4].includes;
+			included1.innerHTML = priceOptionObject[3].includes;
 		}, 200);
 
 		periodSelector3.style.color = "white";

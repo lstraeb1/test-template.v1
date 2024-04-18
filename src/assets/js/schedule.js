@@ -126,7 +126,6 @@ const filterOption1 = document.getElementById('bjj-filter-btn');
 const filterOption2 = document.getElementById('beg-jj-filter-btn');
 const filterOption3 = document.getElementById('youth-jj-filter-btn');
 const filterOption4 = document.getElementById('striking-filter-btn');
-const filterOption5 = document.getElementById('judo-filter-btn');
 
 function filterClasses(filterOptionButton) {
 	if (filterOptionButton.id === 'all-filter-btn') {
@@ -169,8 +168,4 @@ filterOption3.addEventListener('click', function () {
 
 filterOption4.addEventListener('click', function () {
 	filterClasses(filterOption4);
-});
-
-filterOption5.addEventListener('click', function () {
-	filterClasses(filterOption5);
 });

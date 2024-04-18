@@ -7,9 +7,9 @@
         <div class="left-section">
             <a class="logo" href="/"><img loading="lazy" decoding="async" src="/assets/images/subg-nb-logo-2.png" alt="logo" height="400px"></a>
             <div class="socials">
-                <a class="social-icons" href=""><img src="/assets/svgs/facebook-fill.svg" loading="lazy" decoding="async" alt="facebook" height="20px" width="20px"></a>
-                <a class="social-icons" href=""><img src="/assets/svgs/youtube.svg" loading="lazy" decoding="async" alt="facebook" height="20px" width="20px"></a>
-                <a class="social-icons" href=""><img src="/assets/svgs/instagram.svg" loading="lazy" decoding="async" alt="facebook" height="20px" width="20px"></a>
+                <a class="social-icons" href="https://www.facebook.com/p/SUB-G-Brazilian-Jiu-Jitsu-100077642723641/?paipv=0&eav=AfZSu2-R5yqD0nHYofHYfXHL0PCIfORB6Sm1RKYELF97DZt3pEGXbbQ_zKZZSJJUE-U&_rdr" target="_blank"><img src="/assets/svgs/facebook-fill.svg" loading="lazy" decoding="async" alt="facebook" height="20px" width="20px"></a>
+                <a class="social-icons" href="https://www.youtube.com/@SUB_G" target="_blank"><img src="/assets/svgs/youtube.svg" loading="lazy" decoding="async" alt="youtube" height="20px" width="20px"></a>
+                <a class="social-icons" href="https://www.instagram.com/subg_brazilianjiujitsu/" target="_blank"><img src="/assets/svgs/instagram.svg" loading="lazy" decoding="async" alt="instagram" height="20px" width="20px"></a>
             </div>
         </div>
         <div class="right-section">
@@ -43,7 +43,6 @@
                     </li>
                     <li>Brazilian Jiu-Jitsu</li>
                     <li>MMA Striking</li>
-                    <li>Judo</li>
                     <li>Youth Jiu-Jitsu</li>
                 </ul>
                 <ul>
@@ -53,7 +52,6 @@
                     <li>
                         <a href="{{client.address.mapLink}}" target="_blank">
                             {{client.address.lineOne}}<br>
-                            {{client.address.lineTwo}}<br>
                             {{client.address.city}}
                             {{client.address.state}}
                             {{client.address.zip}}
@@ -61,12 +59,11 @@
                     </li>
                     <li>
                         <a href="tel:{{client.phoneForTel}}">
-                            T:
                             {{client.phoneFormatted}}
                         </a>
                     </li>
                     <li>
-                        <a href="mailto:{{client.email}}">Email</a>
+                        <a href="mailto:{{client.email}}">{{client.email}}</a>
                     </li>
                 </ul>
             </div>

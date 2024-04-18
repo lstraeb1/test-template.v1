@@ -15,7 +15,6 @@ const classOption1 = document.getElementById('class-option-1');
 const classOption2 = document.getElementById('class-option-2');
 const classOption3 = document.getElementById('class-option-3');
 const classOption4 = document.getElementById('class-option-4');
-const classOption5 = document.getElementById('class-option-5');
 
 navToggleBtn.addEventListener('click', () => {
 	if (navToggleBtn.classList.contains('collapsed')) {
@@ -42,13 +41,6 @@ const classOptionsObject = [
         alt: "Grapplers image",
         header: "Develop Resilience and Precision",
         subtitle: "Enhance your problem-solving, adaptability, and physical conditioning.",
-    },
-    {
-        name: "Judo",
-        image: "/assets/images/judo-img-copy.png",
-        alt: "Judo players image",
-        header: "Fostering Strength and Technique",
-        subtitle: "Master the art of adaptability, build inner strength, and hone precise techniques with Judo."
     },
     {
         name: "Youth Jiu-jitsu",
@@ -81,7 +73,7 @@ const classOptionSelect = (index) => {
     classSkillsHeader.textContent = selectedClass.header;
     classSkillsSubtitle.textContent = selectedClass.subtitle;
 
-    const allButtons = [classOption1, classOption2, classOption3, classOption4, classOption5];
+    const allButtons = [classOption1, classOption2, classOption3, classOption4];
     allButtons.forEach(button => {
         button.style.backgroundColor = '';
         button.style.color = '';  
@@ -96,7 +88,6 @@ classOption1.addEventListener('click', () => classOptionSelect(0));
 classOption2.addEventListener('click', () => classOptionSelect(1));
 classOption3.addEventListener('click', () => classOptionSelect(2));
 classOption4.addEventListener('click', () => classOptionSelect(3));
-classOption5.addEventListener('click', () => classOptionSelect(4));
 
 classOptionSelect(0);
 

@@ -199,9 +199,9 @@
 }
 
 .section-2 {
-  background-image: url("/assets/svgs/classes-waves(2).svg");
+  background-image: url("/assets/images/classes-waves(2).webp");
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   padding-top: 5rem;
   padding-bottom: 40px;
   min-height: auto;
@@ -209,11 +209,9 @@
 }
 
 .classes-container {
-  padding-bottom: 40px;
   padding-top: 20px;
   border-radius: 5px;
   height: auto;
-  min-height: 70vh;
 }
 
 #classes-header-container h1 {
@@ -230,6 +228,10 @@
 
 .classes-info-container {
   padding-top: 3%;
+}
+
+.classes-table {
+  padding-top: 4rem;
 }
 
 .class-option {
@@ -374,10 +376,10 @@
   text-wrap: nowrap;
 }
 
-.fa-envelope, .fa-phone {
+#email-symbol, #phone-symbol {
   color: var(--alt-gray-highlight);
   font-size: 1.5rem;
-  padding-right: 5px;
+  padding-right: 8px;
 }
 
 #contact-us-header-container h1 {
@@ -467,7 +469,7 @@ label[for=preferred-phone], label[for=preferred-email] {
     height: 90%;
   }
   .section-2 {
-    height: 100vh;
+    height: auto;
   }
   #section-3 {
     height: 80vh;

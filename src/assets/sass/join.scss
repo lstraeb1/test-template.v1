@@ -96,7 +96,7 @@
   margin-top: 20px;
 }
 
-#per-month {
+#per-week {
   font-family: "Be Vietnam";
   font-size: 1.75rem;
 }
@@ -160,6 +160,7 @@
 .section-3 {
   background-color: var(--main-gray);
   height: 70vh;
+  min-height: auto;
 }
 
 #faq-header-container h1 {
@@ -484,7 +485,7 @@
     margin-top: 10px;
   }
   
-  #per-month {
+  #per-week {
     font-family: "Be Vietnam";
     font-size: 1.5rem;
   }

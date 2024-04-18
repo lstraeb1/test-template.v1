@@ -145,10 +145,9 @@ eleventyNavigation:
           <div class="row classes-info-container col-10 mx-auto">
             <div class="classes-table col-12 col-lg-3">
               <button class="class-option col-12 col-md-12 col-xl-9" id="class-option-1">Brazilian Jiu-Jitsu</button>
-              <button class="class-option col-12 col-md-12 col-xl-9" id="class-option-2">Judo</button>
-              <button class="class-option col-12 col-md-12 col-xl-9" id="class-option-3">Youth Jiu-Jitsu</button>
-              <button class="class-option col-12 col-md-12 col-xl-9" id="class-option-4">Striking</button>
-              <button class="class-option col-12 col-md-12 col-xl-9" id="class-option-5">Beginners Jiu-Jitsu</button>
+              <button class="class-option col-12 col-md-12 col-xl-9" id="class-option-2">Youth Jiu-Jitsu</button>
+              <button class="class-option col-12 col-md-12 col-xl-9" id="class-option-3">Striking</button>
+              <button class="class-option col-12 col-md-12 col-xl-9" id="class-option-4">Beginners Jiu-Jitsu</button>
             </div>
             <div class="col-12 col-lg-6 text-center text-lg-left" id="classes-img-container"></div>
             <div class="col-12 col-lg-3" id="class-skills-container">
@@ -182,8 +181,8 @@ eleventyNavigation:
               <h1>We're just an email or call away</h1>
             </div>
             <div class="col-12 justify-content-center d-flex text-center mx-2" id="email-phone">
-              <a href="" target="_blank" class="mx-2 mx-md-5"><img src="/assets/svgs/email-symbol.svg" alt="email symbol" height="15px" id="email-symbol" loading="lazy" decoding="async">subgbjj@gmail.com</a>
-              <a href="" target="_blank" class="mx-2 mx-md-5"><img src="/assets/svgs/phone-symbol.svg" alt="phone symbol" height="15px" id="phone-symbol" loading="lazy" decoding="async">+1(123) 456-7890</a>
+              <a href="mailto:{{client.email}}" target="_blank" class="mx-2 mx-md-5"><img src="/assets/svgs/email-symbol.svg" alt="email symbol" height="15px" id="email-symbol" loading="lazy" decoding="async">{{client.email}}</a>
+              <a href="tel:{{client.phoneFormatted}}" target="_blank" class="mx-2 mx-md-5"><img src="/assets/svgs/phone-symbol.svg" alt="phone symbol" height="15px" id="phone-symbol" loading="lazy" decoding="async">{{client.phoneFormatted}}</a>
             </div>
           </div>
           <div class="col-12 col-lg-7" id="contact-us-form">

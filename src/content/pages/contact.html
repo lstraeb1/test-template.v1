@@ -28,8 +28,8 @@ eleventyNavigation:
         <div class="row">
           <div id="contact-us-container" class="col-12 col-lg-5">
             <div class="col-5 justify-content-start d-flex mx-2" id="email-phone">
-              <a href="" target="_blank" class="mx-2 mx-md-5"><img src="/assets/svgs/email-symbol.svg" alt="email symbol" height="15px" id="email-symbol" loading="lazy" decoding="async">subgbjj@gmail.com</a>
-              <a href="" target="_blank" class="mx-2 mx-md-5"><img src="/assets/svgs/phone-symbol.svg" alt="phone symbol" height="15px" id="phone-symbol" loading="lazy" decoding="async">+1(123) 456-7890</a>
+              <a href="mailto:{{client.email}}" target="_blank" class="mx-2 mx-md-5"><img src="/assets/svgs/email-symbol.svg" alt="email symbol" height="15px" id="email-symbol" loading="lazy" decoding="async">{{client.email}}</a>
+              <a href="tel:{{client.phoneFormatted}}" target="_blank" class="mx-2 mx-md-5"><img src="/assets/svgs/phone-symbol.svg" alt="phone symbol" height="15px" id="phone-symbol" loading="lazy" decoding="async">{{client.phoneFormatted}}</a>
               <a href="https://maps.app.goo.gl/g7kMmgX994f4Fw65A" target="_blank" class="mx-2 mx-md-5" id="address">
                 {{client.address.lineOne}} <br>
                 {{client.address.city}}
