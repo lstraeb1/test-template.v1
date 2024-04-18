@@ -199,10 +199,13 @@
 }
 
 .section-2 {
-  background-color: var(--main-gray);
+  background-image: url("/assets/svgs/classes-waves(2).svg");
+  background-size: cover;
+  background-position: center;
   padding-top: 5rem;
   padding-bottom: 40px;
-  height: auto;
+  min-height: auto;
+  height: 80vh;
 }
 
 .classes-container {
@@ -211,7 +214,6 @@
   border-radius: 5px;
   height: auto;
   min-height: 70vh;
-  background-color: rgb(247, 247, 247);
 }
 
 #classes-header-container h1 {
@@ -463,6 +465,9 @@ label[for=preferred-phone], label[for=preferred-email] {
   }
   #images-container img {
     height: 90%;
+  }
+  .section-2 {
+    height: 100vh;
   }
   #section-3 {
     height: 80vh;
