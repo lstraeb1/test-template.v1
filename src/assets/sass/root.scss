@@ -251,6 +251,12 @@
     display: block;
   }
 
+  .navbar-text,
+  .become-member,
+  .contact-us {
+    display: none;
+  }
+
   #contact-us-mobile a {
     color: var(--alt-gray-highlight);
   }
