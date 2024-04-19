@@ -66,10 +66,14 @@
   font-size: 1.75rem;
 }
 
-#email-symbol, #phone-symbol {
+#email-symbol, #phone-symbol, #shop-symbol {
   color: var(--alt-gray-highlight);
   font-size: 1.5rem;
   padding-right: 15px;
+}
+
+#address-line2 {
+  margin-left: 40px;
 }
 
 #contact-us-header-container h1{
