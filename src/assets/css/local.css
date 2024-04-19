@@ -129,7 +129,7 @@
 }
 
 #images-container img {
-  height: 80%;
+  height: 85%;
   width: auto;
   opacity: 0;
   transform: translateY(8%);
@@ -202,7 +202,7 @@
 .section-2 {
   background-image: url("/assets/images/classes-waves(2).webp");
   background-size: cover;
-  background-position: center top;
+  background-position: center top -130px;
   padding-top: 5rem;
   padding-bottom: 40px;
   min-height: auto;
@@ -467,16 +467,25 @@ label[for=preferred-phone], label[for=preferred-email] {
     height: 100vh;
   }
   #images-container img {
-    height: 90%;
+    height: 95%;
   }
   .section-2 {
     height: auto;
   }
+  .section-2 {
+    background-image: url("/assets/images/classes-waves(2).webp");
+    background-size: cover;
+    background-position: center top;
+    padding-top: 5rem;
+    padding-bottom: 40px;
+    min-height: auto;
+    height: 110vh;
+  }
   #section-3 {
-    height: 80vh;
+    height: auto;
   }
   .section-4 {
-    height: 130vh;
+    height: 135vh;
   }
 }
 @media (max-width: 1200px) {
