@@ -40,37 +40,6 @@
     overflow-x: hidden;
     font-family: 'Be Vietnam';
   }
-
-  .cs-topper {
-    font-size: var(--topperFontSize);
-    line-height: 1.2em;
-    text-transform: uppercase;
-    text-align: inherit;
-    letter-spacing: 0.1em;
-    font-weight: 700;
-    color: var(--main-red);
-    margin-bottom: 0.25rem;
-    display: block;
-  }
-  .cs-title {
-    font-size: var(--headerFontSize);
-    font-weight: 900;
-    line-height: 1.2em;
-    text-align: inherit;
-    max-width: 43.75rem;
-    margin: 0 0 1rem 0;
-    color: var(--headerColor);
-    position: relative;
-  }
-  .cs-text {
-    font-size: var(--bodyFontSize);
-    line-height: 1.5em;
-    text-align: inherit;
-    width: 100%;
-    max-width: 40.625rem;
-    margin: 0;
-    color: var(--bodyTextColor);
-  }
   .cs-button-solid {
     background: linear-gradient(90deg, var(--main-red) 35%, var(--highlight-red));
     font-size: 1.5rem;
@@ -141,36 +110,6 @@
     font-weight: 400;
     src: url('/assets/fonts/knewave-v14-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
-
-  .container {
-    width: 92%;
-    margin: auto;
-    position: relative;
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 0;
-    color: var(--headerColor);
-  }
-  p,
-  li,
-  a {
-    font-size: 1rem;
-    line-height: 1.5em;
-    margin: 0;
-  }
-  p,
-  li {
-    color: #353535;
-  }
-  a:hover,
-  button:hover {
-    cursor: pointer;
-  }
   .skip {
     opacity: 0;
     position: absolute;
@@ -187,67 +126,8 @@
 @media only screen and (min-width: 2000px) {
   
 }
-/*-- -------------------------- -->
-<---      Dark Mode Toggle      -->
-<--- -------------------------- -*/
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-  body.dark-mode #dark-mode-toggle .cs-sun {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-  body.dark-mode #dark-mode-toggle .cs-moon {
-    opacity: 0;
-    transform: translate(-50%, -150%);
-    fill: #fff;
-  }
-  #dark-mode-toggle {
-    width: 3rem;
-    height: 3rem;
-    padding: 0;
-    background: transparent;
-    border: none;
-    display: block;
-    position: absolute;
-    top: 0.625rem;
-    right: 4.375rem;
-    z-index: 1000;
-    overflow: hidden;
-  }
-  #dark-mode-toggle img,
-  #dark-mode-toggle svg {
-    width: 1.25rem;
-    height: 1.25rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-  }
-  #dark-mode-toggle .cs-moon {
-    z-index: 2;
-    transition: transform 0.3s, opacity 0.3s;
-  }
-  #dark-mode-toggle .cs-sun {
-    opacity: 0;
-    z-index: 1;
-    transform: translate(-50%, 100%);
-    transition: transform 0.3s, opacity 0.3s;
-  }
-}
-/* Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-  #dark-mode-toggle {
-    margin: 0;
-    position: relative;
-    top: auto;
-    right: auto;
-    transform: none;
-  }
-  #dark-mode-toggle:hover {
-    cursor: pointer;
-  }
-}
+
+
 /*-- -------------------------- -->
 <---     Mobile Navigation      -->
 <--- -------------------------- -->*/
@@ -388,7 +268,6 @@
   }
 }
 
-
 @media (max-width: 768px) {
 
 
@@ -396,7 +275,6 @@
     height: 20px;
   }
 }
-
 
 @media (max-width: 576px) {
 
@@ -575,7 +453,8 @@ button.navbar-toggler:active {
 
 /*-- -------------------------- -->
 <---    Final Call To Action    -->
-<--- -------------------------- -*/
+<--- -------------------------- -->*/
+
 /* Mobile */
 @media only screen and (min-width: 0em) {
   #cta {
@@ -624,12 +503,14 @@ button.navbar-toggler:active {
     opacity: 1;
   }
 }
+
 /* Small Desktop */
 @media only screen and (min-width: 64em) {
   #cta {
     padding: 10.5rem 0;
   }
 }
+
 /* Large Desktop */
 @media only screen and (min-width: 1300px) {
   #cta {
@@ -661,16 +542,10 @@ button.navbar-toggler:active {
     transform: translateX(-50%);
   }
 }
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-  body.dark-mode #cta:after {
-    display: none;
-  }
-}
 
 
 /*-- -------------------------- -->
-<---   Interior Page Header     -->
+<---           Footer           -->
 <--- -------------------------- -*/
 /* Mobile */
 
@@ -877,11 +752,5 @@ button.navbar-toggler:active {
   }
   #footer .credit .copyright {
     display: inline-block;
-  }
-}
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-  body.dark-mode #footer {
-    background: #061623;
   }
 }
