@@ -51,60 +51,61 @@ if (isDesktopOrLaptop) {
 const priceOptionObject = [
 	{
 		name: "Monthly Adult",
-		header: "Adult Jiu-Jitsu",
+		header: "Monthly Adult Jiu-Jitsu",
 		subtitle: "Mastering self-defense and discipline through adult Jiu-Jitsu training.",
-		price: "$40",
 		sticker: "",
 		includes: `
 			<ul>
-				<li><img src="/assets/svgs/check-circle.svg" alt="included check mark" height="22px" class="check">Unlimited Jiu-Jitsu</li>
-				<li><img src="/assets/svgs/check-circle.svg" alt="included check mark" height="22px" class="check">Unlimited Striking</li>
-				<li><img src="/assets/svgs/check-circle.svg" alt="included check mark" height="22px" class="check">Unlimited Open Mat</li>
+				<li><img src="/assets/svgs/check-svgrepo-com.svg" alt="included check mark" height="30px" class="check">Unlimited Beginner's Jiu-Jitsu</li>
+				<li><img src="/assets/svgs/check-svgrepo-com.svg" alt="included check mark" height="30px" class="check">Unlimited Brazilian Jiu-Jitsu</li>
+				<li><img src="/assets/svgs/check-svgrepo-com.svg" alt="included check mark" height="30px" class="check">Unlimited Striking</li>
+				<li><img src="/assets/svgs/check-svgrepo-com.svg" alt="included check mark" height="30px" class="check">Unlimited Open Mat</li>
 			</ul>
 		`
 	},
 
 	{
 		name: "Monthly Youth",
-		header: "Youth Jiu-Jitsu",
+		header: "Monthly Youth Jiu-Jitsu",
 		subtitle: "Nurturing confidence and resilience in youth through the art of Jiu-Jitsu.",
 		price: "$30",
 		sticker: "",
 		includes: `
 			<ul>
-				<li><img src="/assets/svgs/check-circle.svg" alt="included check mark" height="22px" class="check">Unlimited Youth Jiu-Jitsu</li>
-				<li><img src="/assets/svgs/check-circle.svg" alt="included check mark" height="22px" class="check">Unlimited Youth Judo</li>
+				<li><img src="/assets/svgs/check-svgrepo-com.svg" alt="included check mark" height="30px" class="check">Unlimited Youth Jiu-Jitsu</li>
+				<li><img src="/assets/svgs/check-svgrepo-com.svg" alt="included check mark" height="30px" class="check">Unlimited Youth Judo</li>
 			</ul>
 		`
 	},
 
 	{
 		name: "6 Month Adult",
-		header: "Adult Jiu-Jitsu",
+		header: "6-Month Adult Jiu-Jitsu",
 		subtitle: "Mastering self-defense and discipline through adult Jiu-Jitsu training.",
 		price: "$35",
 		includes: `
 			<ul>
-				<li><img src="/assets/svgs/check-circle.svg" alt="included check mark" height="22px" class="check">Unlimited Jiu-Jitsu</li>
-				<li><img src="/assets/svgs/check-circle.svg" alt="included check mark" height="22px" class="check">Unlimited Striking</li>
-				<li><img src="/assets/svgs/check-circle.svg" alt="included check mark" height="22px" class="check">Unlimited Open Mat</li>
-				<li><img src="/assets/svgs/check-circle.svg" alt="included check mark" height="22px" class="check">1 Free Private Lesson/Month</li>
+				<li><img src="/assets/svgs/check-svgrepo-com.svg" alt="included check mark" height="30px" class="check">Unlimited Beginner's Jiu-Jitsu</li>
+				<li><img src="/assets/svgs/check-svgrepo-com.svg" alt="included check mark" height="30px" class="check">Unlimited Brazilian Jiu-Jitsu</li>
+				<li><img src="/assets/svgs/check-svgrepo-com.svg" alt="included check mark" height="30px" class="check">Unlimited Striking</li>
+				<li><img src="/assets/svgs/check-svgrepo-com.svg" alt="included check mark" height="30px" class="check">Unlimited Open Mat</li>
+				<li><img src="/assets/svgs/check-svgrepo-com.svg" alt="included check mark" height="30px" class="check">1 Free Private Lesson/Month</li>
 			</ul>
 		`
 	},
 
 	{
 		name: "1 Year Adult",
-		header: "Adult Jiu-Jitsu",
+		header: "Annual Adult Jiu-Jitsu",
 		subtitle: "Mastering self-defense and discipline through adult Jiu-Jitsu training.",
 		price: "$30",
 		includes: `
 			<ul>
-				<li><img src="/assets/svgs/check-circle.svg" alt="included check mark" height="22px" class="check">Unlimited Jiu-Jitsu</li>
-				<li><img src="/assets/svgs/check-circle.svg" alt="included check mark" height="22px" class="check">Unlimited Striking</li>
-				<li><img src="/assets/svgs/check-circle.svg" alt="included check mark" height="22px" class="check">Unlimited Judo</li>
-				<li><img src="/assets/svgs/check-circle.svg" alt="included check mark" height="22px" class="check">Unlimited Open Mat</li>
-				<li><img src="/assets/svgs/check-circle.svg" alt="included check mark" height="22px" class="check">2 Free Private Lessons/Month</li>
+				<li><img src="/assets/svgs/check-svgrepo-com.svg" alt="included check mark" height="30px" class="check">Unlimited Beginner's Jiu-Jitsu</li>
+				<li><img src="/assets/svgs/check-svgrepo-com.svg" alt="included check mark" height="30px" class="check">Unlimited Brazilian Jiu-Jitsu</li>
+				<li><img src="/assets/svgs/check-svgrepo-com.svg" alt="included check mark" height="30px" class="check">Unlimited Striking</li>
+				<li><img src="/assets/svgs/check-svgrepo-com.svg" alt="included check mark" height="30px" class="check">Unlimited Open Mat</li>
+				<li><img src="/assets/svgs/check-svgrepo-com.svg" alt="included check mark" height="30px" class="check">2 Free Private Lessons/Month</li>
 			</ul>
 		`
 	}
@@ -118,13 +119,11 @@ function priceOptionSelect(identifier) {
 	if (identifier == 'periodSelector1') {
 		priceHeader1.textContent = priceOptionObject[0].header;
 		priceSubtitle1.textContent = priceOptionObject[0].subtitle;
-		price1.innerHTML= `<h1>${priceOptionObject[0].price}<span id="per-week">/Week</span></h1>`;
 		sticker1.textContent = priceOptionObject[0].sticker;
 		included1.innerHTML = priceOptionObject[0].includes;
 
 		priceHeader2.textContent = priceOptionObject[1].header;
 		priceSubtitle2.textContent = priceOptionObject[1].subtitle;
-		price2.innerHTML= `<h1>${priceOptionObject[1].price}<span id="per-week">/Week</span></h1>`;
 		sticker2.innerHTML = priceOptionObject[1].sticker;
 		included2.innerHTML = priceOptionObject[1].includes;
 
@@ -140,7 +139,6 @@ function priceOptionSelect(identifier) {
 	} else if (identifier == 'periodSelector2') {
 		priceHeader1.textContent = priceOptionObject[2].header;
 		priceSubtitle1.textContent = priceOptionObject[2].subtitle;
-		price1.innerHTML= `<h1>${priceOptionObject[2].price}<span id="per-week">/Week</span></h1>`;
 		sticker1.textContent = priceOptionObject[2].sticker;
 		included1.innerHTML = priceOptionObject[2].includes;
 
@@ -158,7 +156,6 @@ function priceOptionSelect(identifier) {
 		setTimeout(function() {
 			priceHeader1.textContent = priceOptionObject[3].header;
 			priceSubtitle1.textContent = priceOptionObject[3].subtitle;
-			price1.innerHTML= `<h1>${priceOptionObject[3].price}<span id="per-week">/Month</span></h1>`;
 			sticker1.textContent = priceOptionObject[3].sticker;
 			priceSquare2.style.display = "none";
 			included1.innerHTML = priceOptionObject[3].includes;
