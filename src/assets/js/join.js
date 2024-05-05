@@ -52,7 +52,7 @@ const priceOptionObject = [
 	{
 		name: "Monthly Adult",
 		header: "Monthly Adult Jiu-Jitsu",
-		subtitle: "Mastering self-defense and discipline through adult Jiu-Jitsu training.",
+		subtitle: "Mastering self-defense and discipline through Jiu-Jitsu training.",
 		sticker: "",
 		includes: `
 			<ul>
@@ -81,7 +81,7 @@ const priceOptionObject = [
 	{
 		name: "6 Month Adult",
 		header: "6-Month Adult Jiu-Jitsu",
-		subtitle: "Mastering self-defense and discipline through adult Jiu-Jitsu training.",
+		subtitle: "Mastering self-defense and discipline through Jiu-Jitsu training.",
 		price: "$35",
 		includes: `
 			<ul>
@@ -97,7 +97,7 @@ const priceOptionObject = [
 	{
 		name: "1 Year Adult",
 		header: "Annual Adult Jiu-Jitsu",
-		subtitle: "Mastering self-defense and discipline through adult Jiu-Jitsu training.",
+		subtitle: "Mastering self-defense and discipline through Jiu-Jitsu training.",
 		price: "$30",
 		includes: `
 			<ul>
