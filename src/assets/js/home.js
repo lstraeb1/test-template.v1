@@ -69,7 +69,7 @@ const classOptionsObject = [
 const classOptionSelect = (index) => {
     const selectedClass = classOptionsObject[index];
 
-    imgContainer.innerHTML = `<img src="${selectedClass.image}" class="img-fluid" height="300px" alt="${selectedClass.alt}">`;
+    imgContainer.innerHTML = `<img src="${selectedClass.image}" class="img-fluid" height="375" width="665" alt="${selectedClass.alt}">`;
     classSkillsHeader.textContent = selectedClass.header;
     classSkillsSubtitle.textContent = selectedClass.subtitle;
 

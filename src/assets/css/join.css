@@ -38,6 +38,10 @@
   font-family: "Be Vietnam";
 }
 
+#subtitle-container a {
+  color: var(--main-red);
+}
+
 #period-selector-container {
   background: linear-gradient(180deg, rgb(175, 175, 175), white);
   border-radius: 30px;
