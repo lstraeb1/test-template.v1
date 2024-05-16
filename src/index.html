@@ -73,7 +73,7 @@ eleventyNavigation:
         </div>
       </div>
       <picture>
-        <source media="(max-width: 600px)" srcset="/assets/images/home-landing-bg-m.png">
+        <source media="(max-width: 600px)" srcset="/assets/images/home-landing-bg-m.webp">
         <source media="(min-width: 601px)" srcset="/assets/images/home-landing-bg.png">
         <img aria-hidden="true" decoding="async" src="/assets/images/home-landing-bg.png" alt="Sub-G gym" width="1920" height="1280">
       </picture>
@@ -87,7 +87,11 @@ eleventyNavigation:
       <div class="container" id="container-5">
         <div class="row justify-content-center justify-content-lg-start" id="about-section-container">
           <div id="images-container" class="col-12 col-lg-6 justify-content-center d-flex">
-            <img src="/assets/images/landing-page-imgs.webp" alt="about images" id="about-images" width="856" height="874" loading="lazy" decoding="async">
+            <picture>
+              <source media="(max-width: 600px)" srcset="/assets/images/landing-page-imgs.webp">
+              <source media="(min-width: 601px)" srcset="/assets/images/landing-page-imgs.png">
+              <img src="/assets/images/landing-page-imgs.png" alt="about images" id="about-images" width="856" height="874" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div id="about-us-container" class="col-12 col-lg-6">
             <div class="row justify-content-center justify-content-lg-start">
@@ -153,13 +157,17 @@ eleventyNavigation:
             <div class="col-12 col-lg-6 text-center text-lg-left" id="classes-img-container"></div>
             <div class="col-12 col-lg-3" id="class-skills-container">
               <div class="mx-auto text-center text-lg-start" id="class-skills-logo">
-                <img src="/assets/images/subg-nb-logo.png" width="60" height="71" alt="Sub-G logo" loading="lazy" decoding="async">
+                <picture>
+                  <source media="(max-width: 600px)" srcset="/assets/images/subg-nb-logo.webp">
+                  <source media="(min-width: 601px)" srcset="/assets/images/subg-nb-logo.png">
+                  <img src="/assets/images/subg-nb-logo.png" width="60" height="71" alt="Sub-G logo" loading="lazy" decoding="async">
+                </picture>
               </div>
               <div class="mx-auto col-12 col-md-6 col-lg-12 text-center text-lg-start" id="class-skills-header"></div>
               <div class="mx-auto col-12 col-md-10 col-lg-12 text-center text-lg-start" id="class-skills-subtitle"></div>
               <div class="row justify-content-center justify-content-lg-start" id="class-skills-buttons">
                 <div class="col-5 d-flex justify-content-center text-center mx-2" id="join-today">
-                  <a href="/join" target="_blank">Pricing</a>
+                  <a href="/join" target="_blank">See Plans</a>
                 </div>
                 <div class="col-5 d-flex justify-content-center text-center mx-2" id="see-pricing">
                   <a href="/schedule">Schedule</a>

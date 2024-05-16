@@ -479,10 +479,6 @@
     box-shadow: 0 8px 10px 0 rgba(180, 4, 4, 0.2);
   }
   
-  #section-3 {
-    height: 60vh;
-  }
-  
   @media (max-width: 1800px) {
     .section-1 {
       height: 100vh;
@@ -511,6 +507,7 @@
 
     #section-3 {
       height: auto;
+      padding-bottom: 80px;
     }
   
     .section-4 {

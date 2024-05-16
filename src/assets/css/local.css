@@ -449,10 +449,6 @@ label[for=preferred-phone], label[for=preferred-email] {
   box-shadow: 0 8px 10px 0 rgba(180, 4, 4, 0.2);
 }
 
-#section-3 {
-  height: 60vh;
-}
-
 @media (max-width: 1800px) {
   .section-1 {
     height: 100vh;
@@ -477,6 +473,7 @@ label[for=preferred-phone], label[for=preferred-email] {
   }
   #section-3 {
     height: auto;
+    padding-bottom: 80px;
   }
   .section-4 {
     height: 135vh;

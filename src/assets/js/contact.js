@@ -35,10 +35,12 @@ if (isDesktopOrLaptop) {
         // If section-2 is 50% in view, fade out the navigation section
         navSection.style.opacity = "1";
         navSection.style.transition = "opacity 0.3s";
+        navSection.style.pointerEvents = "all";
       } else {
         // Otherwise, fade in the navigation section
         navSection.style.opacity = "0";
         navSection.style.transition = "opacity 0.3s";
+        navSection.style.pointerEvents = "none";
       }
     });
   }, {

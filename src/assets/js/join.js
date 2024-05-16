@@ -34,10 +34,12 @@ if (isDesktopOrLaptop) {
         // If section-2 is 50% in view, fade out the navigation section
         navSection.style.opacity = "1";
         navSection.style.transition = "opacity 0.3s";
+				navSection.style.pointerEvents = "all";
       } else {
         // Otherwise, fade in the navigation section
         navSection.style.opacity = "0";
         navSection.style.transition = "opacity 0.3s";
+				navSection.style.pointerEvents = "none";
       }
     });
   }, {
@@ -216,8 +218,9 @@ function extendFaq1() {
 		question1.style.fontWeight = "normal"; 
 		chevron1.style.transform = "rotate(0deg)";
 	} else {
-		answer1.innerHTML = `<p>Save up to $25/month and get 2 free private lessons/month by choosing an annual plan. Our annual plans are great 
-		for customers who live locally and can commit to the extended timeframe. Join the family at Sub-G on your path to martial arts mastery</p>`;
+		answer1.innerHTML = `<p>By choosing the annual plan, you not only benefit from significant cost savings compared to monthly options, but you also commit to a 
+														year of consistent training. This commitment is crucial for mastering BJJ techniques and achieving your personal martial arts and fitness goals.
+													</p>`;
 		question1.style.fontWeight = "bold";
 		chevron1.style.transform = "rotate(540deg)";
 	}
@@ -229,7 +232,8 @@ function extendFaq2() {
 		question2.style.fontWeight = "normal"; 
 		chevron2.style.transform = "rotate(0deg)";
 	} else {
-		answer2.innerHTML = `<p>At Sub-G we welcome individuals of all experience levels to join our community. Whether you're a complete beginner or have previous martial 
+		answer2.innerHTML = `<p>
+		At Sub-G we welcome individuals of all experience levels to join our community. Whether you're a complete beginner or have previous martial 
 		arts experience, our classes are designed to accommodate everyone. The relaxed environment of Sub-G coupled with its qualified instructors make it a great place to train for everyone.</p>`;
 		question2.style.fontWeight = "bold";
 		chevron2.style.transform = "rotate(540deg)";
@@ -242,10 +246,28 @@ function extendFaq3() {
 		question3.style.fontWeight = "normal"; 
 		chevron3.style.transform = "rotate(0deg)";
 	} else {
-		answer3.innerHTML = `<p>At Sub-G, the safety and well-being of our young students are our top priorities. We implement rigorous safety protocols and age-appropriate 
-		training methods to ensure a positive and secure learning experience for children of all ages. Additionally, we maintain a clean and padded training area to minimize the risk of injury.</p>`;
+		answer3.innerHTML = `<p>Brazilian Jiu-Jitsu offers a myriad of benefits for children, making it an excellent choice for young ones looking to engage 
+														in a sport that promotes physical health and personal development. BJJ focuses on grappling and ground fighting, teaching kids how to defend themselves without striking. 
+													</p>
+													<p>
+														This emphasis on non-violent resolution and self-control is particularly beneficial for young practitioners. Physically, BJJ is a comprehensive workout that improves strength, 
+														flexibility, and cardiovascular health. 
+													</p>
+													<p>
+														Enhancing coordination and balance, which are crucial during the developmental years. Mentally, practicing BJJ boosts confidence and self-esteem by setting clear goals and 
+														providing a structured environment for achievement. It teaches discipline, respect, and persistence, skills that are valuable both on and off the mats. 
+													</p>
+													<p>
+														Regarding safety, BJJ is designed to be safe for all ages. The sport inherently minimizes the risk of high-impact strikes, making it safer than many other martial arts. 
+														Instructors are trained to teach techniques in a controlled, age-appropriate manner, ensuring that children learn in a safe, supportive environment. 
+													</p>
+													<p>
+														Safety measures are standard practice, further reducing the risk of injury. Overall, BJJ is not only a safe sporting option for children but also a profoundly beneficial 
+														one that can impact their physical health, mental well-being, and life skills.
+													</p>`;
 		question3.style.fontWeight = "bold";
 		chevron3.style.transform = "rotate(540deg)";
+		answer3.style.flexDirection = "column";
 	}
 };
 
@@ -255,10 +277,28 @@ function extendFaq4() {
 		question4.style.fontWeight = "normal"; 
 		chevron4.style.transform = "rotate(0deg)";
 	} else {
-		answer4.innerHTML = `<p>training in martial arts can provide students with practical self-defense skills, mental discipline, and improved confidence. Through disciplined practice, students develop mental resilience, 
-		concentration, and self-control. Our supportive community fosters positive attitudes, respect, and camaraderie among students.</p>`;
+		answer4.innerHTML = `<p>
+														Starting Brazilian Jiu-Jitsu (BJJ) as an adult can be a transformative experience with benefits that extend far beyond the dojo. BJJ offers a rigorous full-body workout that improves cardiovascular 
+														health, muscle strength, flexibility, and endurance. 
+													</p>
+													<p>
+														As it involves grappling and ground fighting, it uniquely promotes functional strength and agility, beneficial in daily activities. Additionally, BJJ is a great stress reliever; intense physical activity 
+														helps release endorphins, promoting relaxation and happiness. The strategic nature of BJJ, often likened to playing physical chess, also challenges the brain, enhancing problem-solving skills and mental toughness.
+													</p>
+													<p>
+														BJJ is highly effective for self-defense because it emphasizes control and technique over size and strength. It teaches practical skills that can be used in real-world self-defense situations, helping practitioners 
+														feel safer and more confident in their ability to protect themselves and others.
+													</p>
+													<p>
+														Joining a BJJ class also introduces adults to a community of like-minded individuals, fostering social connections that can help build friendships and support networks, which are vital for mental health and a balanced life.
+													</p>
+													<p>
+														Moreover, BJJ requires dedication and consistent effort, teaching adults the value of persistence and hard work. This discipline can translate into other areas of life, including career and personal relationships. Mastering new 
+														techniques and progressing through belt ranks provides a real sense of accomplishment. 
+													</p>`;
 		question4.style.fontWeight = "bold";
 		chevron4.style.transform = "rotate(540deg)";
+		answer4.style.flexDirection = "column";
 	}
 };
 
