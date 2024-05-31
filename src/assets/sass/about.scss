@@ -608,14 +608,11 @@
 
     .section-4 {
       background-image: url("/assets/images/about-lp-bg-m.png");
+      height: 100vh;
     }
 
     .section-1 {
       padding-top: 0;
-    }
-  
-    .section-4 {
-      height: 100vh;
     }
 
     #about-lp-imgs {
@@ -660,7 +657,7 @@
   
   @media (max-width: 400px) {
     .section-4 {
-      height: 130vh;
+      height: 100vh;
     }
   
     #container-1 {
@@ -676,6 +673,6 @@
     }
 
     #contact-btn-1 a {
-      padding: 1rem 7rem;
+      padding: 1rem 9rem;
     }
   }
