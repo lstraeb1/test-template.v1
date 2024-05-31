@@ -672,10 +672,12 @@ button.navbar-toggler:active {
   #footer .credit a {
     font-size: 1.5rem;
     text-decoration: none;
-    color: #ff3636;
+    color: white;
+    cursor: pointer;
   }
   #footer .credit a:hover {
     text-decoration: underline;
+    color: #ff3636;
   }
   #footer .credit .copyright {
     font-size: 1.5rem;
