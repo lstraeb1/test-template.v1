@@ -631,6 +631,26 @@ label[for=preferred-phone], label[for=preferred-email] {
     padding-bottom: 30px;
     border-radius: 0;
   }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .form-check {
+    display: flex;
+    align-items: center;
+    padding: 10px; /* Increase padding for better touch area */
+    margin-bottom: 10px; /* Add space between form-check elements */
+  }
+  .form-check input[type=radio] {
+    width: 20px; /* Set a reasonable size for the radio button */
+    height: 20px; /* Set a reasonable size for the radio button */
+    margin-right: 10px; /* Space between radio button and label */
+  }
+  .form-check label {
+    padding: 10px; /* Increase padding to make label easier to tap */
+  }
   .input-container {
     border-radius: 0;
   }
