@@ -3,4 +3,4 @@ Disallow: /admin/
 Disallow: /success
 Allow: /
 
-Sitemap: https://www.yourwebsite.com/sitemap.xml
+Sitemap: https://www.subgbjj.com/sitemap.xml
