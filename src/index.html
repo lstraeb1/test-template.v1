@@ -38,7 +38,7 @@ eleventyNavigation:
     <!-- ============================================ -->
     <!--                    Hero                      -->
     <!-- ============================================ -->
-
+    <span itemscope itemtype="http://schema.org/Event" itemref="_description3"></span>
     <section class="section-1">
       <div class="container container-1">
         <div class="row" id="landing-page-container">
@@ -50,7 +50,7 @@ eleventyNavigation:
             </div>
             <div class="row col-12 justify-content-center mx-auto">
               <div class="col-12 col-xl-5 col-md-12 text-center intro-paragraph-container">
-                <p>With tailored instruction, you'll be tapping into the power of BJJ in no time. Ignite your passion, build unshakeable confidence, and embark on an adventure of physical and mental transformation.</p>
+                <p>With tailored instruction, you'll be tapping into the power of<span itemprop="name">BJJ</span> in no time. Ignite your passion, build unshakeable confidence, and embark on an adventure of physical and mental transformation.</p>
               </div>
             </div>
             <div class="row col-12 mx-auto justify-content-center">
@@ -58,7 +58,7 @@ eleventyNavigation:
                 <div class="row text-center justify-content-center">
                   <div class="col-8 col-sm-4 col-md-4 col-lg-4 col-xl-3">
                     <div class="free-class d-flex justify-content-center">
-                      <a href="/contact">Free Class</a>
+                      <a itemprop="offers" itemscope itemtype="http://schema.org/Offer" href="/contact"><span itemprop="price">Free Class</span></a>
                     </div>
                   </div>
                   <div class="col-8 col-sm-4 col-md-4 col-lg-4 col-xl-3">
@@ -141,7 +141,7 @@ eleventyNavigation:
     <section class="section-2" id="section-2">
       <div class="container container-2">
         <div class="classes-container" id="classes-container">
-          <div id="classes-header-container" class="col-12 text-center">
+          <div id="classes-header-container" id="_description3" itemprop="description" class="col-12 text-center">
             <h1>Classes</h1>
           </div>
           <div id="classes-subtitle-container" class="col-11 col-md-7 col-lg-6 mx-auto text-center">
