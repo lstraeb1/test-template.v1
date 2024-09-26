@@ -11,7 +11,11 @@ eleventyNavigation:
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/local.css"/>
+    <!--Defer loading the whole page css-->
+    <link rel="stylesheet" href="/assets/css/local.css" media="print" onload="this.media='all'; this.onload=null;">
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/local.css" />
+    </noscript>
     <link rel="stylesheet" href="/assets/css/critical.css"/>
 
     <!-- Script for Netlify Identity -->
