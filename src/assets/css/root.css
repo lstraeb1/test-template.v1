@@ -1035,7 +1035,6 @@ html {
     opacity: 1;
     transform: translateX(-50%);
     display: block;
-    background: url("/assets/svgs/cta-squares.svg");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
