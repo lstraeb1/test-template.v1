@@ -929,11 +929,9 @@ html {
         #cs-navigation {
             background-color: var(--dark);
 
-            .logo-g {
-                .cls-1,
-                .cls-4 {
-                    fill: #FFFFFF;
-                }
+            .cs-logo {
+                /* makes it white */
+                filter: grayscale(1) brightness(1000%);
             }
 
             .cs-li-link {
