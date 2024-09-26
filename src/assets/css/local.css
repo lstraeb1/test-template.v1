@@ -512,7 +512,7 @@
   }
   #why-choose-1821 .cs-title {
     margin: 0 0 3rem;
-    max-width: 13ch;
+    max-width: 18ch;
     color: var(--bodyTextColorWhite);
   }
   #why-choose-1821 .cs-picture {
@@ -689,6 +689,7 @@
     display: block;
     top: 0;
     left: 0;
+    z-index: -1;
   }
   body.dark-mode #why-choose-1821 .cs-item-text {
     opacity: 0.8;
@@ -1182,7 +1183,7 @@
     align-items: center;
   }
   #faq-1741 .cs-title {
-    max-width: 15ch;
+    max-width: 18ch;
     margin: 0 0 2rem;
   }
   #faq-1741 .cs-faq-group {

@@ -601,7 +601,7 @@
 
         .cs-title {
             margin: 0 0 calc(48/16 * 1rem);
-            max-width: 13ch;
+            max-width: 18ch;
             color: var(--bodyTextColorWhite);
         }
 
@@ -809,6 +809,7 @@
                     display: block;
                     top: 0;
                     left: 0;
+                    z-index: -1;
                 }
             }
 
@@ -1387,7 +1388,7 @@
         }
 
         .cs-title {
-            max-width: 15ch;
+            max-width: 18ch;
             margin: 0 0 calc(32/16 * 1rem);
         }
 

@@ -71,6 +71,7 @@
     color: var(--primary);
   }
   #content-page-713 p {
+    font-family: "Be Vietnam";
     font-size: var(--bodyFontSize);
     line-height: 1.5em;
     text-align: inherit;
@@ -97,6 +98,7 @@
     gap: 1rem;
   }
   #content-page-713 ul li {
+    font-family: "Be Vietnam";
     list-style: none;
     color: inherit;
     position: relative;

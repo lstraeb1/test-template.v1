@@ -399,7 +399,7 @@ html {
     height: auto;
     max-height: 85vh;
     margin: 0;
-    padding: 9.375rem 0 0 0;
+    padding: 6.25rem 0 0 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -491,6 +491,9 @@ html {
   }
   body.dark-mode #cs-navigation .cs-li-link {
     color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #cs-navigation .cs-li-link.cs-active {
+    color: var(--primary);
   }
 }
 /*-- -------------------------- -->
