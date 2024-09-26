@@ -1,6 +1,7 @@
 User-agent: *
 Disallow: /admin/
 Disallow: /success
+Disallow: /join
 Allow: /
 
 Sitemap: https://www.subgbjj.com/sitemap.xml
