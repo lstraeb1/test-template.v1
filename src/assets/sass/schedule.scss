@@ -1,601 +1,334 @@
-.section-1 {
-	height: 80vh;
-	padding-bottom: 20px;
+/* PAGE-SPECIFIC STYLES FOR THE Schedule PAGE */
+
+/*-- -------------------------- -->
+<---         Timetable          -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #timetable-1731 {
+        padding: var(--sectionPadding);
+        position: relative;
+        /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
+
+        .cs-container {
+            width: 100%;
+            max-width: calc(1280 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(2rem, 6vw, 3rem);
+        }
+
+        .cs-content {
+            /* set text align to center if content needs to be centrally aligned */
+            text-align: left;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* aligns content to the left, set to center to centrally align */
+            align-items: flex-start;
+        }
+
+        .cs-title {
+            max-width: 28.75rem;
+        }
+
+        .cs-button-group {
+            margin: 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            row-gap: calc(16/16 * 1rem);
+            /* 20px - 32px */
+            column-gap: clamp(1.25rem, 2vw, 2rem);
+            width: 100%;
+        }
+
+        .cs-button {
+            font-size: calc(16/16 * 1rem);
+            line-height: 1.5em;
+            color: var(--bodyTextColor);
+            background-color: transparent;
+            border: none;
+            position: relative;
+            z-index: 1;
+            transition: color 0.3s;
+
+            &:before {
+                content: '';
+                width: 100%;
+                height: 4px;
+                background: var(--primary);
+                opacity: 0;
+                border-radius: 4px 4px 0 0;
+                position: absolute;
+                display: block;
+                bottom: 0;
+                left: 0;
+                transition: opacity .3s, bottom .3s;
+            }
+
+            &:hover {
+                color: var(--primary);
+                cursor: pointer;
+
+                &:before {
+                    opacity: 1;
+                    bottom: calc(-10/16 * 1rem);
+                }
+            }
+
+            &.cs-active {
+                color: var(--primary);
+
+                &:before {
+                    opacity: 1;
+                    bottom: calc(-10/16 * 1rem);
+                }
+            }
+        }
+
+        .cs-table-list {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            /* 16px - 20px */
+            gap: clamp(1rem, 3vw, 1.25rem);
+
+            &.cs-hidden {
+                position: absolute;
+                /* by using visibility:hidden instead of display:none, we can see the animations from the opacity and transforms, display:none won't render animations. */
+                visibility: hidden;
+                /* prevents the mouse from interacting with it */
+                pointer-events: none;
+                /* hidden galleries have a 0 opacity, and we animate the opacity to 1 when they become active */
+                opacity: 0;
+                /* this top and left value help control the animation, by setting it to position absolute and left 0, the gallery won't fly off screen to the left, it will stop its position to be at the left edge of the .cs-container (left: 0). Same for the top:0 value, the gallery won't go past that posiiton when it animates */
+                top: 0;
+                left: 0;
+                position: absolute;
+                /* prevents the hidden galleries from overflowing the section, and makes a nice animations to transition to and from */
+                transform: scaleY(0) scaleX(0);
+
+                .cs-table {
+                    /* when gallery is hidden, add these styles to the cs-image to animate from when cs-hidden is removed from the .cs-gallery */
+                    transform: translateY(2.1875rem) rotateX(90deg);
+                    opacity: 0;
+                }
+            }
+        }
+
+        .cs-table {
+            /* 260px - 360px */
+            border-radius: calc(8/16 * 1rem);
+            /* clips the image corners */
+            overflow: hidden;
+            display: block;
+            position: relative;
+            /* when .cs-hidden is removed from the .cs-gallery, reset these values and animate between their hidden styles */
+            transform: translateY(0rem) rotateX(0);
+            opacity: 1;
+            transition:
+                opacity 0.6s,
+                transform 0.6s;
+
+            &:nth-of-type(1) {
+                /* the transition delays change at desktop */
+                /* these delays stagger the reveal of each image so they all go one after the other and not all at once */
+                transition-delay: 0.1s;
+            }
+            &:nth-of-type(2) {
+                transition-delay: 0.2s;
+            }
+            &:nth-of-type(3) {
+                transition-delay: 0.3s;
+            }
+            &:nth-of-type(4) {
+                transition-delay: 0.4s;
+            }
+            &:nth-of-type(5) {
+                transition-delay: 0.5s;
+            }
+            &:nth-of-type(6) {
+                transition-delay: 0.6s;
+            }
+            &:nth-of-type(7) {
+                transition-delay: 0.7s;
+            }
+            &:nth-of-type(8) {
+                transition-delay: 0.8s;
+            }
+        }
+
+        .cs-table {
+            text-align: left;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            .highlighted-day {
+                background-color: var(--primary);
+                color: #fff;
+
+                th {
+                    color: var(--bodyTextColorWhite);
+                }
+            }
+
+            thead {
+                padding: calc(20 / 16 * 1rem);
+                background-color: #e8e8e8;
+                transition: background-color 0.3s;
+
+                th {
+                    /* 20px - 25px */
+                    font-size: clamp(1.25rem, 4vw, 1.5625rem);
+                    font-weight: 700;
+                    line-height: 1.2em;
+                    color: var(--headerColor);
+                    transition: color 0.3s;
+                }
+            }
+
+            tbody {
+                min-height: calc(184 / 16 * 1rem);
+                padding: calc(20 / 16 * 1rem);
+                border-radius:  0 0 calc(8 / 16 * 1rem) calc(8 / 16 * 1rem);
+                background-color: #f7f7f7;
+                display: flex;
+                flex-direction: column;
+                gap: calc(16 / 16 * 1rem);
+
+                tr {
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                th,
+                td {
+                    font-size: calc(16 / 16 * 1rem);
+                    font-weight: 400;
+                    line-height: 1.5em;
+                    color: var(--bodyTextColor);
+                }
+            }
+
+            &:hover {
+                thead {
+                    background-color: var(--primary);
+
+                    th {
+                        color: #fff;
+                    }
+                }
+            }           
+        }
+
+        [data-category="two"] {
+            .cs-table {
+                tbody {
+                    min-height: calc(104 / 16 * 1rem);
+                }
+            }
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+        }
+    }
 }
 
-.section-1 picture {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -2;
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #timetable-1731 {
+        .cs-content {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cs-table-list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
 }
 
-.section-1 img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #timetable-1731 {
+        .cs-table-list {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
 }
 
-#container-1 {
-  padding-top: 15vh;
-}
-
-#schedule-header-container h1 {
-	font-size: 8rem;
-	color: var(--main-red);
-	font-family: "Bebas Neue";
-  font-weight: bold;
-}
-
-#schedule-paragraph-container p {
-  font-size: 1.5rem;
-  color: white;
-  font-family: "Be Vietnam";
-}
-
-#contact-button {
-  margin-top: 20px;
-}
-
-#contact-button a {
-  background: linear-gradient(90deg, var(--main-red) 35%, var(--highlight-red)); 
-  border: none;
-  padding: 1rem 5rem;
-  border-radius: 5px;
-  color: white;
-  font-size: 2rem;
-  text-decoration: none;
-  transition: all .3s ease-in-out;
-  text-wrap: nowrap;
-}
-
-#contact-button a:hover {
-  box-shadow: 0 8px 10px 0 rgba(180, 4, 4, 0.2);
-  color: white;
-  cursor: pointer;
-}
-
-.section-2 {
-	height: 135vh;
-  min-height: auto;
-  background-color: var(--main-gray);
-  padding-top: 40px;
-}
-
-.dropdown .btn {
-  background: linear-gradient(90deg, var(--main-red) 35%, var(--highlight-red)); 
-  border: none;
-  border-radius: 10px;
-  color: white;
-  font-size: 2rem;
-  white-space: nowrap;
-  transition: all .2s ease-in-out;
-  padding: 1rem;
-  margin-top: 20px;
-}
-
-.dropdown .btn:hover {
-  color: white;
-  box-shadow: 0 8px 10px 0 rgba(180, 4, 4, 0.2);
-}
-
-.dropdown .dropdown-menu {
-  background-color: white;
-  box-shadow: 2px 2px 4px var(--gray-1);
-  border: none;
-  border-radius: 10px;
-  padding: 1rem;
-}
-
-.dropdown .dropdown-menu a {
-  font-family: "Be Vietnam";
-  font-size: 1.75rem;
-}
-
-#calendar-container {
-	display: flex;
-	font-display: row;
-	width: 200vw;
-	transition: 0.5s ease-in-out;
-	padding-bottom: 20px;
-	padding-top: 20px;
-}
-
-.weekday-container,
-.weekend-container {
-	display: flex;
-	font-display: row;
-	width: 100vw;
-	justify-content: center;
-}
-
-.weekday-container {
-	justify-content: center;
-}
-
-.calendar-column {
-	width: 20%;
-	margin: 3px;
-	border-radius: 10px;
-}
-
-.calendar-block {
-	border-radius: 5px;
-	height: 185px;
-	margin-top: 5px;
-	background-color: white;
-  box-shadow: 2px 2px 7px var(--gray-1);
-}
-
-.calendar-header-container {
-	background-color: #d9d9d9;
-	padding: 0.75rem;
-	border-radius: 5px;
-  margin-bottom: 5px;
-  box-shadow: 2px 2px 4px var(--gray-1);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.date-circle {
-  position: relative;
-  right: 13rem;
-  color: var(--main-red);
-}
-
-.calendar-header-container h1 {
-	font-family: "Bebas Neue";
-	font-size: 2.25rem;
-	margin: 0;
-}
-
-.calendar-time-container,
-.calendar-subtitle-container,
-.calendar-description-container {
-	padding-left: 10px;
-}
-
-.calendar-time-container h2 {
-	font-family: "Bebas Neue";
-	font-size: 5rem;
-	color: var(--alt-gray-highlight);
-}
-
-.calendar-subtitle-container h3 {
-	font-family: "Bebas Neue";
-	font-size: 2.5rem;
-	color: #e70303;
-}
-
-.calendar-description-container p {
-	font-family: "Be Vietnam";
-	font-size: 1.5rem;
-	color: black;
-	width: 90%;
-}
-
-.custom-button {
-	height: 45px;
-	width: 45px;
-	background-color: #d9d9d9;
-  box-shadow: 2px 2px 4px var(--gray-1);
-  border: none;
-	border-radius: 10px;
-  z-index: 3;
-}
-
-.custom-button:active {
-	background-color: var(--gray-2);
-}
-
-.fa-chevron-right,
-.fa-chevron-left {
-	pointer-events: none;
-	font-size: 2rem;
-}
-
-.mobile-btn {
-  display: none;
-}
-
-@media (max-width: 1800px) {
-  .section-1 {
-    height: 90vh;
-  }
-
-  #container-1 {
-    padding-top: 20vh;
-  }
-
-  .section-2 {
-    height: 220vh;
-    min-height: auto;
-  }
-}
-
-@media (max-width: 1200px) {
-
-  .navbar-text {
-    margin-left: 1vw;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .navbar .container-0 .navbar-brand /* logo container */ {
-    margin-right: 1%;
-  }
-
-  .collapse .navbar-text .fa-solid {
-    display: none;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .become-member {
-    background-color: var(--maroon);
-    color: white;
-    text-decoration: none;
-    text-wrap: nowrap;
-    padding: 0.75rem;
-    border-radius: 5px;
-    font-weight: normal;
-    font-size: 1.5rem;
-    transition: all .2s ease-in-out;
-    margin-left: 1px;
-  }
-
-  .section-1 {
-    height: 50vh;
-  }
-
-  .section-2 {
-    height: 130vh;
-    min-height: auto;
-  }
-}
-
-@media (max-width: 992px) {
-
-  body {
-    overflow-x: hidden;
-  }
-
-  body.no-scroll {
-    overflow-y: hidden;
-  }
-
-  .nav-section {
-    width: 100vw;
-    z-index: 3;
-    background-color: white;
-  }
-
-  .navbar {
-    background-color: var(--main-gray);
-    max-height: 130vh;
-    width: 100vw;
-    background-color: none;
-    z-index: 100;
-  }
-  
-  .navbar .container-0 .navbar-brand /* logo container */ {
-    background: none;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    border-radius: 0;
-    border: none;
-    box-shadow: none;
-    padding: 10px 1.5rem;
-    margin-right: 5%;
-    background-color: none;
-  }
-  
-  button.navbar-toggler {
-    border: none; 
-    outline: none; 
-    background: none;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    border-radius: 10px;
-    box-shadow: none;
-    padding: 0 1.5rem;
-  }
-
-  .navbar-nav {
-    background: none;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    border-radius: 0;
-    border: none;
-    box-shadow: none;
-    margin-bottom: 0;
-    margin-top: 5px;
-    height: 100vh;
-  }
-
-  .navbar-collapse .navbar-nav .nav-item .nav-link {
-    text-decoration: none;
-    color: var(--maroon);
-    font-size: 7rem; 
-    font-family: "Bebas Neue"; 
-    font-weight: bold; 
-    text-align: start;
-    text-wrap: nowrap;
-    padding: 0;
-    margin: 0 0 0 15px;
-    text-shadow: 1px 1px 1px var(--alt-gray);
-    opacity: 0;
-    transition: opacity 0.7s ease;
-    background-color: none;
-    background: none;
-  }
-
-  .nav-item-2 {
-    display: block;
-  }
-
-  #log-in-mobile a,
-  #join-us-mobile a {
-    color: var(--alt-gray-highlight);
-  }
-
-  .navbar-collapse.show .navbar-nav .nav-item .nav-link {
-    opacity: 1;
-  }
-
-  .navbar-text,
-  .become-member,
-  .log-in {
-    display: none;
-  }
-
-  .section-1 {
-    min-height: 70vh;
-    height: auto;
-    padding-bottom: 0;
-    background-image: url('/assets/images/schedule-lp-bg-m.png');
-    background-size: cover;
-    background-position: center center;
-  }
-
-  #phone-hand-img {
-    max-height: 100vh;
-    transform: translateX(25vw);
-  }
-
-  .section-2 {
-    height: auto;
-    overflow-x: hidden;
-  }
-  
-  #calendar-container {
-    width: 200vw;
-    padding-bottom: 20px;
-    padding-top: 20px;
-  }
-  
-  .weekday-container,
-  .weekend-container {
-    display: flex;
-    font-display: row;
-    width: 100vw;
-    justify-content: center;
-  }
-
-  #phone-hand-img {
-    display: none;
-  }
-
-  .calendar-block {
-    height: 190px;
-  }
-
-  .calendar-description-container p {
-    line-height: 1.25;
-    width: 90%;
-  }
-}
-
-@media (max-width: 768px) {
-
-  .navbar-brand img {
-    height: 20px;
-  }
-
-  #phone-hand-img {
-    max-height: 350px;
-  }
-
-  #container-1 {
-    padding-top: 15vh;
-  }
-
-  .section-2 {
-    height: auto;
-  }
-
-  #calendar-container {
-    width: 700vw;
-    padding-top: 0;
-  }
-  
-  .weekday-container,
-  .weekend-container {
-    display: flex;
-    font-display: row;
-    width: 300vw;
-    justify-content: center;
-  }
-  
-  .weekday-container {
-    justify-content: center;
-    width: 400vw;
-  }
-  
-  .calendar-column {
-    width: 100vw;
-    margin: 5px 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transform: translate(0);
-    transition: transform 0.5s ease-in-out; 
-  }
-  
-  .calendar-block {
-    height: 200px;
-    width: 60%;
-    margin-top: 10px;
-  }
-  
-  .calendar-header-container {
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--main-gray);
-    box-shadow: none;
-  }
-
-  .calendar-header-container h1 {
-    background-color: #d9d9d9;
-    padding: 1rem 10rem;
-    border-radius: 5px;
-    box-shadow: 2px 2px 4px var(--gray-1);
-    margin: 0 20px;
-  }
-  
-  .date-circle {
-    position: relative;
-    right: 26rem;
-    color: var(--main-red);
-  }
-  
-  .calendar-header-container h1 {
-    font-size: 3rem;
-  }
-  
-  .calendar-time-container h2 {
-    font-size: 6rem;
-  }
-  
-  .calendar-subtitle-container h3 {
-    font-size: 3rem;
-  }
-  
-  .calendar-description-container p {
-    font-size: 1.75rem;
-    width: 60%;
-  }
-
-  #buttons-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-
-  }
-  
-  .fa-chevron-right,
-  .fa-chevron-left {
-    pointer-events: none;
-    font-size: 2rem;
-  }
-
-  .custom-button {
-    display: none;
-  }
-
-  .mobile-btn {
-    display: block;
-    margin: 20px 10px 0 10px;
-    height: 40px;
-    width: 40px;
-    background-color: #d9d9d9;
-    box-shadow: 2px 2px 4px var(--gray-1);
-    border: none;
-    border-radius: 5px;
-  }
-
-  .mobile-btn-left.inactive {
-    pointer-events: none;
-    color: white;
-  }
-
-  .mobile-btn:active {
-    box-shadow: none;
-  }
-
-}
-
-@media (max-width: 576px) {
-
-  body {
-    overflow-x: hidden;
-  }
-
-  .row {
-    max-width: 100vw;
-  }
-
-  .navbar-collapse {
-    flex: 1;
-    overflow-y: auto;
-    max-height: 100dvh;
-  }
-
-  .navbar-collapse .navbar-nav .nav-item .nav-link {
-    margin-left: 10px;
-    font-size: 7rem;
-    margin-bottom: -10%;
-  }
-
-  .section-1 {
-    height: 90vh;
-  }
-
-  #schedule-header-container h1 {
-    font-size: 7rem;
-  }
-
-  .calendar-column {
-    width: 100vw;
-    margin: 5px 0;
-  }
-
-  .calendar-block {
-    margin-top: 5px;
-    width: 70%;
-  }
-
-  .calendar-header-container h1 {
-    padding: 1rem 7rem;
-    margin: 0 10px;
-    font-size: 3rem;
-  }
-  
-  .date-circle {
-    right: 25rem;
-    position: absolute;
-  }
-  
-  .calendar-time-container h2 {
-    font-size: 4rem;
-  }
-  
-  .calendar-subtitle-container h3 {
-    font-size: 2.5rem;
-  }
-  
-  .calendar-description-container p {
-    font-size: 1.5rem;
-    width: 80%;
-  }
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #timetable-1731 {
+            background-color: var(--dark);
+
+            .cs-title {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-button {
+                color: var(--bodyTextColorWhite);
+
+                &.cs-active {
+                    color: var(--primaryLight);
+                }
+            }
+
+            .cs-table {
+                thead {
+                    background-color: var(--secondaryLight);
+
+                    th {
+                        color: var(--bodyTextColorWhite);
+                    }
+                }
+
+                tbody {
+                    background-color: var(--secondary);
+
+                    th,
+                    td {
+                        color: var(--bodyTextColorWhite);
+                        opacity: 0.8;
+                    }
+                }
+
+                &:hover {
+                    thead {
+                        background-color: var(--primary);
+
+                        th {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+
+            .cs-background {
+                display: none;
+            }
+        }
+    }
 }

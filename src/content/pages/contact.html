@@ -12,120 +12,102 @@ eleventyNavigation:
 
 {% block head %}
     <link rel="stylesheet" href="/assets/css/contact.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
 {% endblock %}
 
 {% block body %}
 
     <!-- ============================================ -->
+    <!--                   Banner                     -->
+    <!-- ============================================ -->
+
+    <div id="banner-1004">
+        <div class="cs-container">
+            <picture class="cs-picture">
+                <img class="cs-icon" decoding="async" src="/assets/images/subg-nb-logo.png" alt="divider" width="181" height="36" aria-hidden="true">
+            </picture>
+            <span class="cs-int-title">Contact Us</span>
+            <p class="cs-text">
+                Interested in trying a free class with SUB-G BJJ? Give us a call or fill out the form below and we'll get you on the mats.
+            </p>
+        </div>
+        <!--Background Image-->
+        <picture class="cs-background">
+            <source media="(max-width: 600px)" srcset="/assets/images/schedule-banner-m.webp">
+            <source media="(min-width: 601px)" srcset="/assets/images/schedule-banner.jpg">
+            <img decoding="async" src="/assets/images/schedule-banner.jpg" alt="logo" width="1920" height="1000">
+        </picture>
+
+        <img class="cs-graphic" src="/assets/svgs/white-splatter2.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async" >
+        <!--This is a dark version. Download the image and change the fill color to match the color of the section background below it-->
+        <img class="cs-graphic cs-graphic-dark" src="/assets/svgs/white-splatter2-dark.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async" >
+    </div>
+
+    <!-- ============================================ -->
     <!--                Contact Form                  -->
     <!-- ============================================ -->
 
-    <section class="section-1">
-      <div class="container" id="container-1">
-        <div class="row">
-          <div id="contact-us-container" class="col-12 col-lg-5">
-            <div class="col-5 justify-content-start d-flex mx-2" id="email-phone">
-              <a href="mailto:{{client.email}}" target="_blank" class="mx-2 mx-md-5"><img src="/assets/svgs/email-symbol.svg" alt="email symbol" width="32" height="32" id="email-symbol" loading="lazy" decoding="async">{{client.email}}</a>
-              <a href="tel:{{client.phoneForTel}}" target="_blank" class="mx-2 mx-md-5"><img src="/assets/svgs/phone-symbol.svg" alt="phone symbol" width="32" height="32" id="phone-symbol" loading="lazy" decoding="async">{{client.phoneFormatted}}</a>
-              <a href="https://maps.app.goo.gl/g7kMmgX994f4Fw65A" target="_blank" class="mx-2 mx-md-5" id="address"><img src="/assets/svgs/shop.svg" alt="phone symbol" width="32" height="32" id="shop-symbol" loading="lazy" decoding="async">
-                {{client.address.lineOne}} <br>
-                <span id="address-line2">
-                  {{client.address.city}}
-                  {{client.address.state}}
-                  {{client.address.zip}}
-                </span>
-              </a>
+    <section id="cs-contact-233">
+        <div class="cs-container">
+            <div class="cs-left">
+                <div class="cs-content">
+                    <span class="cs-topper">Contact</span>
+                    <h2 class="cs-title">Get in Touch</h2>
+                    <p class="cs-text">
+                        For inquiries or to learn more about our facilities and classes, please feel free to reach out to us. We look forward to connecting with you and helping you on your martial arts journey!
+                    </p>
+                </div>
+                <form id="cs-form-233" name="Contact Form" method="post" data-netlify="true">
+                    <label>
+                        Name
+                        <input required type="text" id="name-233" name="name" placeholder="Name" autocomplete="name">
+                    </label>
+                    <label>
+                        Email
+                        <input required type="text" id="email-233" name="email" placeholder="Email" autocomplete="email">
+                    </label>
+                    <label>
+                        Phone
+                        <input required type="text" id="phone-233" name="phone" placeholder="Phone" autocomplete="tel">
+                    </label>
+                    <label class="cs-label-message">
+                        Message
+                        <textarea required name="Message" id="message-233" placeholder="Write message..."></textarea>
+                    </label>
+                    <button class="cs-button-solid cs-submit" type="submit">Submit Message
+                        <img class="cs-button-icon" src="/assets/svgs/chevron.svg" width="20" height="20">
+                    </button>
+                </form>
             </div>
-            <picture>
-              <source media="(max-width: 600px)" srcset="/assets/images/gym-exterior.png">
-              <source media="(min-width: 601px)" srcset="/assets/images/gym-exterior.png">
-              <img aria-hidden="true" decoding="async" src="/assets/images/gym-exterior.png" alt="Sub-G exterior" width="1920" height="1280">
-            </picture>
-          </div>
-          <div class="col-12 col-lg-7" id="contact-us-form">
-            <div class="col-12 text-center text-lg-start mx-lg-5" id="contact-us-header-container">
-              <h1>Contact Us</h1>
-            </div>
-            <form name="contact" action="/success" netlify>
-              <div class="row mx-4">
-                <div class="col-md-6 justify-content-center d-flex">
-                  <div class="form-group col-12">
-                      <label for="fname" class="label-container">First Name</label>
-                      <input name="fname" id="fname" class="input-container" type="text" placeholder="Enter your first Name">
-                  </div>
-                </div>
-                <div class="col-md-6 justify-content-center d-flex">
-                  <div class="form-group col-12">
-                      <label for="lname" class="label-container">Last Name</label>
-                      <input name="lname" id="lname" class="input-container" type="text" placeholder="Enter your last Name">
-                  </div>
-                </div>
-              </div>
-              <div class="row mx-4">
-                <div class="col-md-6 justify-content-center d-flex">
-                  <div class="form-group col-12">
-                    <label for="email" class="label-container">Email</label>
-                    <input name="email" id="email" class="input-container" type="email" placeholder="Enter your email" autocomplete="email">
-                  </div>
-                </div>
-                <div class="col-md-6 justify-content-center d-flex">
-                  <div class="form-group col-12">
-                    <label for="phone" class="label-container">Phone Number</label>
-                    <input name="phone" id="phone" class="input-container" type="tel" placeholder="Enter your phone number" autocomplete="tel">
-                  </div>
-                </div>
-              </div>
-              <div class="row mx-4">
-                <div class="col-md-12 justify-content-center d-flex">
-                  <div class="form-group col-12">
-                    <label for="message" class="label-container">Message</label>
-                    <textarea name="message" id="message" class="input-container" rows="1" placeholder="Enter your message"></textarea>
-                  </div>
-                </div>
-              </div>
-              <div class="row mx-4" id="preferred-method-container">
-                <legend class="label-container">Preferred Method of Reply</legend>
-              </div>
-              <div class="row mx-2">
-                <div class="col-md-2 d-flex">
-                  <div class="form-check d-flex">
-                    <input name="preferred-method" id="preferred-phone" type="radio" checked="checked">
-                    <label for="preferred-phone">Phone</label>
-                  </div>
-                </div>
-                <div class="col-md-2 d-flex">
-                  <div class="form-check d-flex">
-                    <input name="preferred-method" id="preferred-email" type="radio">
-                    <label for="preferred-email">Email</label>
-                  </div>
-                </div>
-              </div>
-              <div class="row mx-4">
-                <div class="col-lg-4">
-                  <button type="submit" class="col-12 col-md-12 col-xl-9" id="submit-contact-form">Submit</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
+            <div class="cs-right-section">
+                <!--Email-->
+                <span class="cs-header">Email</span>
+                <a class="cs-link" href="mailto:{{client.email}}">{{client.email}}</a>
+                <!--Phone-->
+                <span class="cs-header">Phone</span>
+                <a class="cs-link" href="tel:{{client.phoneForTel}}">{{client.phoneFormatted}}</a>
+                <!--Address-->
+                <span class="cs-header">Address</span>
+                <a class="cs-link" href="https://maps.app.goo.gl/Uhdo45nTdgHzCxbK7" target="_blank">123 Pike Street, Unit #203 <br>Port Jervis, NY, 12771</a>
+                <a class="cs-link" href="https://maps.app.goo.gl/312tGxu6GoggUNnVA" target="_blank">130 Dolson Avenue, <br>Positive Fitness Training <br>Middletown, NY, 10940</a>
 
+                <!-- Background Image-->
+                <picture class="cs-bg-picture">
+                    <source media="(max-width: 600px)" srcset="/assets/images/doug-watching-m.webp">
+                    <source media="(min-width: 601px)" srcset="/assets/images/doug-watching.jpg">
+                    <img loading="lazy" decoding="async" src="/assets/images/doug-watching.jpg" alt="building" width="542" height="662" aria-hidden="true">
+                </picture>
+            </div>
+        </div>
+    </section>
+                                    
     <!-- ============================================ -->
     <!--                 Maps location                -->
     <!-- ============================================ -->
 
-    <section class="section-2">
-      <div class="container" id="container-2">
-        <div class="col-12 justify-content-center d-flex" id="maps-container">
-          <iframe title="Sub-G Google Maps location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.858831648395!2d-74.69239342549608!3d41.37715169663247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c34f17ad797b65%3A0xa88ffa9805edbee4!2sSUB-G%20Brazilian%20Jiu%20Jitsu!5e0!3m2!1sen!2sus!4v1709437646874!5m2!1sen!2sus" width="1000" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>      
+    <section id="cs-map-1">
+        <div class="cs-container">
+            <iframe title="Sub-G Google Maps location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.858831648395!2d-74.69239342549608!3d41.37715169663247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c34f17ad797b65%3A0xa88ffa9805edbee4!2sSUB-G%20Brazilian%20Jiu%20Jitsu!5e0!3m2!1sen!2sus!4v1709437646874!5m2!1sen!2sus" width="1000" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>      
         </div>
-      </div>
     </section>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="/assets/js/contact.js"></script>
 
 {% endblock %}

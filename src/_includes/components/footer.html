@@ -2,75 +2,91 @@
 <!--                   Footer                     -->
 <!-- ============================================ -->
 
-<footer id="footer">
-    <div class="container">
-        <div class="left-section">
-            <a class="logo" href="/"><img loading="lazy" decoding="async" src="/assets/images/subg-nb-logo-2.png" alt="logo" width="517" height="400"></a>
-            <div class="socials">
-                <a class="social-icons" href="https://www.facebook.com/p/SUB-G-Brazilian-Jiu-Jitsu-100077642723641/?paipv=0&eav=AfZSu2-R5yqD0nHYofHYfXHL0PCIfORB6Sm1RKYELF97DZt3pEGXbbQ_zKZZSJJUE-U&_rdr" target="_blank"><img src="/assets/svgs/facebook-fill.svg" loading="lazy" decoding="async" alt="facebook" height="20" width="20"></a>
-                <a class="social-icons" href="https://www.youtube.com/@SUB_G" target="_blank"><img src="/assets/svgs/youtube.svg" loading="lazy" decoding="async" alt="youtube" height="20" width="20"></a>
-                <a class="social-icons" href="https://www.instagram.com/subg_brazilianjiujitsu/" target="_blank"><img src="/assets/svgs/instagram.svg" loading="lazy" decoding="async" alt="instagram" height="20" width="20"></a>
+<footer id="cs-footer-1339">
+    <div class="cs-container">
+        <!-- Logo Group -->
+        <div class="cs-logo-group">
+            <h2 class="cs-title">Empowering Growth Through BJJ and Community</h2>
+            <a href="/" class="cs-logo">
+                <img src="/assets/images/subg-nb-logo.png" alt="logo" aria-hidden="true" loading="lazy" decoding="async" width="317" height="49">
+            </a>
+            <div class="cs-social">
+                <a class="cs-social-link" target="_blank" aria-label="visit facebook profile" href="https://www.facebook.com/p/SUB-G-Brazilian-Jiu-Jitsu-100077642723641/?paipv=0&eav=AfZSu2-R5yqD0nHYofHYfXHL0PCIfORB6Sm1RKYELF97DZt3pEGXbbQ_zKZZSJJUE-U&_rdr">
+                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook-1a.svg" alt="facebook" width="11" height="11">
+                </a>
+                <a class="cs-social-link" target="_blank" aria-label="visit instagram profile" href="https://www.instagram.com/subg_brazilianjiujitsu/">
+                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-1a.svg" alt="instagram" width="11" height="11">
+                </a>
+                <a class="cs-social-link" target="_blank" aria-label="visit youtube profile" href="https://www.youtube.com/@SUB_G">
+                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube-1a.svg" alt="instagram" width="11" height="11">
+                </a>
             </div>
         </div>
-        <div class="right-section">
-            <div class="lists">
-                <ul>
-                    <li>
-                        <h2>Information</h2>
-                    </li>
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <a href="/about">About</a>
-                    </li>
-                    <li>
-                        <a href="/#classes-container">Classes</a>
-                    </li>
-                    <li>
-                        <a href="/schedule">Schedule</a>
-                    </li>
-                    <li>
-                        <a href="/join">Pricing</a>
-                    </li>
-                    <li>
-                        <a href="/#contact-us-container">Contact</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <h2>Classes</h2>
-                    </li>
-                    <li>Brazilian Jiu-Jitsu</li>
-                    <li>MMA Striking</li>
-                    <li>Youth Jiu-Jitsu</li>
-                </ul>
-                <ul>
-                    <li>
-                        <h2>Contact</h2>
-                    </li>
-                    <li>
-                        <a href="{{client.address.mapLink}}" target="_blank">
-                            {{client.address.lineOne}}<br>
-                            {{client.address.city}}
-                            {{client.address.state}}
+        <!-- Links -->
+        <div class="cs-ul-wrapper">
+            <span class="cs-header">Quick Links</span>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <a class="cs-link" href="/about">About</a>
+                </li>
+                <li class="cs-li">
+                    <a class="cs-link" href="#why-choose-1824">Classes</a>
+                </li>
+                <li class="cs-li">
+                    <a class="cs-link" href="/schedule">Schedule</a>
+                </li>
+                <li class="cs-li">
+                    <a class="cs-link" href="/middletown">Middletown</a>
+                </li>
+                <li class="cs-li">
+                    <a class="cs-link" href="/port-jervis">Port Jervis</a>
+                </li>
+                <li class="cs-li">
+                    <a class="cs-link" href="/contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="cs-ul-wrapper">
+            <!-- Contact Info -->
+            <span class="cs-header">Contact</span>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <a class="cs-link" href="tel:{{client.phoneForTel}}">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-white.svg" alt="phone icon" width="24" height="24">
+                        {{client.phoneFormatted}}
+                    </a>
+                </li>
+                <li class="cs-li">
+                    <a class="cs-link" href="mailto:{{client.email}}">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/email-white.svg" alt="email icon" width="24" height="24">
+                        {{client.email}}
+                    </a>
+                </li>
+                <li class="cs-li">
+                    <!--Make this link go to the google page-->
+                    <a class="cs-link" href="{{client.address.mapLink}}" target="_blank">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/pin-white.svg" alt="pin icon" width="24" height="24">
+                            Port Jervis: {{client.address.lineOne}}<br>
+                            {{client.address.city}},
+                            {{client.address.state}},
                             {{client.address.zip}}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="tel:{{client.phoneForTel}}">
-                            {{client.phoneFormatted}}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:{{client.email}}">{{client.email}}</a>
-                    </li>
-                </ul>
-            </div>
+                    </a>
+                </li>
+                <li class="cs-li">
+                    <a class="cs-link" href="https://maps.app.goo.gl/312tGxu6GoggUNnVA" target="_blank">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/pin-white.svg" alt="pin icon" width="24" height="24">
+                            Middletown: 130 Dolson Ave, <br>
+                            Middletown,
+                            NY, 
+                            10940
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
-    <div class="credit">
-        <span>© Copyright 2024 - Hand Coded by</span>
-        <a href="https://www.southerntierwebdesigns.com/" target="_blank" rel="noopener">Southern Tier Web Designs</a>
+    <div class="cs-bottom">
+        <span class="cs-credit">
+            © Copyright 2024 - Hand Coded By <a href="https://www.southerntierwebdesigns.com/" class="cs-credit-link" target="_blank">Southern Tier Web Designs</a>
+        </span>
     </div>
 </footer>

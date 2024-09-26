@@ -1,5 +1,5 @@
 ---
-title: 'Brazilian Jiu-Jitsu'
+title: 'Brazilian Jiu-Jitsu | SUB-G Brazilian Jiu-Jitsu | Port Jervis & Middletown, NY'
 description: "With tailored instruction, you'll be tapping into the power of BJJ in no time. Ignite your passion, build unshakeable confidence, and embark on an adventure of physical and mental transformation."
 preloadImg: '/assets/images/home-landing-bg.png'
 permalink: '/'
@@ -11,8 +11,8 @@ eleventyNavigation:
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/local.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/local.css"/>
+    <link rel="stylesheet" href="/assets/css/critical.css"/>
 
     <!-- Script for Netlify Identity -->
     <!-- <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -31,6 +31,44 @@ eleventyNavigation:
                 });
         }
     </script> -->
+
+    <!-- JSON Schema Markup -->
+    <script type="application/ld+json">
+      {
+          "@context": "http://schema.org",
+          "@type": "LocalBusiness",
+          "name": "{{ client.name }}",
+          {% if preloadImg %}"image": "{{ preloadImg }}",{% endif %}
+          {% if client.phoneFormatted %}"telephone": "{{ client.phoneFormatted }}",{% endif %}
+          {% if client.email %}"email": "{{ client.email }}",{% endif %}
+          {% if client.address %}
+              "address": {
+                  "@type": "PostalAddress"{% if client.address.lineOne %},
+                      "streetAddress": "{{ client.address.lineOne }}{% if client.address.lineTwo %}, {{ client.address.lineTwo }}{% endif %}"
+                  {% endif %}
+                  {% if client.address.city %},
+                      "addressLocality": "{{ client.address.city }}"
+                  {% endif %}
+                  {% if client.address.state %},
+                      "addressRegion": "{{ client.address.state }}"
+                  {% endif %}
+                  {% if client.address.zip %},
+                      "postalCode": "{{ client.address.zip }}"
+                  {% endif %}
+                  {% if client.address.country %},
+                      "addressCountry": "{{ client.address.country }}"
+                  {% endif %}
+              },
+          {% endif %}
+          {% if client.domain and page.url %}"url": "{{ client.domain }}{{ page.url }}",{% endif %}
+          {% if client.socials %}
+              "sameAs": [{% for platform, url in client.socials %}
+                      {% if not loop.first %},{% endif %}
+                      "{{ url }}"
+                  {% endfor %}]
+          {% endif %}
+      }
+  </script>
 {% endblock %}
 
 {% block body %}
@@ -38,245 +76,547 @@ eleventyNavigation:
     <!-- ============================================ -->
     <!--                    Hero                      -->
     <!-- ============================================ -->
-    <section class="section-1">
-      <div class="container container-1">
-        <div class="row" id="landing-page-container">
-          <div class="col-12 intro-container justify-content-center">
-            <div class="row justify-content-center">
-              <div class="col-12 intro-header-container text-center mx-md-auto">
-                <h1>Learn, Roll, Excel</h1>
-              </div>
-            </div>
-            <div class="row col-12 justify-content-center mx-auto">
-              <div class="col-12 col-xl-5 col-md-12 text-center intro-paragraph-container">
-                <p>With tailored instruction, you'll be tapping into the power of<span itemprop="name">BJJ</span> in no time. Ignite your passion, build unshakeable confidence, and embark on an adventure of physical and mental transformation.</p>
-              </div>
-            </div>
-            <div class="row col-12 mx-auto justify-content-center">
-              <div class="call-to-action col-xl-8 col-md-8 text-center mx-md-auto mx-lg-0">
-                <div class="row text-center justify-content-center">
-                  <div class="col-8 col-sm-4 col-md-4 col-lg-4 col-xl-3">
-                    <div class="free-class d-flex justify-content-center">
-                      <a itemprop="offers" itemscope itemtype="http://schema.org/Offer" href="/contact"><span itemprop="price">Free Class</span></a>
-                    </div>
-                  </div>
-                  <div class="col-8 col-sm-4 col-md-4 col-lg-4 col-xl-3">
-                    <div class="learn-more-container d-flex justify-content-center">
-                      <a href="/About">Explore</a>
-                    </div>
-                  </div>
+
+    <section id="hero-1785">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">SUB-G Brazilian Jiu-Jitsu</span>
+                <h1 class="cs-title">Learn, Roll, Excel</h1>
+                <p class="cs-text">
+                    Ignite your passion, build unshakeable confidence, and embark on an adventure of physical and mental transformation with Brazilian Jiu-Jitsu, Striking, and more in Port Jervis and Middletown.
+                </p>
+                <div class="cs-button-group">
+                    <a href="/contact" class="cs-button-solid cs-button1">Free Class
+                        <img class="cs-button-icon" src="/assets/svgs/chevron.svg" width="20" height="20">
+                    </a>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
-      <picture>
-        <source media="(max-width: 600px)" srcset="/assets/images/home-landing-bg-m.webp">
-        <source media="(min-width: 601px)" srcset="/assets/images/home-landing-bg.png">
-        <img aria-hidden="true" decoding="async" src="/assets/images/home-landing-bg.png" alt="Sub-G gym" width="1920" height="1280">
-      </picture>
+
+        <!-- Background Image -->
+        <picture class="cs-background">
+            <source media="(max-width: 600px)" srcset="/assets/images/rolling-hero-m.webp">
+            <source media="(min-width: 601px)" srcset="/assets/images/rolling-hero.jpg">
+            <img loading="lazy" decoding="async" src="/assets/images/rolling-hero.jpg" alt="group photo of SUB-G members" width="1920" height="1200" aria-hidden="true">
+        </picture>
+
+        <img class="cs-graphic" src="/assets/svgs/white-splatter2.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async" >
+        <!--This is a dark version. Download the image and change the fill color to match the color of the section background below it-->
+        <img class="cs-graphic cs-graphic-dark" src="/assets/svgs/white-splatter2-dark.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async" >
     </section>
-
+                                    
     <!-- ============================================ -->
-    <!--                  About us                    -->
+    <!--                   Services                   -->
     <!-- ============================================ -->
 
-    <section class="section-4">
-      <div class="container" id="container-5">
-        <div class="row justify-content-center justify-content-lg-start" id="about-section-container">
-          <div id="images-container" class="col-12 col-lg-6 justify-content-center d-flex">
-            <picture>
-              <source media="(max-width: 600px)" srcset="/assets/images/landing-page-imgs.webp">
-              <source media="(min-width: 601px)" srcset="/assets/images/landing-page-imgs.png">
-              <img src="/assets/images/landing-page-imgs.png" alt="about images" id="about-images" width="856" height="874" loading="lazy" decoding="async">
+    <section id="why-choose-1824">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/back-control-m.webp">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/back-control.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/back-control.jpg" alt="Brazilian Jiu Jitsu training" width="522" height="713">
             </picture>
-          </div>
-          <div id="about-us-container" class="col-12 col-lg-6">
-            <div class="row justify-content-center justify-content-lg-start">
-              <div id="about-us-header" class="col-11 col-lg-8 text-start mx-4 mx-lg-0">
-                <h1>Our Story</h1>
-              </div>
-            </div>
-            <div class="row justify-content-center justify-content-lg-start">
-              <div class="about-paragraph col-11 col-lg-11 text-start mx-4 mx-lg-0" id="about-paragraph-1">
-                <p>
-                  Established in 2022, SUB-G is a dedicated martial arts school that emphasizes a deep 
-                  understanding of Grappling Martial Arts. Our approach blends foundational techniques 
-                  that have shaped grappling over the years with contemporary methods and practical scenarios. 
-                </p>
-              </div>
-            </div>
-            <div class="row justify-content-center justify-content-lg-start">
-              <div class="about-paragraph col-11 col-lg-11 text-start mx-4 mx-lg-0" id="about-paragraph-2">
-                <p>
-                  Tyler Roberts, who founded SUB-G BJJ, also leads as the head instructor at our facility in Port Jervis, NY. 
-                  With a profound commitment to Brazilian Jiu Jitsu, Tyler focuses on creating a nurturing and inclusive atmosphere, 
-                  welcoming students from all walks of life to explore and grow in the art.
-                </p>
-              </div>
-            </div>
-            <div class="row justify-content-center justify-content-lg-start">
-              <div id="owner-quote" class="col-11 col-md-11 col-lg-12 col-xl-11">
-                <p>If you know the way broadly you will see it in everything</p>
-                <h2>Miyamoto Musashi</h2>
-                <h3>Tyler's Favorite Quote</h3>
-              </div>
-            </div>
-            <div class="row col-12">
-              <div class="col-12 col-lg-4 justify-content-center d-flex mx-2" id="more-about">
-                <a href="/about">More About Us</a>
-              </div>
-            </div>
-          </div>
+            <picture class="cs-floater">
+                <img class="cs-floater-icon" loading="lazy" decoding="async" src="/assets/images/subg-nb-logo-2.png" alt="icon" width="59" height="48">
+            </picture>
         </div>
-      </div>
+        <div class="cs-content">
+            <span class="cs-topper">Classes</span>
+            <h2 class="cs-title">Our Classes Taught By Experienced Instructors</h2>
+        </div>
+        <div class="cs-flex">
+            <div class="cs-box">
+                <div class="cs-box-content" data-box="one">
+                    <img class="cs-box-icon" loading="lazy" decoding="async" src="/assets/svgs/bjj-red.svg" alt="icon" width="62" height="62">
+                    <h3 class="cs-h3">Brazilian Jiu-Jitsu</h3>
+                    <p class="cs-box-text">
+                        Enhance your problem-solving, adaptability, and physical conditioning. Learn through a combination of drilling and live rolling each class.
+                    </p>
+                </div>
+                <div class="cs-box-content cs-hidden" data-box="two">
+                    <img class="cs-box-icon" loading="lazy" decoding="async" src="/assets/svgs/boxing-ring-red.svg" alt="icon" width="62" height="62">
+                    <h3 class="cs-h3">Youth Brazilian Jiu-Jitsu</h3>
+                    <p class="cs-box-text">
+                        Unleash the potential of your child as they build resilience and learn essential skills for on and off the mats.
+                    </p>
+                </div>
+                <div class="cs-box-content cs-hidden" data-box="three">
+                    <img class="cs-box-icon" loading="lazy" decoding="async" src="/assets/svgs/boxing-gloves-red.svg" alt="icon" width="62" height="62">
+                    <h3 class="cs-h3">MMA Striking</h3>
+                    <p class="cs-box-text">
+                        Learn mixed martial arts striking through a combination of boxing and other forms of martial arts.
+                    </p>
+                </div>
+                <div class="cs-box-content cs-hidden" data-box="four">
+                    <img class="cs-box-icon" loading="lazy" decoding="async" src="/assets/svgs/beginner-red.svg" alt="icon" width="62" height="62">
+                    <h3 class="cs-h3">Beginners Brazilian Jiu-Jitsu</h3>
+                    <p class="cs-box-text">
+                        Perfect for new students with little experience who want to give Jiu-Jitsu a try in a slower paced environment.
+                    </p>
+                </div>
+            </div>
+            <div class="cs-button-group">
+                <button class="cs-button cs-active" data-filter="one">
+                    <picture class="cs-icon-wrapper">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/bjj-red.svg" alt="icon" width="32" height="32">
+                    </picture>
+                    <span class="cs-button-text">Brazilian Jiu-Jitsu</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-arrow.svg" alt="icon" width="32" height="32">
+                </button>
+                <button class="cs-button" data-filter="two">
+                    <picture class="cs-icon-wrapper">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/boxing-ring-red.svg" alt="icon" width="32" height="32">
+                    </picture>
+                    <span class="cs-button-text">Youth Brazilian Jiu-Jitsu</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-arrow.svg" alt="icon" width="32" height="32">
+                </button>
+                <button class="cs-button" data-filter="three">
+                    <picture class="cs-icon-wrapper">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/boxing-gloves-red.svg" alt="icon" width="32" height="32">
+                    </picture>
+                    <span class="cs-button-text">MMA Striking</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-arrow.svg" alt="icon" width="32" height="32">
+                </button>
+                <button class="cs-button" data-filter="four">
+                    <picture class="cs-icon-wrapper">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/beginner-red.svg" alt="icon" width="32" height="32">
+                    </picture>
+                    <span class="cs-button-text">Beginners Brazilian Jiu-Jitsu</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-arrow.svg" alt="icon" width="32" height="32">
+                </button>
+            </div>
+        </div>
+    </div>
+    </section>
+                                
+
+    <!-- ============================================ -->
+    <!--                 Side By Side                 -->
+    <!-- ============================================ -->
+
+    <section id="sbs-68">
+        <div class="cs-container">
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="/assets/images/doug-watching-m.webp">
+                <source media="(min-width: 601px)" srcset="/assets/images/doug-watching.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/doug-watching.jpg" alt="BJJ class" width="502" height="520" aria-hidden="true">
+            </picture>
+            <div class="cs-content">
+                <span class="cs-topper">Our Story</span>
+                <h2 class="cs-title">Driven By A Deep Passion For Brazilian Jiu-Jitsu & Teaching</h2>
+                <p class="cs-text">
+                    Established in 2022, SUB-G is a dedicated martial arts school that emphasizes a deep 
+                    understanding of Grappling Martial Arts. Our approach blends foundational techniques 
+                    that have shaped grappling over the years with contemporary methods and practical scenarios. 
+                </p>
+                <p class="cs-text">
+                    Tyler Roberts, who founded SUB-G BJJ, also leads as the head instructor at our facility in Port Jervis, NY. 
+                    With a profound commitment to Brazilian Jiu Jitsu, Tyler focuses on creating a nurturing and inclusive atmosphere, 
+                    welcoming students from all walks of life to explore and grow in the art.
+                </p>
+                <div id="quote-827">
+                    <span class="cs-quote-text">
+                        If you know the way broadly you will see it in everything
+                    </span>
+                    <span class="cs-name">Miyamoto Musashi</span>
+                    <span class="cs-job">Tyler's Favorite Quote</span>
+                    <img class="cs-quote-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg" alt="quote icon" width="136" height="77">
+                </div>            
+                <a href="/about" class="cs-button-solid cs-button1">More About Us
+                    <img class="cs-button-icon" src="/assets/svgs/chevron.svg" width="20" height="20">
+                </a>
+            </div>
+        </div>
     </section>
 
     <!-- ============================================ -->
-    <!--                  Classes                     -->
+    <!--                 Why Choose Us                -->
     <!-- ============================================ -->
 
-    <section class="section-2" id="section-2">
-      <div class="container container-2">
-        <div class="classes-container" id="classes-container">
-          <div id="classes-header-container" id="_description3" itemprop="description" class="col-12 text-center">
-            <h1>Classes</h1>
-          </div>
-          <div id="classes-subtitle-container" class="col-11 col-md-7 col-lg-6 mx-auto text-center">
-            <p>Choose from a wide variety of classes taught by experienced coaches, each dedicated to providing you with valuable insights and a supportive learning environment.</p>
-          </div>
-          <div class="row classes-info-container col-10 mx-auto">
-            <div class="classes-table col-12 col-lg-3">
-              <button class="class-option col-12 col-md-12 col-xl-9" id="class-option-1">Brazilian Jiu-Jitsu</button>
-              <button class="class-option col-12 col-md-12 col-xl-9" id="class-option-2">Youth Jiu-Jitsu</button>
-              <button class="class-option col-12 col-md-12 col-xl-9" id="class-option-3">Striking</button>
-              <button class="class-option col-12 col-md-12 col-xl-9" id="class-option-4">Beginners Jiu-Jitsu</button>
-            </div>
-            <div class="col-12 col-lg-6 text-center text-lg-left" id="classes-img-container"></div>
-            <div class="col-12 col-lg-3" id="class-skills-container">
-              <div class="mx-auto text-center text-lg-start" id="class-skills-logo">
-                <picture>
-                  <source media="(max-width: 600px)" srcset="/assets/images/subg-nb-logo.webp">
-                  <source media="(min-width: 601px)" srcset="/assets/images/subg-nb-logo.png">
-                  <img src="/assets/images/subg-nb-logo.png" width="60" height="71" alt="Sub-G logo" loading="lazy" decoding="async">
+    <section id="why-choose-1821">
+        <div class="cs-container">
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/facility.svg" alt="icon" width="32" height="32">
+                    <div class="cs-item-wrapper">
+                        <h3 class="cs-h3">
+                            New Facilities In Middletown & Port Jervis
+                        </h3>
+                        <p class="cs-item-text">
+                            Enjoy the convenience of training at both our Middletown and Port Jervis locations at various times throughout the day.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/experienced-instructors.svg" alt="icon" width="32" height="32">
+                    <div class="cs-item-wrapper">
+                        <h3 class="cs-h3">
+                            Experienced & Qualified Instructors
+                        </h3>
+                        <p class="cs-item-text">
+                            We take pride in the experience and expertise of our instructors as well as their ability to help students grow and improve.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/fist-bump.svg" alt="icon" width="32" height="32">
+                    <div class="cs-item-wrapper">
+                        <h3 class="cs-h3">
+                            Supportive and Welcoming Training Environment
+                        </h3>
+                        <p class="cs-item-text">
+                            The casual environment at SUB-G is like no other martial arts gym. Our coaches and members are always welcoming and friendly.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/locker.svg" alt="icon" width="32" height="32">
+                    <div class="cs-item-wrapper">
+                        <h3 class="cs-h3">
+                            Showers, Locker-rooms, & More
+                        </h3>
+                        <p class="cs-item-text">
+                            We're excited to offer a locker-room, showers, and fitness training equipment at our brand new Middletown location.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <div class="cs-content">
+                <span class="cs-topper">Why Choose Us</span>
+                <h2 class="cs-title">Why Choose SUB-G Brazilian Jiu-Jitsu</h2>
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="/assets/images/why-choose-rolling-photo-m.webp">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="/assets/images/why-choose-rolling-photo.png">
+                    <img loading="lazy" decoding="async" src="/assets/images/why-choose-rolling-photo.png" alt="guys rolling in Jiu-Jitsu" width="405" height="228">
                 </picture>
-              </div>
-              <div class="mx-auto col-12 col-md-6 col-lg-12 text-center text-lg-start" id="class-skills-header"></div>
-              <div class="mx-auto col-12 col-md-10 col-lg-12 text-center text-lg-start" id="class-skills-subtitle"></div>
-              <div class="row justify-content-center justify-content-lg-start" id="class-skills-buttons">
-                <div class="col-5 d-flex justify-content-center text-center mx-2" id="join-today">
-                  <a href="/join" target="_blank">See Plans</a>
-                </div>
-                <div class="col-5 d-flex justify-content-center text-center mx-2" id="see-pricing">
-                  <a href="/schedule">Schedule</a>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
+    </section>                       
+
+    <!-- ============================================ -->
+    <!--             Side By Side Reverse             -->
+    <!-- ============================================ -->
+
+    <section id="sbsr-1807">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Coach Tyler</span>
+                <h2 class="cs-title">Your Black Belt Coach For All Things Martial Arts</h2>
+                <p class="cs-text">
+                    Coach Tyler Roberts, a skilled Brazilian Jiu-Jitsu black belt, is dedicated to fostering growth in students of all ages. His passion for the art of BJJ is matched by his commitment to teaching and mentoring students at every level. Whether working with beginners or advanced practitioners, Coach Roberts tailors his instruction to meet each student's needs, ensuring they develop the confidence, discipline, and technique required for success both on and off the mat.
+                </p>
+                <p class="cs-text">
+                    Coach Tyler believes that BJJ is not just a physical activity but a transformative tool that builds mental toughness and self-discipline. He creates a supportive learning environment where students feel encouraged to push beyond their limits and achieve their goals. His ability to connect with younger students and adults alike has made him a trusted mentor, guiding his students through the challenges of BJJ while instilling lifelong values of perseverance and respect.
+                </p>
+                <a href="/contact" class="cs-button-solid cs-button1">Get In Touch
+                    <img class="cs-button-icon" src="/assets/svgs/chevron.svg" width="20" height="20">
+                </a>          
+            </div>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <span class="cs-stat">BJJ Black Belt</span>
+                    <span class="cs-number">3+ Years</span>
+                </li>
+                <li class="cs-item">
+                    <span class="cs-stat">Martial Arts Experience</span>
+                    <span class="cs-number">10+ Years</span>
+                </li>
+                <li class="cs-item">
+                    <span class="cs-stat">Students Coached</span>
+                    <span class="cs-number">100+</span>
+                </li>
+            </ul>
+        </div>
+        <picture class="cs-person">
+            <source media="(max-width: 600px)" srcset="/assets/images/instructor-photo-m.webp">
+            <source media="(min-width: 601px)" srcset="/assets/images/instructor-photo.png">
+            <img loading="lazy" decoding="async" src="/assets/images/instructor-photo.png" alt="coach Tyler Roberts" width="705" height="937" aria-hidden="true">
+        </picture>
+
+        <!--Backgorund Image-->
+        <picture class="cs-background">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="/assets/images/group-photo-m.webp">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="/assets/images/group-photo.jpg">
+            <img loading="lazy" decoding="async" src="/assets/images/group-photo.jpg" alt="SUB-G members" width="1920" height="1200">
+        </picture>
+
+        <!--White Splash Graphic-->
+        <img class="cs-graphic cs-light" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gym-hero-shape.png" alt="graphic" height="161" width="1920" loading="lazy" decoding="async" >
+        <!--This is a dark version. Download the image and change the fill color to match the color of the section background below it-->
+        <img class="cs-graphic cs-dark" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gym-hero-shape-dark.png" alt="graphic" height="161" width="1920" loading="lazy" decoding="async" >
     </section>
 
     <!-- ============================================ -->
-    <!--                Contact Form                  -->
+    <!--                Side By Side                  -->
     <!-- ============================================ -->
-    <section class="section-6">
-      <div class="container" id="container-3">
-        <div class="row">
-          <div id="contact-us-container" class="col-12 col-lg-5">
-            <div class="col-12 justify-content-center d-flex text-center text-lg-start" id="email-away-container">
-              <h1>We're just an email or call away</h1>
+
+    <section id="sbs-1362">
+        <div class="cs-container">
+            <div class="cs-image-group">
+                <picture class="cs-background">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="/assets/images/middletown-facility-m.webp">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="/assets/images/middletown-facility.jpg">
+                    <img loading="lazy" decoding="async" src="/assets/images/middletown-facility.jpg" alt="Middletown facilities" width="586" height="757">
+                </picture>
+                <div class="cs-box">
+                    <img class="cs-box-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/gear-white.svg" alt="icon" width="60" height="60">
+                    <span class="cs-desc">
+                        Middletown, NY <br>October 2024
+                    </span>
+                </div>
             </div>
-            <div class="col-12 justify-content-center d-flex text-center mx-2" id="email-phone">
-              <a href="mailto:{{client.email}}" target="_blank" class="mx-2 mx-md-5"><img src="/assets/svgs/email-symbol.svg" alt="email symbol" width="22" height="22" id="email-symbol" loading="lazy" decoding="async">{{client.email}}</a>
-              <a href="tel:{{client.phoneForTel}}" target="_blank" class="mx-2 mx-md-5"><img src="/assets/svgs/phone-symbol.svg" alt="phone symbol" width="22" height="22" id="phone-symbol" loading="lazy" decoding="async">{{client.phoneFormatted}}</a>
+            <div class="cs-content">
+                <span class="cs-topper">Brand New</span>
+                <h2 class="cs-title">New Martial Arts Facility & Gym In Middletown, NY</h2>
+                <p class="cs-text">
+                    SUB-G's new facility in Middletown, NY, is designed to offer a top-notch training experience for all members. The spacious gym is equipped with state-of-the-art workout equipment, perfect for conditioning and strength training. Members can enjoy the convenience of modern showers and locker rooms, ensuring a comfortable experience before and after training. This upgraded facility reflects SUB-G's dedication to offering a high-quality space where students can train, improve, and fully enjoy their Brazilian Jiu-Jitsu experience.
+                </p>
+                <ul class="cs-card-group">
+                    <li class="cs-item">
+                        <h3 class="cs-h3">
+                            <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/shower.svg" alt="shower icon" width="32" height="32">
+                            Showers & Locker-rooms
+                        </h3>
+                        <p class="cs-item-text">
+                            Enjoy complimentary showers after class and lockers to store your gear
+                        </p>
+                    </li>
+                    <li class="cs-item">
+                        <h3 class="cs-h3">
+                            <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/dumbbell.svg" alt="dumbbell icon" width="32" height="32">
+                            Gym & Training Equipment
+                        </h3>
+                        <p class="cs-item-text">
+                            Improve your fitness off the mats with access to Positive Fitness Training
+                        </p>
+                    </li>
+                </ul>
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/black-check.svg" alt="checkmark" width="24" height="24">
+                        Access To Middletown & Port Jervis Locations
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/black-check.svg" alt="checkmark" width="24" height="24">
+                        Large Mat Space For Martial Arts Training
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/black-check.svg" alt="checkmark" width="24" height="24">
+                        Included Access To Positive Fitness Training Facility
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/black-check.svg" alt="checkmark" width="24" height="24">
+                        Showers & Lockers included
+                    </li>
+                </ul>
+                <a href="/contact" class="cs-button-solid cs-button1">First Class On Us
+                    <img class="cs-button-icon" src="/assets/svgs/chevron.svg" width="20" height="20">
+                </a>
             </div>
-          </div>
-          <div class="col-12 col-lg-7" id="contact-us-form">
-            <div class="col-12 text-center text-lg-start mx-lg-5" id="contact-us-header-container">
-              <h1>Contact Us</h1>
-            </div>
-            <form name="home-contact" action="/success" netlify>
-              <div class="row mx-4">
-                <div class="col-md-6 justify-content-center d-flex">
-                  <div class="form-group col-12">
-                      <label for="fname" class="label-container">First Name</label>
-                      <input name="fname" id="fname" class="input-container" type="text" placeholder="Enter your first Name">
-                  </div>
-                </div>
-                <div class="col-md-6 justify-content-center d-flex">
-                  <div class="form-group col-12">
-                      <label for="lname" class="label-container">Last Name</label>
-                      <input name="lname" id="lname" class="input-container" type="text" placeholder="Enter your last Name">
-                  </div>
-                </div>
-              </div>
-              <div class="row mx-4">
-                <div class="col-md-6 justify-content-center d-flex">
-                  <div class="form-group col-12">
-                    <label for="email" class="label-container">Email</label>
-                    <input name="email" id="email" class="input-container" type="email" placeholder="Enter your email" autocomplete="email">
-                  </div>
-                </div>
-                <div class="col-md-6 justify-content-center d-flex">
-                  <div class="form-group col-12">
-                    <label for="phone" class="label-container">Phone Number</label>
-                    <input name="phone" id="phone" class="input-container" type="tel" placeholder="Enter your phone number" autocomplete="tel">
-                  </div>
-                </div>
-              </div>
-              <div class="row mx-4">
-                <div class="col-md-12 justify-content-center d-flex">
-                  <div class="form-group col-12">
-                    <label for="message" class="label-container">Message</label>
-                    <textarea name="message" id="message" class="input-container" rows="1" placeholder="Enter your message"></textarea>
-                  </div>
-                </div>
-              </div>
-              <div class="row mx-4" id="preferred-method-container">
-                <legend class="label-container">Preferred Method of Reply</legend>
-              </div>
-              <div class="row mx-2">
-                <div class="col-md-2 d-flex">
-                  <div class="form-check d-flex">
-                    <input name="preferred-method" id="preferred-phone" type="radio" checked="checked">
-                    <label for="preferred-phone">Phone</label>
-                  </div>
-                </div>
-                <div class="col-md-2 d-flex">
-                  <div class="form-check d-flex">
-                    <input name="preferred-method" id="preferred-email" type="radio">
-                    <label for="preferred-email">Email</label>
-                  </div>
-                </div>
-              </div>
-              <div class="row mx-4">
-                <div class="col-lg-4">
-                  <button type="submit" class="col-12 col-md-12 col-xl-9" id="submit-contact-form">Submit</button>
-                </div>
-            </form>
-          </div>
         </div>
-      </div>
+    </section>               
+    
+    <!-- ============================================ -->
+    <!--                    FAQ                       -->
+    <!-- ============================================ -->
+
+    <section id="faq-1741">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Frequently Asked Questions</span>
+                <h2 class="cs-title">Find Answers To Your Questions</h2>
+                <a href="/contact" class="cs-button-solid cs-button1">More Information
+                    <img class="cs-button-icon" src="/assets/svgs/chevron.svg" width="20" height="20">
+                </a>
+            </div>
+            <div class="cs-flex-group">
+                <ul class="cs-faq-group">
+                    <!-- Active class added as default -->
+                    <li class="cs-faq-item active">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                Do I need any martial arts experience to join?
+                            </span>
+                        </button>
+                        <p class="cs-item-text">
+                            At Sub-G we welcome individuals of all experience levels to join our community. Whether you're a complete beginner or have previous martial 
+		                    arts experience, our classes are designed to accommodate everyone. The relaxed environment of Sub-G coupled with its qualified instructors make it a great place to train for everyone.
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                Is martial arts training safe for kids?
+                            </span>
+                        </button>
+                        <p class="cs-item-text">Brazilian Jiu-Jitsu offers a myriad of benefits for children, making it an excellent choice for young ones looking to engage 
+                            in a sport that promotes physical health and personal development. BJJ focuses on grappling and ground fighting, teaching kids how to defend themselves without striking. 
+                        </p>
+                        <p class="cs-item-text">
+                            This emphasis on non-violent resolution and self-control is particularly beneficial for young practitioners. Physically, BJJ is a comprehensive workout that improves strength, 
+                            flexibility, and cardiovascular health. 
+                        </p>
+                        <p class="cs-item-text">
+                            Enhancing coordination and balance, which are crucial during the developmental years. Mentally, practicing BJJ boosts confidence and self-esteem by setting clear goals and 
+                            providing a structured environment for achievement. It teaches discipline, respect, and persistence, skills that are valuable both on and off the mats. 
+                        </p>
+                        <p class="cs-item-text">
+                            Regarding safety, BJJ is designed to be safe for all ages. The sport inherently minimizes the risk of high-impact strikes, making it safer than many other martial arts. 
+                            Instructors are trained to teach techniques in a controlled, age-appropriate manner, ensuring that children learn in a safe, supportive environment. 
+                        </p>
+                        <p class="cs-item-text"> 
+                            Safety measures are standard practice, further reducing the risk of injury. Overall, BJJ is not only a safe sporting option for children but also a profoundly beneficial 
+                            one that can impact their physical health, mental well-being, and life skills.
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                What are the benefits of training martial arts?
+                            </span>
+                        </button>
+                        <p class="cs-item-text">
+                            Starting Brazilian Jiu-Jitsu (BJJ) as an adult can be a transformative experience with benefits that extend far beyond the dojo. BJJ offers a rigorous full-body workout that improves cardiovascular 
+                            health, muscle strength, flexibility, and endurance. 
+                        </p>
+                        <p class="cs-item-text">
+                            As it involves grappling and ground fighting, it uniquely promotes functional strength and agility, beneficial in daily activities. Additionally, BJJ is a great stress reliever; intense physical activity 
+                            helps release endorphins, promoting relaxation and happiness. The strategic nature of BJJ, often likened to playing physical chess, also challenges the brain, enhancing problem-solving skills and mental toughness.
+                        </p>
+                        <p class="cs-item-text">
+                            BJJ is highly effective for self-defense because it emphasizes control and technique over size and strength. It teaches practical skills that can be used in real-world self-defense situations, helping practitioners 
+                            feel safer and more confident in their ability to protect themselves and others.
+                        </p>
+                        <p class="cs-item-text">
+                            Joining a BJJ class also introduces adults to a community of like-minded individuals, fostering social connections that can help build friendships and support networks, which are vital for mental health and a balanced life.
+                        </p>
+                        <p class="cs-item-text">
+                            Moreover, BJJ requires dedication and consistent effort, teaching adults the value of persistence and hard work. This discipline can translate into other areas of life, including career and personal relationships. Mastering new 
+                            techniques and progressing through belt ranks provides a real sense of accomplishment. 
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                What equipment or attire do I need for classes?
+                            </span>
+                        </button>
+                        <p class="cs-item-text">
+                            While some of our classes involve training in a traditional BJJ gi, it is not required. We encourage students to wear atheletic clothing
+		                    that they can be comfortable and agile in. We recommend trying out one of our free classes before purchasing gis, rashguards, mouthguards, or any other equipment.
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                Why should I choose an annual plan?
+                            </span>
+                        </button>
+                        <p class="cs-item-text">
+                            By choosing the annual plan, you not only benefit from significant cost savings compared to monthly options, but you also commit to a 
+                            year of consistent training. This commitment is crucial for mastering BJJ techniques and achieving your personal martial arts and fitness goals.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </section>
-
+                                
     <!-- ============================================ -->
-    <!--                 Maps location                -->
+    <!--                   Reviews                    -->
     <!-- ============================================ -->
 
-    <!-- <section id="section-3">
-      <div class="container" id="container-4">
-        <div class="col-12 justify-content-center d-flex" id="maps-container">
-          <iframe title="Sub-G Google Maps location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.858831648395!2d-74.69239342549608!3d41.37715169663247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c34f17ad797b65%3A0xa88ffa9805edbee4!2sSUB-G%20Brazilian%20Jiu%20Jitsu!5e0!3m2!1sen!2sus!4v1709437646874!5m2!1sen!2sus" width="1000" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>      
+    <section id="reviews-727">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Testimonials</span>
+                <h2 class="cs-title">What Our Members Have To Say About Us</h2>
+                <p class="cs-text">
+                    At SUB-G, we deeply value the insights and opinions of our members. We are committed to listening, learning, and continuously improving to create the best possible experience for everyone in our community.
+                </p>
+            </div>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <img class="cs-icon" src="/assets/svgs/quote2-svgrepo-com.svg" alt="quote icon" aria-hidden="true" width="40" height="38" loading="lazy" decoding="async">
+                    <h3 class="cs-h3">Great Environment</h3>
+                    <p class="cs-item-text">
+                        I'm impressed with the relaxed informal class structure at Sub-G. After training at a few schools over the course of a few years the non-traditional approach at Sub-G was very refreshing. This is a growth oriented learning space...
+                    </p>
+                    <span class="cs-name">Sean R.</span>
+                </li>
+                <li class="cs-item">
+                    <img class="cs-icon" src="/assets/svgs/quote2-svgrepo-com.svg" alt="quote icon" aria-hidden="true" width="40" height="38" loading="lazy" decoding="async">
+                    <h3 class="cs-h3">Perfect For Kids & Adults</h3>
+                    <p class="cs-item-text">
+                        Super great place to train, everyone is friendly and respectful. The instructor is a very good teacher, I've learned so much in a short period of time along with my daughter who loves training here and he's great with the kids so I highly recommend this gym.
+                    </p>
+                    <span class="cs-name">Mike H.</span>
+                </li>
+            </ul>
         </div>
-      </div>
-    </section> -->
+    </section>
 
     {% include 'components/cta.html' %}
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="/assets/js/home.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const buttons = document.querySelectorAll('#why-choose-1824 .cs-button');
+        const boxContents = document.querySelectorAll('#why-choose-1824 .cs-box-content');
+
+        // Function to show the corresponding box content and hide others
+        function showBoxContent(button) {
+        const filterValue = button.getAttribute('data-filter');
+
+        boxContents.forEach(box => {
+            if (box.getAttribute('data-box') === filterValue) {
+                box.classList.remove('cs-hidden');
+            } else {
+                box.classList.add('cs-hidden');
+            }
+        });
+
+        buttons.forEach(btn => {
+            if (btn === button) {
+                btn.classList.add('cs-active');
+            } else {
+                btn.classList.remove('cs-active');
+            }
+        });
+        }
+
+        // Event listeners for screens below 1024px
+        if (window.matchMedia('(max-width: 1024px)').matches) {
+        buttons.forEach(button => {
+            button.addEventListener('click', () => showBoxContent(button));
+        });
+        }
+
+        // Event listeners for screens above 1024px
+        if (window.matchMedia('(min-width: 1024px)').matches) {
+        buttons.forEach(button => {
+            button.addEventListener('mouseover', () => showBoxContent(button));
+        });
+        }
+        });   
+        
+        const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
+        for (const item of faqItems) {
+            const onClick = () => {
+                item.classList.toggle('active');
+            };
+            item.addEventListener('click', onClick);
+        }
+                                        
+    </script>
 
 {% endblock %}
 
